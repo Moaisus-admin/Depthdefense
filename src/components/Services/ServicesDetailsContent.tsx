@@ -1,84 +1,180 @@
 "use client";
-  
+
 import React from "react";
-import RelatedServices from "./RelatedServices";
-import ServiceSidebar from "./ServiceSidebar";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const ServicesDetailsContent: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <div className="services-details-area pt-100 pb-70">
+      <div className="our-approach-area pb-70 pt-[60px] text-black dark:bg-zinc-800">
         <div className="container">
+          <div className="section-title">
+            <h2 className="dark:text-white">{t("Cybersecurity Assessment")}</h2>
+          </div>
+
           <div className="row">
-            <div className="col-lg-8">
-              <div className="services-details-content">
-                <div className="services-content">
-                  <h2>Is Your Information Cyber Secure?</h2>
-                  <p>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate
-                    velit esse molestie consequat, vel illum dolore eu feugiat
-                    nulla facilisis at vero eros et accumsan et iusto odio
-                    dignissim qui blandit praesent luptatum zzril delenit augue
-                    duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
-                    amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                    euismod tincidunt ut laoreet dolore magna aliquam erat
-                    volutpat dolor in hendrerit in vulputate feugiat.
-                  </p>
-
-                  <div className="services-details-one">
-                    <Image
-                      src="/images/services-details/services-details-1.jpg"
-                      alt="Image"
-                      width={810}
-                      height={450}
-                    />
-                  </div>
-                </div>
-
-                <div className="services-content">
-                  <h3>What is Cyber Security?</h3>
-                  <p>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate
-                    velit esse molestie consequat, vel illum dolore eu feugiat
-                    nulla facilisis at vero eros et accumsan et iusto odio
-                    dignissim qui blandit praesent luptatum zzril delenit augue
-                    duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
-                    amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                    euismod tincidunt ut laoreet dolore magna aliquam erat
-                    volutpat. eum iriure dolor in hendrerit in vulputate
-                  </p>
-                </div>
-
-                <div className="services-content">
-                  <h3>Why is it Important?</h3>
-                  <p>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate
-                    velit esse molestie consequat, vel illum dolore eu feugiat
-                    nulla facilisis at vero eros et accumsan et iusto odio
-                    dignissim qui blandit praesent luptatum zzril delenit augue
-                    duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
-                    amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                    euismod tincidunt ut laoreet dolore magna aliquam erat
-                    volutpat. nulla facilisi. Lorem ipsum dolor sit
-                  </p>
-                  <p>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate
-                    velit esse molestie consequat, vel illum dolore eu feugiat
-                    nulla facilisis at vero eros et accumsan et iusto odio
-                    dignissim qui blandit praesent luptatum zzril delenit augue
-                    duis dolore te feugait nulla facilisi. feugait nulla
-                    facilisi. Lorem ipsum dolor sit amet, consectetuer
-                    adipiscing elit,
-                  </p>
-                </div>
-
-                <RelatedServices />
+            <div className="col-lg-6">
+              <div className="approach-img">
+                <Image
+                  src="/images/approach-img.jpg"
+                  alt="Image"
+                  width={600}
+                  height={505}
+                />
               </div>
             </div>
 
-            <div className="col-lg-4">
-              <ServiceSidebar />
+            <div className="col-lg-6">
+              <div className="approach-content">
+                <p className="mt-4 dark:text-white">
+                  {t("Cybersecurity Assessment Description 1")}
+                </p>
+
+                <p className="mt-5 mb-4 dark:text-white">
+                  {t("Cybersecurity Assessment Description 2")}
+                </p>
+              </div>
+            </div>
+            <div className="row mt-4">
+              <h3 className="mb-4 approach-content dark:text-white">
+                {t("Cybersecurity Assessment Description 3")}
+              </h3>
+              <div className="col-lg-6 col-sm-">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">{t("Current assets")}</h3>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-sm-6">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">
+                    {t(
+                      "Business compliance with the relevant security ordinance."
+                    )}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-sm-6">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">
+                    {t(" Vulnerabilities present in the assets.")}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-sm-6">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">
+                    {t(" Identify the attack surface.")}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-sm-6">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">
+                    {t("Potential threats and risks on assets.")}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-sm-6">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">
+                    {t("Assets’ cyber resiliency.")}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-sm-6">
+                <div className="single-approach dark:bg-zinc-700">
+                  <h3 className="dark:text-white">
+                    {t(
+                      " Assets prevention cost with proportion to assets cost."
+                    )}
+                  </h3>
+                </div>
+              </div>
+
+              <p className="mt-4 text-lg dark:text-white">{t("paragraph3")}</p>
+            </div>
+          </div>
+
+          <div className="row mt-[50px]">
+            <div className="col-lg-6">
+              <div className="section-title">
+                <h2 className="mt-4 dark:text-white">
+                  {t(
+                    " What are the different types of cybersecurity assessments?"
+                  )}
+                </h2>
+              </div>
+              <div className="row mt-4">
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Vulnerability")}</h3>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Penetration")}</h3>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Compromise")}</h3>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Social")}</h3>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Red")}</h3>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Third-party")}</h3>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Cloud")}</h3>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Risk")}</h3>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-sm-6">
+                  <div className="single-approach dark:bg-zinc-700">
+                    <h3 className="dark:text-white">{t("Security")}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="approach-img">
+                <Image
+                  src="/images/services/services-Aa.jpg"
+                  alt="Image"
+                  width={600}
+                  height={505}
+                />
+              </div>
             </div>
           </div>
         </div>

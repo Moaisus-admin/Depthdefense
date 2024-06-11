@@ -1,16 +1,23 @@
 "use client";
 import { useEffect, useRef } from "react";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 
 interface WordElement extends HTMLSpanElement {}
 
-const SolutionsCard: React.FC = () => {
+const SIEMCard: React.FC = () => {
   const textRef = useRef<HTMLHeadingElement>(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
+    gsap.to(imageRef.current, {
+      y: 20, // Move the image 20px up
+      duration: 1, // The animation should last 1 second
+      repeat: -1, // Repeat the animation indefinitely
+      yoyo: true, // Reverse the animation on alternate iterations
+      ease: "power1.inOut", // Use a smooth easing function
+    });
     if (textRef.current) {
       const words = textRef.current!.querySelectorAll(
         "span"
@@ -60,7 +67,7 @@ const SolutionsCard: React.FC = () => {
                 <div className="solution-title col-lg-12 flex justify-center">
                   <div className=" ml-auto col-lg-6 text-xl">
                     <div className="">
-                      <h2 className=" dark:text-white">All-in Solution</h2>
+                      <h2 className=" dark:text-white">SIEM</h2>
                     </div>
                     <div
                       className="dark:text-white flex flex-wrap gap-1"
@@ -91,7 +98,7 @@ const SolutionsCard: React.FC = () => {
                     </div>
                   </div>
                   <div className="col-lg-6 pt-4 w-fit m-auto">
-                    <div className="solution-img w-fit">
+                    <div className="solution-img w-fit" ref={imageRef}>
                       <Image
                         src="/images/solutions/solutions-2.jpg"
                         alt="Image"
@@ -202,4 +209,4 @@ const SolutionsCard: React.FC = () => {
   );
 };
 
-export default SolutionsCard;
+export default SIEMCard;

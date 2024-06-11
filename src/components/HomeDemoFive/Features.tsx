@@ -8,7 +8,6 @@ const Features: React.FC = () => {
   const [startTyping, setStartTyping] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const featureRefs = useRef<(HTMLElement | null)[]>([]);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   const addToRefs = (el: HTMLElement | null) => {
     if (el && !featureRefs.current.includes(el)) {
@@ -17,23 +16,6 @@ const Features: React.FC = () => {
   };
 
   useEffect(() => {
-    const video = videoRef.current;
-
-    // Pause and play the video based on scroll events
-    let isScrolling: number;
-    window.addEventListener(
-      "scroll",
-      () => {
-        window.clearTimeout(isScrolling);
-        video?.play();
-
-        isScrolling = window.setTimeout(() => {
-          video?.pause();
-        }, 66);
-      },
-      false
-    );
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -68,28 +50,12 @@ const Features: React.FC = () => {
 
   return (
     <>
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        style={{
-          position: "fixed",
-          right: "0",
-          bottom: "0",
-          minWidth: "100%",
-          minHeight: "100%",
-          zIndex: "-1",
-        }}
-      >
-        <source src="/images/bg-video.mp4" type="video/mp4" />
-      </video>
       <div
-        className="feature-area feature-area-two feature-area-five pt-100 pb-[100px] dark:bg-zinc-800"
+        className="feature-area feature-area-two feature-area-five pt-100 pb-[100px] bg-slate-50 dark:bg-zinc-800"
         ref={sectionRef}
       >
         <div className="container">
-          <div className="section-title white-title w-full">
+          <div className="section-title w-full">
             <span className="text-2xl text-[#e21f36]">Services</span>
             <h3 className="text-3xl dark:text-white font-poppins">
               {startTyping && (

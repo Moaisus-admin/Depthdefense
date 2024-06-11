@@ -1,8 +1,4 @@
 /*
-@File: Nezox Template Styles
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the template.
 
 This files table contents are outlined below>>>>>
 
@@ -175,6 +171,15 @@ Default Style
 
 .feature-card:hover {
   transform: scale(1.05);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.partner-slide {
+  direction: ltr !important;
 }
 
 body {
@@ -451,7 +456,7 @@ Section Title Area Style*/
   margin-bottom: 0;
 }
 .section-title.white-title span {
-  /* color: #ffffff; */
+  color: #ffffff;
 }
 .section-title.white-title h2 {
   /* color: #ffffff; */
@@ -1541,8 +1546,83 @@ Our Approach Area Style
   transform: translateY(-5px);
 }
 
-.approach-img {
+.single-approach {
+  background-color: transparent;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.single-approach::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  /* background-color: green; */
+  z-index: -1;
+  transition: all ease 0.5s;
+}
+
+.single-approach:hover::before {
+  width: 100%;
+}
+
+.single-approach:hover h3 {
+  /* color: white; */
+}
+
+.single-approach:hover p {
+  color: #4b5280;
+}
+
+.single-approach-2 {
+  background-color: #ffffff;
+  border-left: 2px solid blue;
+  padding: 20px;
   margin-bottom: 30px;
+  transition: all ease 0.5s;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.single-approach-2 p {
+  transition: all ease 0.5s;
+}
+.single-approach-2:hover {
+  transform: translateY(-5px);
+}
+
+.single-approach-2 {
+  background-color: transparent;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.single-approach-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  /* background-color: purple; */
+  z-index: -1;
+  transition: all ease 0.5s;
+}
+
+.single-approach-2:hover::before {
+  width: 100%;
+}
+
+.single-approach-2:hover h3 {
+  color: white;
+}
+
+.single-approach-2:hover p {
+  color: white;
+}
+
+.approach-img {
+  /* margin-bottom: 90px; */
 }
 
 /*

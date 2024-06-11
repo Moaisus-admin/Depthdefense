@@ -25,8 +25,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Nezox - Cyber Security Company React Nextjs Template",
-  description: "Cyber Security Company React Nextjs Template",
+  title: "Depthdefense - Cyber Security Company",
+  description: "Cyber Security Company",
 };
 
 export default function RootLayout({

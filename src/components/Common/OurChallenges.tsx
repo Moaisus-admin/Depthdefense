@@ -5,11 +5,13 @@ import React from "react";
 const OurChallenges: React.FC = () => {
   return (
     <>
-      <div className="challenges-area pt-100 pb-70 jarallax dark:bg-slate-900">
+      <div className="challenges-area pt-100 jarallax dark:bg-slate-900">
         <div className="container">
           <div className="section-title white-title ">
-            <span>Our Challenges</span>
-            <h2>You Can Protect Your Organization’s Cybersecurity By Us</h2>
+            <div className="text-red-600 text-2xl">Our Challenges</div>
+            <h2 className="dark:text-white">
+              You Can Protect Your Organization’s Cybersecurity By Us
+            </h2>
           </div>
 
           <div className="row">
@@ -18,10 +20,7 @@ const OurChallenges: React.FC = () => {
                 <div className="overly-two">
                   <i className="flaticon-threat"></i>
                   <h3 className="dark:text-white">Identifying Threats</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                    do.
-                  </p>
+
                   <span className="flaticon-threat"></span>
                 </div>
               </div>
@@ -32,10 +31,7 @@ const OurChallenges: React.FC = () => {
                 <div className="overly-two">
                   <i className="flaticon-cyber"></i>
                   <h3 className="dark:text-white">Cyber Risk Assessment</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                    do.
-                  </p>
+
                   <span className="flaticon-cyber"></span>
                 </div>
               </div>
@@ -46,10 +42,7 @@ const OurChallenges: React.FC = () => {
                 <div className="overly-two">
                   <i className="flaticon-cyber-security-1"></i>
                   <h3 className="dark:text-white">Testing Cyber Security</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                    do.
-                  </p>
+
                   <span className="flaticon-cyber-security-1"></span>
                 </div>
               </div>
@@ -60,10 +53,7 @@ const OurChallenges: React.FC = () => {
                 <div className="overly-two">
                   <i className="flaticon-password"></i>
                   <h3 className="dark:text-white">Managing Cloud Security</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed
-                    do.
-                  </p>
+
                   <span className="flaticon-password"></span>
                 </div>
               </div>

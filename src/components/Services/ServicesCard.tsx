@@ -22,7 +22,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/cybersecurity-assessment">
                     <Image
                       src="/images/services/services-A.jpg"
                       alt="Image"
@@ -34,13 +34,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">
+                    <Link href="/services/cybersecurity-assessment">
                       Cybersecurity Assessment
                     </Link>
                   </h3>
                   <p>A cybersecurity assessment is a process of. . .</p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/cybersecurity-assessment"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -50,7 +53,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/malware-analysis">
                     <Image
                       src="/images/services/services-B.jpg"
                       alt="Image"
@@ -62,11 +65,13 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">Malware Analysis</Link>
+                    <Link href="/services/malware-analysis">
+                      Malware Analysis
+                    </Link>
                   </h3>
                   <p>Malware analysis is the use of tools and. . .</p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link href="/services/malware-analysis" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -76,7 +81,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/vulnerability-assessment-penetration-testing">
                     <Image
                       src="/images/services/services-C.jpg"
                       alt="Image"
@@ -88,7 +93,7 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">
+                    <Link href="/services/vulnerability-assessment-penetration-testing">
                       Vulnerability Assessment and Penetration Testing
                     </Link>
                   </h3>
@@ -97,7 +102,10 @@ const ServicesCard: React.FC = () => {
                     of . . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/vulnerability-assessment-penetration-testing"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -107,7 +115,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/application-security-assessment">
                     <Image
                       src="/images/services/services-D.jpg"
                       alt="Image"
@@ -119,7 +127,7 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">
+                    <Link href="/services/application-security-assessment">
                       Application Security Assessment
                     </Link>
                   </h3>
@@ -128,7 +136,10 @@ const ServicesCard: React.FC = () => {
                     . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/application-security-assessment"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -138,7 +149,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/ransomware-assessment">
                     <Image
                       src="/images/services/services-E.jpg"
                       alt="Image"
@@ -150,13 +161,18 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">Ransomware Assessment</Link>
+                    <Link href="/services/ransomware-assessment">
+                      Ransomware Assessment
+                    </Link>
                   </h3>
                   <p>
                     Ransomware preparedness assessment aims to identify. . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/ransomware-assessment"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -166,7 +182,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/ddos-simulation">
                     <Image
                       src="/images/services/services-F.jpg"
                       alt="Image"
@@ -178,14 +194,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">DDoS Simulation</Link>
+                    <Link href="/services/ddos-simulation">
+                      DDoS Simulation
+                    </Link>
                   </h3>
                   <p>
                     A DDoS Simulation is an effort to make a system or network.
                     . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link href="/services/ddos-simulation" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -195,7 +213,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/compromised-assessment">
                     <Image
                       src="/images/services/services-G.jpg"
                       alt="Image"
@@ -207,14 +225,19 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">Compromise Assessment</Link>
+                    <Link href="/services/compromised-assessment">
+                      Compromise Assessment
+                    </Link>
                   </h3>
                   <p>
                     Compromise assessments are high-level investigations where.
                     . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/compromised-assessment"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -224,7 +247,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/risk-assessment">
                     <Image
                       src="/images/services/services-H.jpg"
                       alt="Image"
@@ -236,11 +259,13 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">Risk Assessment</Link>
+                    <Link href="/services/risk-assessment">
+                      Risk Assessment
+                    </Link>
                   </h3>
                   <p>IT security risk assessments focus on identifying. . .</p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link href="/services/risk-assessment" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -250,7 +275,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/governance-risk-management-and-compliance-sama-citc-nca">
                     <Image
                       src="/images/services/services-I.jpg"
                       alt="Image"
@@ -262,13 +287,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">
+                    <Link href="/services/governance-risk-management-and-compliance-sama-citc-nca">
                       Governance, Risk Management, and Compliance SAMA/CITC/NCA
                     </Link>
                   </h3>
                   <p>Governance, Risk Management, and Compliance. . .</p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/governance-risk-management-and-compliance-sama-citc-nca"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -278,7 +306,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/forensic-analysis">
                     <Image
                       src="/images/services/services-J.jpg"
                       alt="Image"
@@ -290,14 +318,19 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">Forensic Analysis</Link>
+                    <Link href="/services/forensic-analysis">
+                      Forensic Analysis
+                    </Link>
                   </h3>
                   <p>
                     Forensic analysis definition can be described as a detailed.
                     . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/forensic-analysis"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -307,7 +340,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/network-security-operations-noc-soc">
                     <Image
                       src="/images/services/services-K.jpg"
                       alt="Image"
@@ -319,7 +352,7 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">
+                    <Link href="/services/network-security-operations-noc-soc">
                       Network & Security Operations
                     </Link>
                   </h3>
@@ -328,7 +361,10 @@ const ServicesCard: React.FC = () => {
                     . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/network-security-operations-noc-soc"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -338,7 +374,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/vciso">
                     <Image
                       src="/images/services/services-L.jpg"
                       alt="Image"
@@ -350,13 +386,13 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">vCISO</Link>
+                    <Link href="/services/vciso">vCISO</Link>
                   </h3>
                   <p>
                     A vCISO (Virtual Chief Information Security Officer) is. . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link href="/services/vciso" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -366,7 +402,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/managed-security-services">
                     <Image
                       src="/images/services/services-M.jpg"
                       alt="Image"
@@ -378,13 +414,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">
+                    <Link href="/services/managed-security-services">
                       Managed Security Services
                     </Link>
                   </h3>
                   <p>Managed Security Services (MSS) refer to. . .</p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link
+                    href="/services/managed-security-services"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -394,7 +433,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/iso-27001">
                     <Image
                       src="/images/services/services-N.jpg"
                       alt="Image"
@@ -406,13 +445,13 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">ISO 27001</Link>
+                    <Link href="/services/iso-27001">ISO 27001</Link>
                   </h3>
                   <p>
                     ISO27001 is an international standard that is used to. . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link href="/services/iso-27001" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -422,7 +461,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/details">
+                  <Link href="/services/pdpl">
                     <Image
                       src="/images/services/services-I.jpg"
                       alt="Image"
@@ -434,13 +473,13 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/details">PDPL</Link>
+                    <Link href="/services/pdpl">PDPL</Link>
                   </h3>
                   <p>
                     The Personal Data Protection Law (PDPL) is the first. . .
                   </p>
 
-                  <Link href="/services/details" className="read-more">
+                  <Link href="/services/pdpl" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>

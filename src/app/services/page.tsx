@@ -3,7 +3,6 @@ import NavbarFive from "../../components/Layouts/NavbarFive";
 import PageBanner from "../../components/Common/PageBanner";
 import ServicesCard from "../../components/Services/ServicesCard";
 import Footer from "../../components/Layouts/Footer";
-import Image from "next/image";
 
 export default function Page() {
   return (
@@ -11,10 +10,10 @@ export default function Page() {
       <NavbarFive />
 
       <PageBanner
-        pageTitle="Services Style One"
+        pageTitle="Services"
         homePageUrl="/"
         homePageText="Home"
-        activePageText="Services Style One"
+        activePageText="Services"
       />
 
       <ServicesCard />

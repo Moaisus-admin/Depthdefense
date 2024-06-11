@@ -62,20 +62,69 @@ export const menus = [
     link: "#",
     submenu: [
       {
-        label: "Services Style One",
+        label: "Services details",
         link: "/services/",
       },
+
       {
-        label: "Services Style Two",
-        link: "/services/2/",
+        label: "Cybersecurity Assessment",
+        link: "/services/cybersecurity-assessment/",
       },
       {
-        label: "Services Style Three",
-        link: "/services/3/",
+        label: "Vulnerability Assessment & Penetration Testing",
+        link: "/services/vulnerability-assessment-penetration-testing/",
       },
       {
-        label: "Service Details",
-        link: "/services/details/",
+        label: "Malware Analysis",
+        link: "/services/malware-analysis/",
+      },
+      {
+        label: "Application Security Assessment",
+        link: "/services/application-security-assessment/",
+      },
+      {
+        label: "Ransomware Assessment",
+        link: "/services/ransomware-assessment/",
+      },
+      {
+        label: "DDoS Simulation",
+        link: "/services/ddos-simulation/",
+      },
+      {
+        label: "Compromise Assessment",
+        link: "/services/compromised-assessment/",
+      },
+      {
+        label: "Risk Assessment",
+        link: "/services/risk-assessment/",
+      },
+      {
+        label: "Governance, Risk Management, and Compliance SAMA/CITC/NCA",
+        link: "/services/governance-risk-management-and-compliance-sama-citc-nca/",
+      },
+      {
+        label: "Forensic Analysis",
+        link: "/services/forensic-analysis/",
+      },
+      {
+        label: "Network & Security Operations",
+        link: "/services/network-security-operations-noc-soc/",
+      },
+      {
+        label: "vCISO",
+        link: "/services/vciso/",
+      },
+      {
+        label: "Managed Security Services",
+        link: "/services/managed-security-services/",
+      },
+      {
+        label: "ISO 27001",
+        link: "/services/iso-27001/",
+      },
+      {
+        label: "PDPL",
+        link: "/services/pdpl/",
       },
     ],
   },
@@ -85,11 +134,11 @@ export const menus = [
     submenu: [
       {
         label: "SIEM (Security Information and Event Management)",
-        link: "/solutions/",
+        link: "/solutions/siem-security-information-and-event-management",
       },
       {
         label: "End Point Protection EDR,XDR,NDR",
-        link: "/solutions/details/",
+        link: "/solutions/endpoint-protection-edr-xdr-ndr/",
       },
       {
         label: "Next Gen Firewall & WAF",
@@ -101,19 +150,19 @@ export const menus = [
       },
       {
         label: "Privilege Access Management",
-        link: "/solutions/PAM/",
+        link: "/solutions/pam-privileged-access-management/",
       },
       {
         label: "Network Access Control",
-        link: "/solutions/NAC/",
+        link: "/solutions/nac-network-access-control/",
       },
       {
-        label: "Threat Intelligence",
-        link: "/solutions/Threat/",
+        label: "Security Intelligence / Threat Intelligence",
+        link: "/solutions/security-intelligence-threat-intelligence/",
       },
       {
         label: "Advanced Persistent Threat",
-        link: "/solutions/APT/",
+        link: "/solutions/advanced-persistent-threat-apt/",
       },
       {
         label: "Breach & Attack Simulation Solution",

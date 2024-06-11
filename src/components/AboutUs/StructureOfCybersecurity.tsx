@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { FaStar } from "react-icons/fa";
-import gsap from "gsap";
 import {
   Accordion,
   AccordionItem,

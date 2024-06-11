@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { gsap } from "gsap";
 
 const MainBanner: React.FC = () => {
@@ -27,7 +26,7 @@ const MainBanner: React.FC = () => {
       setCurrentHeadingIndex((prevIndex) =>
         prevIndex === headings.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change heading every 3 seconds
+    }, 3000);
 
     gsap.to(bannerRef.current, {
       backgroundPosition: "200% 0",
@@ -36,7 +35,7 @@ const MainBanner: React.FC = () => {
       duration: 15,
     });
 
-    return () => clearTimeout(timer); // Clear timeout on component unmount
+    return () => clearTimeout(timer);
   }, [currentHeadingIndex]);
 
   return (
@@ -49,13 +48,6 @@ const MainBanner: React.FC = () => {
           <div className="d-table-cell w-full">
             <div className="container w-full">
               <div className="banner-content">
-                {/* <Image
-                  src="/images/banner/banner-logo.png"
-                  alt="Image"
-                  width={54}
-                  height={53}
-                /> */}
-
                 <span className="top-title w-full text-3xl">
                   World Class Cyber Security
                 </span>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 const PartnersTwo: React.FC = () => {
@@ -32,7 +32,7 @@ const PartnersTwo: React.FC = () => {
               768: { slidesPerView: 4 },
               1260: { slidesPerView: 4 },
             }}
-            modules={[Autoplay, Navigation]}
+            modules={[Autoplay]}
             className="partner-slide"
             navigation={{}}
             {...swiperOptions} // Apply the swiperOptions

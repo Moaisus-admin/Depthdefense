@@ -5,12 +5,8 @@ import PartnersTwo from "../components/Common/PartnersTwo";
 import Features from "../components/HomeDemoFive/Features";
 import AboutUs from "../components/HomeDemoFive/AboutUs";
 import OurChallenges from "../components/Common/OurChallenges";
-import Services from "../components/HomeDemoFive/Services";
-import PriceTable from "../components/Common/PriceTable";
-import WhyChooseUs from "../components/HomeDemoFive/WhyChooseUs";
 import TeamMember from "../components/Common/TeamMember";
 import GetInTouchFormTwo from "../components/Common/GetInTouchFormTwo";
-import LatestNewsTwo from "../components/Common/LatestNewsTwo";
 import Footer from "../components/Layouts/Footer";
 
 export default function Page() {
@@ -23,23 +19,14 @@ export default function Page() {
       <Features />
 
       <AboutUs />
+
       <PartnersTwo />
 
-      {/* <OurChallenges /> */}
-
-      {/* <Services /> */}
-
-      {/* <PriceTable /> */}
-
-      {/* <WhyChooseUs /> */}
+      <OurChallenges />
 
       <TeamMember />
 
       <GetInTouchFormTwo />
-
-      {/* <div className="pt-100">
-        <LatestNewsTwo />
-      </div> */}
 
       <Footer />
     </>

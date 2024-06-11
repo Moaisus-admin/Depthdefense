@@ -1,16 +1,44 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const EndPointProtection: React.FC = () => {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+
+  useEffect(() => {
+    const elements = [ref1, ref2, ref3, ref4];
+    elements.forEach((ref, index) => {
+      gsap.set(ref.current, {
+        x: index % 2 === 0 ? "-100vw" : "100vw",
+        autoAlpha: 0,
+      });
+
+      gsap.to(ref.current, {
+        x: "0",
+        autoAlpha: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top center",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+  }, []);
   return (
     <>
       <div className="blog-column-two-area ptb-100 dark:bg-zinc-800">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-6" ref={ref1}>
               <div className="single-blog-posts">
                 <Image
                   src="/images/solutions/solution-3.jpg"
@@ -35,7 +63,7 @@ const EndPointProtection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-6" ref={ref2}>
               <div className="single-blog-posts">
                 <Image
                   src="/images/solutions/XDR.jpg"
@@ -61,7 +89,7 @@ const EndPointProtection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-6" ref={ref3}>
               <div className="single-blog-posts">
                 <Image
                   src="/images/solutions/NDR.jpg"
@@ -86,7 +114,7 @@ const EndPointProtection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-6 col-md-6" ref={ref4}>
               <div className="single-blog-posts">
                 <Image
                   src="/images/solutions/MDR.jpg"
