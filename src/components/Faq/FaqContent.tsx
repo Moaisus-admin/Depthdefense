@@ -13,7 +13,7 @@ import Image from "next/image";
 const FaqContent: React.FC = () => {
   return (
     <>
-      <div className="faq-area white-bg ptb-100 dark:bg-slate-900">
+      <div className="faq-area white-bg ptb-100 dark:bg-zinc-800">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">

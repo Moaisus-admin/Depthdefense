@@ -6,8 +6,10 @@ import Image from "next/image";
 import MenuItem from "./MenuItem";
 import { menus } from "../../../libs/menus";
 import TopHeader from "./TopHeader";
+import { useTranslation } from "react-i18next";
 
 const NavbarThree: React.FC = () => {
+  const { t } = useTranslation();
   const [menu, setMenu] = useState(true);
   const toggleNavbar = () => {
     setMenu(!menu);
@@ -75,7 +77,7 @@ const NavbarThree: React.FC = () => {
                 <div className="others-option">
                   <div className="get-quote">
                     <Link href="/contact" className="default-btn">
-                      <span>Get a Quote</span>
+                      <span>{t("Get a Quote")}</span>
                     </Link>
                   </div>
                 </div>

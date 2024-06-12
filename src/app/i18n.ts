@@ -11,7 +11,7 @@ i18n.use(initReactI18next).init({
         cyberSecurityDescription:
           "Cyber security is the protection from the theft to protect of our computer systems and networks or being damaged of our hardware and software.",
         powerfulProtectionEasyRecovery: "Powerful Protection Easy Recovery",
-        Home: "Home",
+
         ///////////// CyberSecurity Assesment Page/////
         "Cybersecurity Assessment": "Cybersecurity Assessment",
         "Cybersecurity Assessment Description 1":
@@ -45,6 +45,62 @@ i18n.use(initReactI18next).init({
         "Third-party": "Third-party Risk Assessment",
         Risk: "Risk Assessment",
         Security: "Security Audit (NCA, CITC, SAMA, CCC)",
+        /////////Navbar//////////
+        Home: "Home",
+        Pages: "Pages",
+        "About Us": "About Us",
+        Team: "Team",
+        Testimonials: "Testimonials",
+        Pricing: "Pricing",
+        "My Account": "My Account",
+        Login: "Login",
+        Register: "Register",
+        "Recover Password": "Recover Password",
+        Faq: "Faq",
+        "Coming Soon": "Coming Soon",
+        "Terms & Conditions": "Terms & Conditions",
+        "Privacy Policy": "Privacy Policy",
+        Services: "Services",
+        "Services details": "Services details",
+        "Cybersecurity Assessment ": "Cybersecurity Assessment",
+        "Vulnerability Assessment & Penetration Testing":
+          "Vulnerability Assessment & Penetration Testing",
+        "Malware Analysis": "Malware Analysis",
+        "Application Security Assessment": "Application Security Assessment",
+        "Ransomware Assessment": "Ransomware Assessment",
+        "DDoS Simulation": "DDoS Simulation",
+        "Compromise Assessment": "Compromise Assessment",
+        "Risk Assessment": "Risk Assessment",
+        "Governance, Risk Management, and Compliance SAMA/CITC/NCA":
+          "Governance, Risk Management, and Compliance SAMA/CITC/NCA",
+        "Forensic Analysis": "Forensic Analysis",
+        "Network & Security Operations": "Network & Security Operations",
+        vCISO: "vCISO",
+        "Managed Security Services": "Managed Security Services",
+        "ISO 27001": "ISO 27001",
+        PDPL: "PDPL",
+        Solutions: "Solutions",
+        "SIEM (Security Information and Event Management)":
+          "SIEM (Security Information and Event Management)",
+        "End Point Protection EDR,XDR,NDR": "End Point Protection EDR,XDR,NDR",
+        "Next Gen Firewall & WAF": "Next Gen Firewall & WAF",
+        "IAM(Identity and Access Management)":
+          "IAM (Identity and Access Management)",
+        "Privilege Access Management": "Privilege Access Management",
+        "Network Access Control": "Network Access Control",
+        "Security Intelligence / Threat Intelligence":
+          "Security Intelligence / Threat Intelligence",
+        "Advanced Persistent Threat": "Advanced Persistent Threat",
+        "Breach & Attack Simulation Solution":
+          "Breach & Attack Simulation Solution",
+        "Network Monitoring & Protection": "Network Monitoring & Protection",
+        "Patch Management & Vulnerability Management":
+          "Patch Management & Vulnerability Management",
+        "Digital Rights Management": "Digital Rights Management",
+        Contact: "Contact",
+        "Get a Quote": "Get a Quote",
+        ////PartnersTwo/////
+        "Our Valued Vendors": "Our Valued Vendors",
         // Add more English translations here
       },
     },
@@ -56,7 +112,7 @@ i18n.use(initReactI18next).init({
         cyberSecurityDescription:
           "الأمن السيبراني هو الحماية من السرقة لحماية أنظمة الكمبيوتر والشبكات لدينا أو التلف الذي قد يلحق بأجهزتنا وبرامجنا.",
         powerfulProtectionEasyRecovery: "حماية قوية سهلة الاستعادة",
-        Home: "الصفحة الرئيسية",
+
         ////////Cybersecurity Assesment Page////
         "Cybersecurity Assessment": "تقييم الأمن السيبراني",
         "Cybersecurity Assessment Description 1":
@@ -100,6 +156,60 @@ i18n.use(initReactI18next).init({
         Risk: "تقييم المخاطر",
         Security:
           "التدقيق الأمني ​​(NCA، CITC، مؤسسة النقد العربي السعودي، CCC)",
+        //////Navbar/////
+        Home: "بيت",
+        Pages: "الصفحات",
+        "About Us": "معلومات عنا",
+        Team: "فريق",
+        Testimonials: "الشهادات",
+        Pricing: "التسعير",
+        "My Account": "حسابي",
+        Login: "تسجيل الدخول",
+        Register: "تسجيل",
+        "Recover Password": "استعادة كلمة المرور",
+        Faq: "الأسئلة المتكررة",
+        "Coming Soon": "قريبا",
+        "Terms & Conditions": "الشروط والأحكام",
+        "Privacy Policy": "سياسة الخصوصية",
+        Services: "الخدمات",
+        "Services details": "تفاصيل الخدمات",
+        "Cybersecurity Assessment ": "تقييم الأمن السيبراني",
+        "Vulnerability Assessment & Penetration Testing":
+          "تقييم الضعف واختبار الاختراق",
+        "Malware Analysis": "تحليل البرمجيات الخبيثة",
+        "Application Security Assessment": "تقييم أمن التطبيق",
+        "Ransomware Assessment": "تقييم رانسوموير",
+        "DDoS Simulation": "محاكاة هجوم الحرمان من الخدمة",
+        "Compromise Assessment": "تقييم التسوية",
+        "Risk Assessment": "تقييم المخاطر",
+        "Governance, Risk Management, and Compliance SAMA/CITC/NCA":
+          "الحوكمة وإدارة المخاطر والامتثال SAMA/CITC/NCA",
+        "Forensic Analysis": "التحليل الجنائي",
+        "Network & Security Operations": "عمليات الشبكة والأمن",
+        vCISO: "CISO الافتراضي",
+        "Managed Security Services": "خدمات الأمن المدارة",
+        "ISO 27001": "ISO 27001",
+        PDPL: "PDPL",
+        Solutions: "الحلول",
+        "SIEM (Security Information and Event Management)":
+          "SIEM (إدارة معلومات وأحداث الأمان)",
+        "End Point Protection EDR,XDR,NDR": "حماية نقطة النهاية EDR,XDR,NDR",
+        "Next Gen Firewall & WAF": "جدار الحماية الجيل التالي و WAF",
+        "IAM(Identity and Access Management)": "IAM (إدارة الهوية والوصول)",
+        "Privilege Access Management": "إدارة الوصول المميز",
+        "Network Access Control": "التحكم في الوصول إلى الشبكة",
+        "Security Intelligence / Threat Intelligence":
+          "معلومات الأمان / استخبارات التهديدات",
+        "Advanced Persistent Threat": "التهديد المستمر المتقدم",
+        "Breach & Attack Simulation Solution": "حل محاكاة الاختراق والهجوم",
+        "Network Monitoring & Protection": "مراقبة الشبكة وحمايتها",
+        "Patch Management & Vulnerability Management":
+          "إدارة التصحيحات وإدارة الثغرات الأمنية",
+        "Digital Rights Management": "إدارة الحقوق الرقمية",
+        Contact: "اتصل بنا",
+        "Get a Quote": "إقتبس",
+        /////PartnersTwo/////
+        "Our Valued Vendors": "بائعينا الكرام",
         // Add more Arabic translations here
       },
     },

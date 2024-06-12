@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 interface MenuItemProps {
   label: string;
@@ -11,6 +12,7 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu }) => {
+  const { t } = useTranslation();
   const pathname = usePathname();
   const isActive = pathname == link;
 
@@ -19,25 +21,27 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu }) => {
       <li className="nav-item" key={label}>
         <Link
           href={link}
-          className="nav-link"
+          className="nav-link text-white dark:text-white"
           onClick={(e) => e.preventDefault()}
         >
-          {label} <i className="bx bx-chevron-down"></i>
+          {t(label)} <i className="bx bx-chevron-down"></i>
         </Link>
 
-        <ul className="dropdown-menu text-black dark:bg-slate-800 dark:text-white">
+        <ul className="dropdown-menu dark:bg-zinc-800 dark:text-white">
           {submenu.map((subItem) => {
             const isActive = pathname == subItem.link;
             return (
               <li
-                className="nav-item text-black dark:bg-slate-800 dark:text-white"
+                className="nav-item dark:bg-zinc-800 dark:text-white"
                 key={subItem.label}
               >
                 <Link
                   href={subItem.link}
-                  className={`nav-link ${isActive ? "active" : ""}`}
+                  className={` dark:text-white nav-link ${
+                    isActive ? "active" : ""
+                  }`}
                 >
-                  {subItem.label}
+                  {t(subItem.label)}
                 </Link>
               </li>
             );
@@ -48,9 +52,12 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, link, submenu }) => {
   }
 
   return (
-    <li className="nav-item" key={label}>
-      <Link href={link} className={`nav-link ${isActive ? "active" : ""}`}>
-        {label}
+    <li className="nav-item text-white" key={label}>
+      <Link
+        href={link}
+        className={`text-white nav-link ${isActive ? "active" : ""}`}
+      >
+        {t(label)}
       </Link>
     </li>
   );

@@ -5,10 +5,10 @@ import React from "react";
 const TestimonialsContent: React.FC = () => {
   return (
     <>
-      <div className="testimonials-area testimonials-page-area pt-100 pb-70 dark:bg-slate-900">
+      <div className="testimonials-area testimonials-page-area pt-100 pb-70 dark:bg-zinc-800">
         <div className="container">
           <div className="section-title">
-            <span>Testimonials</span>
+            <span className="text-red-600 text-2xl">Testimonials</span>
             <h2 className="dark:text-white">What Our Customers Say</h2>
           </div>
 

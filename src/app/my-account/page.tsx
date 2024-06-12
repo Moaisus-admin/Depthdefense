@@ -16,20 +16,22 @@ export default function Page() {
         activePageText="My Account"
       />
 
-      <div className="user-area-style ptb-100 dark:bg-slate-800">
+      <div className="user-area-style ptb-100 dark:bg-zinc-800">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <div className="contact-form-action mb-50">
+              <div className="contact-form-action mb-50 dark:bg-zinc-700">
                 <div className="account-title">
-                  <h2>Log in</h2>
+                  <h2 className="dark:text-white">Log in</h2>
                 </div>
 
                 <form method="post">
                   <div className="row">
                     <div className="col-12">
                       <div className="form-group">
-                        <label>Email or Phone</label>
+                        <label className="dark:text-white">
+                          Email or Phone
+                        </label>
                         <input
                           className="form-control"
                           type="text"
@@ -40,7 +42,7 @@ export default function Page() {
 
                     <div className="col-12">
                       <div className="form-group">
-                        <label>Password</label>
+                        <label className="dark:text-white">Password</label>
                         <input
                           className="form-control"
                           type="password"
@@ -53,11 +55,16 @@ export default function Page() {
                       <div className="login-action">
                         <span className="log-rem">
                           <input id="remember" type="checkbox" />
-                          <label htmlFor="remember">Remember me!</label>
+                          <label className="dark:text-white" htmlFor="remember">
+                            Remember me!
+                          </label>
                         </span>
 
                         <span className="forgot-login">
-                          <Link href="/recover-password">
+                          <Link
+                            className="dark:text-white"
+                            href="/recover-password"
+                          >
                             Forgot Your Password?
                           </Link>
                         </span>
@@ -75,16 +82,16 @@ export default function Page() {
             </div>
 
             <div className="col-lg-6">
-              <div className="contact-form-action">
+              <div className="contact-form-action dark:bg-zinc-700">
                 <div className="account-title">
-                  <h2>Register</h2>
+                  <h2 className="dark:text-white">Register</h2>
                 </div>
 
                 <form method="post">
                   <div className="row">
                     <div className="col-12">
                       <div className="form-group">
-                        <label>Full Name</label>
+                        <label className="dark:text-white">Full Name</label>
                         <input
                           className="form-control"
                           type="text"
@@ -95,7 +102,7 @@ export default function Page() {
 
                     <div className="col-12">
                       <div className="form-group">
-                        <label>Email Address</label>
+                        <label className="dark:text-white">Email Address</label>
                         <input
                           className="form-control"
                           type="email"
@@ -106,7 +113,7 @@ export default function Page() {
 
                     <div className="col-12">
                       <div className="form-group">
-                        <label>Password</label>
+                        <label className="dark:text-white">Password</label>
                         <input
                           className="form-control"
                           type="text"
@@ -122,7 +129,9 @@ export default function Page() {
                             className="default-btn register"
                             type="submit"
                           >
-                            <span>Register now</span>
+                            <span className="dark:text-white">
+                              Register now
+                            </span>
                           </button>
                         </div>
                       </div>

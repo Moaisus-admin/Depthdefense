@@ -14,34 +14,36 @@ const AssesmentTesting: React.FC = () => {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      imageRef.current,
-      { scaleX: 0 }, // Start with no width
-      {
-        duration: 3, // Make the animation slower for the image
-        scaleX: 1, // End with full width
-        ease: "power1.out",
-      }
-    );
-
-    [cardRef1, cardRef2, cardRef3].forEach((cardRef) => {
+    setTimeout(() => {
       gsap.fromTo(
-        cardRef.current,
+        imageRef.current,
         { scaleX: 0 }, // Start with no width
         {
-          duration: 1,
+          duration: 3, // Make the animation slower for the image
           scaleX: 1, // End with full width
           ease: "power1.out",
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: "top center", // when the top of the trigger hits the center of the viewport
-            end: "bottom center", // end after scrolling 500px beyond the start
-            scrub: true,
-            toggleActions: "play none none reverse", // reverse the animation when scrolling past it
-          },
         }
       );
-    });
+
+      [cardRef1, cardRef2, cardRef3].forEach((cardRef) => {
+        gsap.fromTo(
+          cardRef.current,
+          { scaleX: 0 }, // Start with no width
+          {
+            duration: 1,
+            scaleX: 1, // End with full width
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top center", // when the top of the trigger hits the center of the viewport
+              end: "bottom center", // end after scrolling 500px beyond the start
+              scrub: true,
+              toggleActions: "play none none reverse", // reverse the animation when scrolling past it
+            },
+          }
+        );
+      });
+    }, 500); // Delay of 500 milliseconds
   }, []);
   return (
     <>

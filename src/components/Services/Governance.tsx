@@ -1,10 +1,101 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Governance: React.FC = () => {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const p1Ref1 = useRef(null);
+  const p1Ref2 = useRef(null);
+  const p1Ref3 = useRef(null);
+  const pRef1 = useRef(null);
+  const pRef2 = useRef(null);
+  const pRef3 = useRef(null);
+  const pRef4 = useRef(null);
+  const pRef5 = useRef(null);
+  const pRef6 = useRef(null);
+  const pRef7 = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(".fadeIn", { opacity: 0 }, { opacity: 1, duration: 4 });
+    const elements = [ref1, ref2, ref3, ref4];
+    elements.forEach((ref, index) => {
+      gsap.set(ref.current, {
+        x: index % 2 === 0 ? "-100vw" : "100vw",
+        autoAlpha: 0,
+      });
+
+      gsap.to(ref.current, {
+        x: "0",
+        autoAlpha: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+
+    const refs = [p1Ref1, p1Ref2, p1Ref3];
+
+    refs.forEach((ref) => {
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, scaleX: 0 }, // Start with no width
+        {
+          duration: 1, // Make the animation slower for the image
+          opacity: 1, // End with full visibility
+          scaleX: 1, // End with full width
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center", // when the top of the trigger hits the center of the viewport
+            end: "bottom center", // end after scrolling 500px beyond the start
+            toggleActions: "play none none none", // don't reverse the animation
+          },
+        }
+      );
+    });
+
+    const prefs = [pRef1, pRef2, pRef3, pRef4, pRef5, pRef6, pRef7];
+
+    prefs.forEach((pref) => {
+      gsap.fromTo(
+        pref.current,
+        { opacity: 0, scale: 0.5 }, // Start with no visibility and a small scale
+        {
+          duration: 1, // Make the animation slower for the image
+          opacity: 1, // End with full visibility
+          scale: 1, // End with full scale
+          ease: "bounce.out",
+          scrollTrigger: {
+            trigger: pref.current,
+            start: "top center", // when the top of the trigger hits the center of the viewport
+            end: "bottom center", // end after scrolling 500px beyond the start
+            toggleActions: "play none none none", // don't reverse the animation
+          },
+        }
+      );
+    });
+
+    gsap.to(imageRef.current, {
+      y: 20, // Move the image 20px up
+      duration: 1, // The animation should last 1 second
+      repeat: -1, // Repeat the animation indefinitely
+      yoyo: true, // Reverse the animation on alternate iterations
+      ease: "power1.inOut", // Use a smooth easing function
+    });
+  }, []);
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -31,7 +122,7 @@ const Governance: React.FC = () => {
 
             <div className="col-lg-6">
               <div className="approach-content">
-                <p className="mt-4 dark:text-white">
+                <p className="mt-4 dark:text-white fadeIn">
                   Governance, Risk, and Compliance (GRC) is a structured way to
                   align IT with business goals while managing risks and meeting
                   all industry and government regulations. It includes tools and
@@ -41,10 +132,10 @@ const Governance: React.FC = () => {
                   remove uncertainty, and meet compliance requirements.
                 </p>
 
-                <div className="section-title mt-5">
+                <div className="section-title mt-5 fadeIn">
                   <h2 className="dark:text-white">What does GRC stand for?</h2>
 
-                  <p className=" mb-4 dark:text-white">
+                  <p className=" mb-4 dark:text-white fadeIn">
                     GRC stands for governance, risk (management), and
                     compliance. Most businesses are familiar with these terms
                     but have practiced them separately in the past. GRC combines
@@ -79,7 +170,10 @@ const Governance: React.FC = () => {
 
                     <div className="row mt-4">
                       <div className="col-lg-6 col-sm-6">
-                        <div className=" dark:bg-zinc-700 shadow-2xl rounded-full px-3">
+                        <div
+                          className=" dark:bg-zinc-700 shadow-2xl rounded-full px-3"
+                          ref={ref1}
+                        >
                           <h3 className="dark:text-white text-center">
                             Ethics and accountability
                           </h3>
@@ -87,7 +181,10 @@ const Governance: React.FC = () => {
                       </div>
 
                       <div className="col-lg-6 col-sm-6">
-                        <div className=" dark:bg-zinc-700 shadow-xl rounded-full px-3">
+                        <div
+                          className=" dark:bg-zinc-700 shadow-xl rounded-full px-3"
+                          ref={ref2}
+                        >
                           <h3 className="dark:text-white text-center">
                             Transparent information sharing
                           </h3>
@@ -95,7 +192,10 @@ const Governance: React.FC = () => {
                       </div>
 
                       <div className="col-lg-6 col-sm-6">
-                        <div className=" dark:bg-zinc-700 shadow-xl rounded-full px-3">
+                        <div
+                          className=" dark:bg-zinc-700 shadow-xl rounded-full px-3"
+                          ref={ref3}
+                        >
                           <h3 className="dark:text-white text-center">
                             Conflict resolution policies
                           </h3>
@@ -103,7 +203,10 @@ const Governance: React.FC = () => {
                       </div>
 
                       <div className="col-lg-6 col-sm-6">
-                        <div className=" dark:bg-zinc-700 shadow-xl rounded-full px-3">
+                        <div
+                          className=" dark:bg-zinc-700 shadow-xl rounded-full px-3"
+                          ref={ref4}
+                        >
                           <h3 className="dark:text-white text-center">
                             Resource management
                           </h3>
@@ -120,7 +223,10 @@ const Governance: React.FC = () => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-12 col-md-6">
-                  <div className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4">
+                  <div
+                    className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4"
+                    ref={p1Ref1}
+                  >
                     <span className="text-2xl text-red-600">
                       Risk management:
                     </span>
@@ -138,7 +244,10 @@ const Governance: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-lg-12 col-md-6 mt-5">
-                  <div className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4">
+                  <div
+                    className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4"
+                    ref={p1Ref2}
+                  >
                     <span className="text-2xl text-red-600">Compliance:</span>
 
                     <p className="mt-2">
@@ -154,7 +263,10 @@ const Governance: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-lg-12 col-md-6 mt-5">
-                  <div className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4">
+                  <div
+                    className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4"
+                    ref={p1Ref3}
+                  >
                     <span className="text-2xl text-red-600">
                       Why is GRC important?
                     </span>
@@ -169,32 +281,32 @@ const Governance: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <p className="dark:text-white text-xl mt-4">
+                <p className="dark:text-white text-xl mt-4" ref={pRef1}>
                   The following are some benefits of implementing a GRC strategy
                   at your organization.
                 </p>
-                <p className="text-red-600 text-2xl mt-4">
+                <p className="text-red-600 text-2xl mt-4" ref={pRef2}>
                   {" "}
                   Data-driven decision-making
                 </p>{" "}
-                <p className="dark:text-white text-xl mt-2">
+                <p className="dark:text-white text-xl mt-2" ref={pRef3}>
                   You can make data-driven decisions within a shorter time frame
                   by monitoring your resources, setting up rules or frameworks,
                   and using GRC software and tools.
                 </p>{" "}
-                <p className="text-red-600 text-2xl mt-4">
+                <p className="text-red-600 text-2xl mt-4" ref={pRef4}>
                   Responsible operations
                 </p>{" "}
-                <p className="dark:text-white text-xl mt-2">
+                <p className="dark:text-white text-xl mt-2" ref={pRef5}>
                   GRC streamlines operations around a common culture that
                   promotes ethical values and creates a healthy environment for
                   growth. It guides strong organizational culture development
                   and ethical decision-making in the organization.
                 </p>{" "}
-                <p className="text-red-600 text-2xl mt-4">
+                <p className="text-red-600 text-2xl mt-4" ref={pRef6}>
                   Improved cybersecurity
                 </p>{" "}
-                <p className="dark:text-white text-xl mt-2">
+                <p className="dark:text-white text-xl mt-2" ref={pRef7}>
                   With an integrated GRC approach, businesses can employ data
                   security measures to protect customer data and private
                   information. Implementing a GRC strategy is essential for your
@@ -210,7 +322,7 @@ const Governance: React.FC = () => {
 
           <div className="blog-column-two-area ptb-100 dark:bg-zinc-800">
             <div className="container">
-              <div className="row col-lg-10 m-auto">
+              <div className="row col-lg-10 m-auto" ref={imageRef}>
                 <Image
                   src="/images/services/services-Azz.jpg"
                   alt="Image"

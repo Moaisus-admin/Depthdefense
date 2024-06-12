@@ -7,10 +7,10 @@ import Image from "next/image";
 const PriceTable: React.FC = () => {
   return (
     <>
-      <div className="pricing-area bg-color pt-100 pb-70 dark:bg-slate-900">
+      <div className="pricing-area bg-color pt-100 pb-70 dark:bg-zinc-800">
         <div className="container">
           <div className="section-title">
-            <span>Security Packages</span>
+            <span className="text-red-600 text-2xl">Security Packages</span>
             <h2 className="dark:text-white">
               We Have Different Types Of Pricing Plans
             </h2>

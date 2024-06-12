@@ -6,8 +6,10 @@ import Image from "next/image";
 import MenuItem from "./MenuItem";
 import { menus } from "../../../libs/menus";
 import TopHeaderTwo from "./TopHeaderTwo";
+import { useTranslation } from "react-i18next";
 
 const NavbarFour: React.FC = () => {
+  const { t } = useTranslation();
   const [menu, setMenu] = useState(true);
   const toggleNavbar = () => {
     setMenu(!menu);
@@ -65,7 +67,7 @@ const NavbarFour: React.FC = () => {
                 </button>
 
                 <div className={classOne} id="navbarSupportedContent">
-                  <ul className="navbar-nav m-auto">
+                  <ul className="navbar-nav m-auto text-white dark:text-white">
                     {menus.map((menuItem) => (
                       <MenuItem key={menuItem.label} {...menuItem} />
                     ))}
@@ -75,7 +77,7 @@ const NavbarFour: React.FC = () => {
                 <div className="others-option">
                   <div className="get-quote">
                     <Link href="/contact" className="default-btn">
-                      <span>Get a Quote</span>
+                      <span>{t("Get a Quote")}</span>
                     </Link>
                   </div>
                 </div>

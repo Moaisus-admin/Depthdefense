@@ -589,7 +589,7 @@ Navbar Area Style
 .navbar-area .main-nav nav .navbar-nav .nav-item a {
   font-size: 17px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
   text-transform: capitalize;
   transition: all ease 0.5s;
   margin-left: 0;
@@ -635,7 +635,7 @@ Navbar Area Style
 }
 .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
   font-size: 15px;
-  color: #000219;
+  /* color: #000219; */
   position: relative;
   padding: 10px 15px;
   /* border-bottom: 1px dashed #eeeeee; */

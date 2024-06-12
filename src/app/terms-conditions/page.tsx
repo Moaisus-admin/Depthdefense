@@ -15,7 +15,7 @@ export default function Page() {
         activePageText="Terms & Conditions"
       />
 
-      <div className="terms-conditions-area ptb-100 dark:bg-slate-900 dark:text-white">
+      <div className="terms-conditions-area ptb-100 dark:bg-zinc-800 dark:text-white">
         <div className="container">
           <div className="terms-conditions">
             <div className="title ">

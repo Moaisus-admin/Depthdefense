@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import MenuItem from "./MenuItem";
 import { menus } from "../../../libs/menus";
+import { useTranslation } from "react-i18next";
 
 const Navbar: React.FC = () => {
+  const { t } = useTranslation();
   const [menu, setMenu] = useState(true);
   const toggleNavbar = () => {
     setMenu(!menu);
@@ -72,7 +74,7 @@ const Navbar: React.FC = () => {
                 <div className="others-option">
                   <div className="get-quote">
                     <Link href="/contact" className="default-btn">
-                      <span>Get a Quote</span>
+                      <span>{t("Get a Quote")}</span>
                     </Link>
                   </div>
                 </div>

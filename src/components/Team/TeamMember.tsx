@@ -6,10 +6,10 @@ import Image from "next/image";
 const TeamMember: React.FC = () => {
   return (
     <>
-      <div className="team-area pt-100 pb-70 dark:bg-slate-900">
+      <div className="team-area pt-100 pb-70 dark:bg-zinc-800">
         <div className="container">
           <div className="section-title">
-            <span>Professionals</span>
+            <span className="text-red-600 text-2xl">Professionals</span>
             <h2 className="dark:text-white">Meet Our Skilled Team</h2>
           </div>
 

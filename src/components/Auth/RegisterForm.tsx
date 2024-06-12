@@ -6,39 +6,39 @@ import Link from "next/link";
 const RegisterForm: React.FC = () => {
   return (
     <>
-      <div className="user-area-style ptb-100 dark:bg-slate-800">
+      <div className="user-area-style ptb-100 dark:bg-zinc-800">
         <div className="container">
-          <div className="contact-form-action dark:bg-slate-900">
+          <div className="contact-form-action dark:bg-zinc-700">
             <div className="account-title">
-              <h2>Register</h2>
+              <h2 className="dark:text-white">Register</h2>
             </div>
 
             <form method="post">
               <div className="row">
                 <div className="col-12">
                   <div className="form-group">
-                    <label>Full Name</label>
+                    <label className="dark:text-white">Full Name</label>
                     <input className="form-control" type="text" name="name" />
                   </div>
                 </div>
 
                 <div className="col-12">
                   <div className="form-group">
-                    <label>Email Address</label>
+                    <label className="dark:text-white">Email Address</label>
                     <input className="form-control" type="email" name="email" />
                   </div>
                 </div>
 
                 <div className="col-12">
                   <div className="form-group">
-                    <label>Mobile NO.</label>
+                    <label className="dark:text-white">Mobile NO.</label>
                     <input className="form-control" type="text" name="Number" />
                   </div>
                 </div>
 
                 <div className="col-12">
                   <div className="form-group">
-                    <label>Password</label>
+                    <label className="dark:text-white">Password</label>
                     <input
                       className="form-control"
                       type="text"
@@ -51,14 +51,14 @@ const RegisterForm: React.FC = () => {
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-sm-6">
                       <button className="default-btn register" type="submit">
-                        <span>Register now</span>
+                        <span className="dark:text-white">Register now</span>
                       </button>
                     </div>
                   </div>
                 </div>
 
                 <div className="col-12">
-                  <p>
+                  <p className="dark:text-white">
                     Have an Account? <Link href="/login">Login Now!</Link>
                   </p>
                 </div>

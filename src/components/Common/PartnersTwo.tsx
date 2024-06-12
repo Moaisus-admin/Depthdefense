@@ -4,8 +4,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const PartnersTwo: React.FC = () => {
+  const { t } = useTranslation();
   const swiperOptions = {
     loop: true,
     freeMode: false,
@@ -21,7 +23,7 @@ const PartnersTwo: React.FC = () => {
   return (
     <>
       <div className="partner-area bg-color pt-[60px] pb-5 dark:bg-zinc-800 text-black relative">
-        <h1 className="text-4xl dark:text-white">Our Valued Vendors</h1>
+        <h1 className="text-4xl dark:text-white">{t("Our Valued Vendors")}</h1>
         <div className="container mt-8">
           <Swiper
             spaceBetween={20}

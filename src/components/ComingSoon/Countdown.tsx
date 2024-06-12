@@ -47,20 +47,20 @@ const Countdown: React.FC<CountdownProps> = ({ endDate }) => {
 
   return (
     <>
-      <div className="coming-soon-area dark:bg-slate-900">
+      <div className="coming-soon-area dark:bg-zinc-800">
         <div className="d-table">
           <div className="d-table-cell">
-            <div className="coming-soon-content">
+            <div className="coming-soon-content dark:bg-zinc-700">
               <Link href="/" className="logo">
                 <Image
-                  src="/images/black-logo.png"
+                  src="/images/Depth-logo-1.jpg"
                   alt="image"
                   width={150}
                   height={42}
                 />
               </Link>
 
-              <h2>We are launching soon</h2>
+              <h2 className="dark:text-white">We are launching soon</h2>
 
               <div
                 id="timer"
@@ -96,7 +96,7 @@ const Countdown: React.FC<CountdownProps> = ({ endDate }) => {
                 <div className="form-group">
                   <input
                     type="email"
-                    className="input-newsletter"
+                    className="input-newsletter dark:text-white"
                     placeholder="Enter your email"
                     name="EMAIL"
                     required
@@ -110,7 +110,7 @@ const Countdown: React.FC<CountdownProps> = ({ endDate }) => {
                   <span>Subscribe</span>
                 </button>
 
-                <p>
+                <p className="dark:text-white">
                   If you would like to be notified when your app is live, Please
                   subscribe to our mailing list.
                 </p>

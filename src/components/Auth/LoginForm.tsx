@@ -6,25 +6,25 @@ import Link from "next/link";
 const LoginForm: React.FC = () => {
   return (
     <>
-      <div className="user-area-style ptb-100 dark:bg-slate-800">
+      <div className="user-area-style ptb-100 dark:bg-zinc-800">
         <div className="container ">
-          <div className="contact-form-action dark:bg-slate-900">
+          <div className="contact-form-action dark:bg-zinc-700">
             <div className="account-title">
-              <h2>Log in</h2>
+              <h2 className="dark:text-white">Log in</h2>
             </div>
 
             <form method="post">
               <div className="row">
                 <div className="col-12">
                   <div className="form-group">
-                    <label>Email or Phone</label>
+                    <label className="dark:text-white">Email or Phone</label>
                     <input className="form-control" type="text" name="name" />
                   </div>
                 </div>
 
                 <div className="col-12">
                   <div className="form-group">
-                    <label>Password</label>
+                    <label className="dark:text-white">Password</label>
                     <input
                       className="form-control"
                       type="password"
@@ -37,11 +37,16 @@ const LoginForm: React.FC = () => {
                   <div className="login-action">
                     <span className="log-rem">
                       <input id="remember" type="checkbox" />
-                      <label htmlFor="remember">Remember Me!</label>
+                      <label className="dark:text-white" htmlFor="remember">
+                        Remember Me!
+                      </label>
                     </span>
 
                     <span className="forgot-login">
-                      <Link href="/recover-password">
+                      <Link
+                        className="dark:text-white"
+                        href="/recover-password"
+                      >
                         Forgot Your Password?
                       </Link>
                     </span>
@@ -55,8 +60,11 @@ const LoginForm: React.FC = () => {
                 </div>
 
                 <div className="col-12">
-                  <p>
-                    Have an account? <Link href="/register">Register Now!</Link>
+                  <p className="dark:text-white">
+                    Have an account?{" "}
+                    <Link className="dark:text-white" href="/register">
+                      Register Now!
+                    </Link>
                   </p>
                 </div>
               </div>
