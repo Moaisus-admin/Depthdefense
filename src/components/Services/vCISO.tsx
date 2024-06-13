@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import { Typewriter } from "react-simple-typewriter";
 
 const VCISO: React.FC = () => {
   const { ref, inView } = useInView({
@@ -12,16 +13,20 @@ const VCISO: React.FC = () => {
   return (
     <div className="about-us-area pb-70  text-black  dark:bg-zinc-900">
       <div className="container mx-auto px-4 overflow-hidden">
+        <div className="dark:text-white mt-11">
+          <Typewriter
+            words={[
+              "A vCISO (Virtual Chief Information Security Officer) is a contracted service that provides an organization with the expertise and guidance of a highly skilled and experienced CISO, but on a part-time or as-needed basis rather than a full-time employee. This allows smaller organizations without the ability to afford a full-time CISO to have access to a high-level cybersecurity professional.",
+            ]}
+            loop={1}
+            cursor
+            cursorStyle=""
+            typeSpeed={10}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </div>
         <div className="flex flex-wrap items-center">
-          <span className="dark:text-white mt-11">
-            A vCISO (Virtual Chief Information Security Officer) is a contracted
-            service that provides an organization with the expertise and
-            guidance of a highly skilled and experienced CISO, but on a
-            part-time or as-needed basis rather than a full-time employee. This
-            allows smaller organizations without the ability to afford a
-            full-time CISO to have access to a high-level cybersecurity
-            professional.
-          </span>
           <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
             <div className="about-img mr-auto w-fit">
               <Image

@@ -55,8 +55,7 @@ const DepthCybersecurity: React.FC = () => {
                     <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two pt-4">
                         <p className="pb-2 text-lg dark:text-white">
-                          Why You Need Defense in Depth Cybersecurity To
-                          Minimize the Impact of Data Breaches are almost
+                          To Minimize the Impact of Data Breaches are almost
                           inevitable. Sooner or later, there will be an attacker
                           determined, resourceful, or lucky enough to slip past
                           the perimeter defenses somehow to start ripping data

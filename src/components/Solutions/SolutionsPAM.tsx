@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsPAM: React.FC = () => {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
   const ref = useRef(null);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -25,34 +27,24 @@ const SolutionsPAM: React.FC = () => {
       }
     );
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: imgRef.current,
-        start: "top center",
-        toggleActions: "play none none none",
-      },
-    });
+    const elements = [ref1, ref2];
+    elements.forEach((ref, index) => {
+      gsap.set(ref.current, {
+        x: index % 2 === 0 ? "-100vw" : "100vw",
+        autoAlpha: 0,
+      });
 
-    tl.fromTo(
-      imgRef.current,
-      { scale: 0.8, autoAlpha: 0 },
-      {
-        scale: 1,
+      gsap.to(ref.current, {
+        x: "0",
         autoAlpha: 1,
-        duration: 2,
-        ease: "bounce",
-      }
-    ).to(
-      imgRef.current,
-      {
-        y: 20,
-        repeat: -1,
-        yoyo: true,
-        duration: 0.8,
-        ease: "power1.inOut",
-      },
-      "+=2"
-    );
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top bottom",
+          toggleActions: "play none none none",
+        },
+      });
+    });
   }, []);
   return (
     <>
@@ -65,6 +57,7 @@ const SolutionsPAM: React.FC = () => {
                 alt="Image"
                 width={610}
                 height={200}
+                ref={ref1}
               />
 
               <Image
@@ -72,6 +65,7 @@ const SolutionsPAM: React.FC = () => {
                 alt="Image"
                 width={610}
                 height={200}
+                ref={ref2}
               />
             </div>
             <div className="col-lg-12 col-md-12 mt-11">

@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import { Typewriter } from "react-simple-typewriter";
 
 const SecurityServices: React.FC = () => {
   const { ref, inView } = useInView({
@@ -12,13 +13,20 @@ const SecurityServices: React.FC = () => {
   return (
     <div className="about-us-area pb-70  text-black  dark:bg-zinc-900">
       <div className="container mx-auto px-4 overflow-hidden">
+        <div className="dark:text-white mt-11">
+          <Typewriter
+            words={[
+              "Managed Security Services (MSS) refer to outsourcing security tasks and duties to third-party service providers. These services aim to enhance an organization’s security posture by providing advanced security measures, threat detection, and response capabilities.",
+            ]}
+            loop={1}
+            cursor
+            cursorStyle=""
+            typeSpeed={10}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </div>
         <div className="flex flex-wrap items-center">
-          <span className="dark:text-white mt-11">
-            Managed Security Services (MSS) refer to outsourcing security tasks
-            and duties to third-party service providers. These services aim to
-            enhance an organization’s security posture by providing advanced
-            security measures, threat detection, and response capabilities.
-          </span>
           <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
             <div className="about-img mr-auto w-fit">
               <Image

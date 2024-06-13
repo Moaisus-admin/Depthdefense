@@ -15,7 +15,7 @@ export default function Page() {
         activePageText="Privacy Policy"
       />
 
-      <div className="privacy-policy-area ptb-100 dark:bg-slate-900 dark:text-white">
+      <div className="privacy-policy-area ptb-100 dark:bg-zinc-800 dark:text-white">
         <div className="container">
           <div className="privacy-policy">
             <div className="title">

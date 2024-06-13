@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Typewriter } from "react-simple-typewriter";
 
 const ServicesCard: React.FC = () => {
   return (
@@ -14,7 +15,17 @@ const ServicesCard: React.FC = () => {
               Cybersecurity Services
             </span>
             <h2 className="dark:text-white">
-              You Can Protect Your Organization’s Cybersecurity by Services Us
+              <Typewriter
+                words={[
+                  "You Can Protect Your Organization’s Cybersecurity by Services Us",
+                ]}
+                loop={1}
+                cursor
+                cursorStyle=""
+                typeSpeed={20}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
             </h2>
           </div>
 

@@ -20,19 +20,11 @@ export default function Page() {
 
       <div className="pt-100 pb-70 dark:bg-zinc-800">
         <OurSolution />
-        {/* <AboutUsContent /> */}
       </div>
 
       <StructureCybersecurity />
 
       <DepthCybersecurity />
-      {/* <OurChallenges /> */}
-
-      {/* <Protects /> */}
-
-      {/* <Testimonials /> */}
-
-      {/* <Partners /> */}
 
       <Footer />
     </>

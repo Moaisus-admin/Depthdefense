@@ -3,15 +3,27 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { Typewriter } from "react-simple-typewriter";
 
 const ServicesDetailsContent: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div className="our-approach-area pb-70 pt-[60px] text-black dark:bg-zinc-800">
         <div className="container">
           <div className="section-title">
-            <h2 className="dark:text-white">{t("Cybersecurity Assessment")}</h2>
+            <h2 className="dark:text-white">
+              <Typewriter
+                key={i18n.language}
+                words={[t("Cybersecurity Assessment")]}
+                loop={1}
+                cursor
+                cursorStyle=""
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </h2>
           </div>
 
           <div className="row">

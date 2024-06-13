@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import { Typewriter } from "react-simple-typewriter";
 
 const ISO: React.FC = () => {
   const { ref, inView } = useInView({
@@ -12,15 +13,20 @@ const ISO: React.FC = () => {
   return (
     <div className="about-us-area pb-70  text-black  dark:bg-zinc-900">
       <div className="container mx-auto px-4 overflow-hidden">
+        <div className="dark:text-white mt-11">
+          <Typewriter
+            words={[
+              "ISO27001 is an international standard that is used to manage and ensure the security of information assets in an organization. The standard provides a framework for implementing a robust information security management system (ISMS) that includes policies, procedures, and controls designed to protect the confidentiality, integrity, and availability of information.",
+            ]}
+            loop={1}
+            cursor
+            cursorStyle=""
+            typeSpeed={10}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </div>
         <div className="flex flex-wrap items-center">
-          <span className="dark:text-white mt-11">
-            ISO27001 is an international standard that is used to manage and
-            ensure the security of information assets in an organization. The
-            standard provides a framework for implementing a robust information
-            security management system (ISMS) that includes policies,
-            procedures, and controls designed to protect the confidentiality,
-            integrity, and availability of information.
-          </span>
           <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
             <div className="about-img mr-auto w-fit">
               <Image

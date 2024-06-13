@@ -1,7 +1,7 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
+import { Typewriter } from "react-simple-typewriter";
 
 const OurSolution: React.FC = () => {
   return (
@@ -14,10 +14,17 @@ const OurSolution: React.FC = () => {
                 <div className="solution-title">
                   <span className="text-2xl text-red-600">Who we Are</span>
                   <h2 className="dark:text-white">
-                    We are team of young, dynamic & passionate experienced team,
-                    always ready to take up challenges & deliver them
-                    responsibility ensuring extreme customer satisfaction & high
-                    quality of standards.
+                    <Typewriter
+                      words={[
+                        " We are team of young, dynamic & passionate experienced team, always ready to take up challenges & deliver them responsibility ensuring extreme customer satisfaction & high quality of standards.",
+                      ]}
+                      loop={1}
+                      cursor
+                      cursorStyle=""
+                      typeSpeed={20}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    />
                   </h2>
                 </div>
 

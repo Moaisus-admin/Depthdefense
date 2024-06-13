@@ -12,7 +12,7 @@ interface TailwindConfig {
 }
 
 const config: TailwindConfig = {
-  darkMode: "class",
+  darkMode: "class", /// if chnaged to media then mode will be selected based on users system settings
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
