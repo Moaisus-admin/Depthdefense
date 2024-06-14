@@ -83,22 +83,22 @@ const Footer: React.FC = () => {
 
                 <ul className="import-link">
                   <li>
-                    <Link href="/solutions/details">Secure Private Cloud</Link>
+                    <Link href="#">Risk Management</Link>
                   </li>
                   <li>
-                    <Link href="/solutions/details">Online Backup</Link>
+                    <Link href="#">VAPT</Link>
                   </li>
                   <li>
-                    <Link href="/solutions/details">Secure Websites</Link>
+                    <Link href="#">SOC/IR Service</Link>
                   </li>
                   <li>
-                    <Link href="/solutions/details">Cyber-Security</Link>
+                    <Link href="#">Offensive Security</Link>
                   </li>
                   <li>
-                    <Link href="/solutions/details">Enterprise Networks</Link>
+                    <Link href="#">NOC Service</Link>
                   </li>
                   <li>
-                    <Link href="/solutions/details">Collaboration</Link>
+                    <Link href="#">Infrastructure Service</Link>
                   </li>
                 </ul>
               </div>
@@ -106,28 +106,26 @@ const Footer: React.FC = () => {
 
             <div className="col-lg-3 col-md-6">
               <div className="single-footer-widget">
-                <h3>Resources</h3>
+                <h3>Quick Links</h3>
 
                 <ul className="import-link">
                   <li>
-                    <Link href="/services/details">
-                      Cybersecurity Strategies
-                    </Link>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link href="/services/details">Security Advisories</Link>
+                    <Link href="/about-us/">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/services/details">Security News</Link>
+                    <Link href="/services/">Services</Link>
                   </li>
                   <li>
-                    <Link href="/blog">Blog</Link>
+                    <Link href="#">Solution</Link>
                   </li>
                   <li>
-                    <Link href="/solutions">Case Studies</Link>
+                    <Link href="/solutions">Careers</Link>
                   </li>
                   <li>
-                    <Link href="/contact">User Guides</Link>
+                    <Link href="/contact/">Contact</Link>
                   </li>
                 </ul>
               </div>

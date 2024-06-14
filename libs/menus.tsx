@@ -182,32 +182,7 @@ export const menus = [
       },
     ],
   },
-  // {
-  //   label: "Blog",
-  //   link: "#",
-  //   submenu: [
-  //     {
-  //       label: "Blog Column One",
-  //       link: "/blog/",
-  //     },
-  //     {
-  //       label: "Blog Column Two",
-  //       link: "/blog/2/",
-  //     },
-  //     {
-  //       label: "Blog Column Three",
-  //       link: "/blog/3/",
-  //     },
-  //     {
-  //       label: "Blog Left Sidebar",
-  //       link: "/blog/4/",
-  //     },
-  //     {
-  //       label: "Blog Details",
-  //       link: "/blog/details/",
-  //     },
-  //   ],
-  // },
+
   {
     label: "Contact",
     link: "/contact/",
