@@ -2,9 +2,9 @@ import React from "react";
 import NavbarFive from "../../components/Layouts/NavbarFive";
 import PageBanner from "../../components/Common/PageBanner";
 import Footer from "../../components/Layouts/Footer";
-import OurSolution from "@/components/HomeDemoFive/OurSolution";
-import StructureCybersecurity from "@/components/AboutUs/StructureOfCybersecurity";
-import DepthCybersecurity from "@/components/AboutUs/DepthCybersecurity";
+import OurSolution from "../../components/HomeDemoFive/OurSolution";
+import StructureCybersecurity from "../../components/AboutUs/StructureOfCybersecurity";
+import DepthCybersecurity from "../../components/AboutUs/DepthCybersecurity";
 
 export default function Page() {
   return (

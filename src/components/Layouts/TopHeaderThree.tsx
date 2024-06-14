@@ -1,7 +1,7 @@
 "use client";
 
-import DarkModeToggle from "@/app/DarkModeToggle";
-import RtlToggle from "@/app/RtlToggle";
+import DarkModeToggle from "../../app/DarkModeToggle";
+import RtlToggle from "../../app/RtlToggle";
 import React from "react";
 
 const TopHeaderThree: React.FC = () => {
