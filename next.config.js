@@ -1,6 +1,10 @@
-module.exports = {
-  distDir: "out", // Custom output directory
-  webpack: (config, { isServer }) => {
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withBundleAnalyzer({
+  distDir: "out",
+  webpack(config, { isServer }) {
     if (!isServer) {
       config.optimization.splitChunks = {
         chunks: "all",
@@ -9,4 +13,4 @@ module.exports = {
     }
     return config;
   },
-};
+});
