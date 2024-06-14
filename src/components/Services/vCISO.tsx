@@ -58,7 +58,7 @@ const VCISO: React.FC = () => {
                   }`}
                 >
                   Cost-effective: Organizations can save money by only paying
-                  for a vCISO's services when they require them, rather than
+                  for a vCISOs services when they require them, rather than
                   hiring a full-time CISO.
                 </li>
                 <li
@@ -68,7 +68,7 @@ const VCISO: React.FC = () => {
                 >
                   Expertise: vCISOs are highly skilled and experienced
                   cybersecurity professionals who can provide expert guidance
-                  and recommendations tailored to an organization's specific
+                  and recommendations tailored to an organizations specific
                   needs.
                 </li>
                 <li
@@ -76,8 +76,8 @@ const VCISO: React.FC = () => {
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Flexibility: A vCISO's availability can be tailored to an
-                  organization's needs, with the ability to scale up or down as
+                  Flexibility: A vCISOs availability can be tailored to an
+                  organizations needs, with the ability to scale up or down as
                   required.
                 </li>
                 <li
@@ -86,7 +86,7 @@ const VCISO: React.FC = () => {
                   }`}
                 >
                   Objective perspective: As a third-party, the vCISO can offer
-                  an objective perspective on an organization's security posture
+                  an objective perspective on an organizations security posture
                   and make recommendations without any bias.
                 </li>
                 <li
@@ -96,8 +96,8 @@ const VCISO: React.FC = () => {
                 >
                   Risk mitigation: A vCISO can help identify and prioritize
                   risks, develop strategies to mitigate them, and regularly
-                  monitor and assess an organization's security posture to
-                  ensure ongoing risk reduction.
+                  monitor and assess an organizations security posture to ensure
+                  ongoing risk reduction.
                 </li>
               </ul>
             </div>

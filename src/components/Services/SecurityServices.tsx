@@ -59,7 +59,7 @@ const SecurityServices: React.FC = () => {
                   }`}
                 >
                   Proactive Threat Detection: MSS providers use specialized
-                  tools and techniques to continuously monitor an organization's
+                  tools and techniques to continuously monitor an organizations
                   systems, networks, and applications for potential security
                   threats.
                 </li>
