@@ -1,3 +1,5 @@
+import withBundleAnalyzer from "@next/bundle-analyzer";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // For Static Export
@@ -7,11 +9,8 @@ const nextConfig = {
     unoptimized: true,
   },
   optimizeFonts: false,
-
-  // i18n: {
-  //   locales: ["en", "ar"], // List of supported languages (English and Arabic)
-  //   defaultLocale: "en", // Default language to use if no locale is specified
-  // },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+})(nextConfig);
