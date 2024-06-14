@@ -36,7 +36,7 @@ const MainBanner: React.FC = () => {
     });
 
     return () => clearTimeout(timer);
-  }, [currentHeadingIndex]);
+  }, [currentHeadingIndex, headings.length]);
 
   return (
     <>

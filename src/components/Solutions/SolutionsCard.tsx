@@ -45,7 +45,7 @@ const SIEMCard: React.FC = () => {
         );
       }
     }
-  }, [textRef.current]);
+  }, []);
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });

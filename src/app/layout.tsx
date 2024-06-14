@@ -1,3 +1,4 @@
+import React from "react";
 import "../app/styles/bootstrap.min.css";
 import "../app/styles/animate.min.css";
 import "../app/styles/boxicons.min.css";
@@ -17,7 +18,7 @@ import "../app/styles/rtl.css";
 
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import GoTop from "@/components/Layouts/GoTop";
+import GoTop from "../components/Layouts/GoTop";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],

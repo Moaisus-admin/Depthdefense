@@ -10,15 +10,15 @@ const AboutUs: React.FC = () => {
   });
 
   return (
-    <div className="about-us-area pb-70  text-black  dark:bg-zinc-900">
+    <div className="about-us-area ptb-100  text-black  dark:bg-zinc-900">
       <div className="container mx-auto px-4 overflow-hidden">
         <div className="flex flex-wrap items-center">
           <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-            <div className="about-img mr-auto w-fit">
+            <div className="about-img mr-auto col-lg-8">
               <Image
                 src="/images/Lock.jpg"
                 alt="Image"
-                width={300}
+                width={500}
                 height={345}
                 layout="responsive"
                 className="pt-[80px]"
