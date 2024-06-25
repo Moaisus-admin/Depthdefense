@@ -2,7 +2,7 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "out",
+  distDir: ".next", // Ensure the distDir is correctly set
   trailingSlash: true,
   images: {
     unoptimized: true,
