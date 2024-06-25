@@ -54,9 +54,9 @@ const MainBanner: React.FC = () => {
           <div className="d-table-cell">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-lg-8 text-center">
+                <div className="col-lg-12 text-center">
                   <div className="banner-content">
-                    <span className="top-title text-xl">
+                    <span className="top-title text-2xl">
                       World Class Cyber Security
                     </span>
                     <h2 className="transition-opacity duration-1000 opacity-100 w-full text-white">

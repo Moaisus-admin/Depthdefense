@@ -29,7 +29,7 @@ export default function Page() {
 
         <Solution />
 
-        <CyberSafety />
+        {/* <CyberSafety /> */}
 
         <PriceTableTwo />
 

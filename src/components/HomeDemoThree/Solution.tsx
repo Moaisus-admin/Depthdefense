@@ -95,12 +95,12 @@ const Solution: React.FC = () => {
             </div>
 
             <div className="col-lg-6">
-              <div className="solution-img-two text-center">
+              <div className="solution-img-two text-center mt-4">
                 <Image
-                  src="/images/solution-img-2.png"
+                  src="/images/AdobeStock_330520825.jpeg"
                   alt="Image"
-                  width={524}
-                  height={700}
+                  width={580}
+                  height={800}
                 />
               </div>
             </div>
@@ -109,10 +109,10 @@ const Solution: React.FC = () => {
 
         <div className="solution-shape-left shape-three">
           <Image
-            src="/images/solution-shape-left.png"
+            src="/images/AdobeStock_589118176.png"
             alt="Image"
-            width={153}
-            height={144}
+            width={100}
+            height={90}
           />
         </div>
       </div>

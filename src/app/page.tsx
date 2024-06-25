@@ -30,7 +30,7 @@ export default function Page() {
 
         <Solution />
 
-        <CyberSafety />
+        {/* <CyberSafety /> */}
 
         <WhyChooseUs />
 

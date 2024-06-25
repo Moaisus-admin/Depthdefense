@@ -10,12 +10,12 @@ const WhyChooseUs: React.FC = () => {
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-4">
-              <div className="counter-img">
+              <div className="counter-img" style={{marginTop:"100px"}}>
                 <Image
-                  src="/images/counter-img.png"
+                  src="/images/AdobeStock_580196665.jpeg"
                   alt="Image"
                   width={526}
-                  height={482}
+                  height={582}
                 />
               </div>
             </div>
@@ -23,7 +23,7 @@ const WhyChooseUs: React.FC = () => {
             <div className="col-lg-8">
               <div className="counter-max-wide">
                 <div className="section-title">
-                  <span className="dark:text-white">Why Choose Us</span>
+                  <span className="dark:text-white text-2xl">Why Choose Us</span>
                   <h2 className="dark:text-white">
                     We Have a Lot of Skills in Cyber Security
                   </h2>

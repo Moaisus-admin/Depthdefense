@@ -31,7 +31,15 @@ const imageNames = [
 const Slider = () => {
   return (
     <>
+    
+     <div className="section-title">
+                  {/* <span className="dark:text-white text-2xl">Why Choose Us</span> */}
+                  <h2 className="dark:text-white">
+Our Esteemed Clients                  </h2>
+                </div>
       <div className="sliderContainer dark:bg-zinc-500 pt-[20px] relative">
+     
+
         <div className="slider dark:text-white relative">
           <div className="slideTrack dark:text-white">
             {imageNames.map((imageName, index) => (
