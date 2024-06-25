@@ -18,20 +18,24 @@ const withGridBackground =
   <P extends object>(
     Component: ComponentType<P>,
     gridProps: GridPatternProps = {}
-  ): ComponentType<P> =>
-  (componentProps: P) =>
-    (
-      <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
-        <Component {...componentProps} />
-        <GridPattern
-          numSquares={30}
-          maxOpacity={0.5}
-          duration={4}
-          repeatDelay={0.5}
-          className="absolute inset-0 h-full w-full"
-          {...gridProps}
-        />
-      </div>
-    );
+  ): ComponentType<P> => {
+  const WrappedComponent: React.FC<P> = (componentProps) => (
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+      <Component {...componentProps} />
+      <GridPattern
+        numSquares={30}
+        maxOpacity={0.5}
+        duration={4}
+        repeatDelay={0.5}
+        className="absolute inset-0 h-full w-full"
+        {...gridProps}
+      />
+    </div>
+  );
+
+  WrappedComponent.displayName = `withGridBackground(${Component.displayName || Component.name || "Component"})`;
+
+  return WrappedComponent;
+};
 
 export default withGridBackground;
