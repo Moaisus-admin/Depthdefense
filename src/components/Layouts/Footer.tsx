@@ -137,14 +137,14 @@ const Footer: React.FC = () => {
       <div className="copy-right-area">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-6">
-              <p>
-                Copyright &copy; {currentYear} Copy Right{" "}
-                <span className="text-red-500">Depth Defence</span>
+            <div className="col-lg-7 col-md-6">
+              <p className="flex justify-end gap-1">
+                Copyright &copy; {currentYear}
+                <span className="text-red-500">Depth Defense</span>
               </p>
             </div>
 
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-5 col-md-6">
               <ul className="footer-menu">
                 <li>
                   <Link href="/privacy-policy">Privacy Policy</Link>

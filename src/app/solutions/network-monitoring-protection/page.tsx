@@ -1,15 +1,15 @@
 import React from "react";
-import NavbarFive from "../../../components/Layouts/NavbarFive";
 import PageBanner from "../../../components/Common/PageBanner";
 import Footer from "../../../components/Layouts/Footer";
-import PartnersTwo from "../../../components/Common/PartnersTwo";
 import GetInTouchFormTwo from "../../../components/Common/GetInTouchFormTwo";
 import SolutionsNetWorkM from "../../../components/Solutions/NetworkMonitoring";
+import Slider from "@/components/HomeDemoThree/Slider/Slider";
+import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
   return (
     <>
-      <NavbarFive />
+      <NavbarThree />
 
       <PageBanner
         pageTitle="Network Monitoring & Protection"
@@ -19,7 +19,7 @@ export default function Page() {
       />
       <SolutionsNetWorkM />
 
-      <PartnersTwo />
+      <Slider />
 
       <GetInTouchFormTwo />
 

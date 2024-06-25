@@ -1,225 +1,144 @@
 "use client";
+import React, { useState } from "react";
 
-import React from "react";
+interface Review {
+  name: string;
+  username: string;
+  body: string;
+  img: string;
+}
+
+const reviews: Review[] = [
+  {
+    name: "Jack",
+    username: "@jack",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Jill",
+    username: "@jill",
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Jane",
+    username: "@jane",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Jenny",
+    username: "@jenny",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "James",
+    username: "@james",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/james",
+  },
+];
 
 const TestimonialsContent: React.FC = () => {
-  return (
-    <>
-      <div className="testimonials-area testimonials-page-area pt-100 pb-70 dark:bg-zinc-800">
-        <div className="container">
-          <div className="section-title">
-            <span className="text-red-600 text-2xl">Testimonials</span>
-            <h2 className="dark:text-white">What Our Customers Say</h2>
-          </div>
+  const [isFirstRowPaused, setIsFirstRowPaused] = useState(false);
+  const [isSecondRowPaused, setIsSecondRowPaused] = useState(false);
 
-          <div className="row">
-            <div className="col-lg-6 col-md-6">
-              <div className="testimonials-item  ">
-                <i className="flaticon-quote "></i>
-                <p className="dark:text-white">
-                  “Nam liber tempor cum soluta nobis eleifend option congue
-                  nihil imperdiet doming id quod mazim placerat facer possim
-                  assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat.”
-                </p>
+  const firstRow = reviews.slice(0, Math.ceil(reviews.length / 2));
+  const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
 
-                <ul>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                </ul>
+  const handleFirstRowHover = (isPaused: boolean) => {
+    setIsFirstRowPaused(isPaused);
+  };
 
-                <h3 className="dark:text-white">Jastin Anderson</h3>
-                <span className="dark:text-white">CEO</span>
-              </div>
-            </div>
+  const handleSecondRowHover = (isPaused: boolean) => {
+    setIsSecondRowPaused(isPaused);
+  };
 
-            <div className="col-lg-6 col-md-6">
-              <div className="testimonials-item">
-                <i className="flaticon-quote"></i>
-                <p className="dark:text-white">
-                  “Nam liber tempor cum soluta nobis eleifend option congue
-                  nihil imperdiet doming id quod mazim placerat facer possim
-                  assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat.”
-                </p>
-
-                <ul>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                </ul>
-
-                <h3 className="dark:text-white">Juhon Anderson</h3>
-                <span className="dark:text-white">Manager</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="testimonials-item">
-                <i className="flaticon-quote"></i>
-                <p className="dark:text-white">
-                  “Nam liber tempor cum soluta nobis eleifend option congue
-                  nihil imperdiet doming id quod mazim placerat facer possim
-                  assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat.”
-                </p>
-
-                <ul>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                </ul>
-
-                <h3 className="dark:text-white">Kliva</h3>
-                <span className="dark:text-white">Marketer</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="testimonials-item">
-                <i className="flaticon-quote"></i>
-                <p className="dark:text-white">
-                  “Nam liber tempor cum soluta nobis eleifend option congue
-                  nihil imperdiet doming id quod mazim placerat facer possim
-                  assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat.”
-                </p>
-
-                <ul>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                </ul>
-
-                <h3 className="dark:text-white">Jon Smith</h3>
-                <span className="dark:text-white">CEO IT</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="testimonials-item">
-                <i className="flaticon-quote"></i>
-                <p className="dark:text-white">
-                  “Nam liber tempor cum soluta nobis eleifend option congue
-                  nihil imperdiet doming id quod mazim placerat facer possim
-                  assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat.”
-                </p>
-
-                <ul>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                </ul>
-
-                <h3 className="dark:text-white">Admam Smith</h3>
-                <span className="dark:text-white">Covered</span>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="testimonials-item">
-                <i className="flaticon-quote"></i>
-                <p className="dark:text-white">
-                  “Nam liber tempor cum soluta nobis eleifend option congue
-                  nihil imperdiet doming id quod mazim placerat facer possim
-                  assum. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                  elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                  dolore magna aliquam erat volutpat.”
-                </p>
-
-                <ul>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                  <li>
-                    <i className="bx bxs-star"></i>
-                  </li>
-                </ul>
-
-                <h3 className="dark:text-white">Alex</h3>
-                <span className="dark:text-white">Developer</span>
-              </div>
-            </div>
+  const ReviewCard: React.FC<
+    Review & { isPaused: boolean; handleHover: (isPaused: boolean) => void }
+  > = ({ img, name, username, body, handleHover }) => {
+    return (
+      <figure
+        className="relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-50/[.10] dark:hover:bg-gray-50/[.15]"
+        onMouseEnter={() => handleHover(true)}
+        onMouseLeave={() => handleHover(false)}
+      >
+        <div className="flex flex-row items-center gap-2">
+          <img
+            className="rounded-full"
+            width="32"
+            height="32"
+            alt=""
+            src={img}
+          />
+          <div className="flex flex-col">
+            <figcaption className="text-sm font-medium dark:text-white">
+              {name}
+            </figcaption>
+            <p className="text-xs font-medium dark:text-white/40">{username}</p>
           </div>
         </div>
+        <blockquote className="mt-2 text-sm">{body}</blockquote>
+      </figure>
+    );
+  };
+
+  return (
+    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background py-20 md:shadow-xl">
+      <div>
+        <h1 className="text-4xl text-center font-normal mb-4 text-red-600">
+          What Our Customers Say
+        </h1>
       </div>
-    </>
+      <div className="group flex overflow-hidden p-2 [--duration:20s] [--gap:1rem] [gap:var(--gap)]">
+        {[...firstRow, ...firstRow].map((review, index) => (
+          <div
+            key={index}
+            className={`flex-shrink-0 animate-marquee ${
+              isFirstRowPaused ? "paused" : ""
+            }`}
+            onMouseEnter={() => handleFirstRowHover(true)}
+            onMouseLeave={() => handleFirstRowHover(false)}
+          >
+            <ReviewCard
+              {...review}
+              isPaused={isFirstRowPaused}
+              handleHover={handleFirstRowHover}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="group flex overflow-hidden p-2 [--duration:20s] [--gap:1rem] [gap:var(--gap)]">
+        {[...secondRow, ...secondRow].map((review, index) => (
+          <div
+            key={index}
+            className={`flex-shrink-0 animate-marquee-reverse ${
+              isSecondRowPaused ? "paused" : ""
+            }`}
+            onMouseEnter={() => handleSecondRowHover(true)}
+            onMouseLeave={() => handleSecondRowHover(false)}
+          >
+            <ReviewCard
+              {...review}
+              isPaused={isSecondRowPaused}
+              handleHover={handleSecondRowHover}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+    </div>
   );
 };
 

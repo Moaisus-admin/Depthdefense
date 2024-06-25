@@ -41,6 +41,16 @@ This files table contents are outlined below>>>>>
 Default Style
 ============================*/
 
+/* CSS for animation pause effect */
+
+.animate-marquee.paused {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse.paused {
+  animation-play-state: paused;
+}
+
 .floating-line {
   animation: float 5s ease-in-out infinite;
 }
@@ -840,16 +850,16 @@ Navbar Area Style
   color: #e21f36;
 }
 .navbar-area.navbar-area-two {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 .navbar-area.navbar-area-two .main-nav nav .navbar-nav .nav-item a {
-  color: #000000;
+  /* color: #000000; */
 }
 .navbar-area.navbar-area-two .main-nav nav .navbar-nav .nav-item a:hover {
-  color: #e21f36;
+  /* color: #e21f36; */
 }
 .navbar-area.navbar-area-two .main-nav nav .navbar-nav .nav-item a.active {
-  color: #e21f36;
+  /* color: #e21f36; */
 }
 .navbar-area.navbar-area-two
   .main-nav
@@ -859,7 +869,7 @@ Navbar Area Style
   .dropdown-menu
   li
   a {
-  color: #000219;
+  /* color: #000219; */
 }
 .navbar-area.navbar-area-two
   .main-nav
@@ -1090,7 +1100,7 @@ Banner Area Style
 .banner-area.banner-area-three {
   height: auto;
   background-color: #eae1d6;
-  padding-top: 100px;
+  padding-top: 200px;
   padding-bottom: 170px;
 }
 .banner-area.banner-area-three .banner-content .top-title {
@@ -1686,7 +1696,7 @@ Our Challenges Area Style
   position: relative;
   margin-bottom: 30px;
   transition: all ease 0.5s;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
   padding: 30px 25px;
   text-align: center;
@@ -1784,7 +1794,7 @@ Solution Area Style
   z-index: -1;
   position: absolute;
   top: 50px;
-  left: 50px;
+  left: 620px;
   animation: movebounce 5s linear infinite;
 }
 
@@ -1814,6 +1824,14 @@ Solution Area Style
   font-weight: 700;
   margin-bottom: 0;
   line-height: 1.4;
+}
+
+.single-solution-new {
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+  transition: all ease 0.5s;
+  margin-bottom: 30px;
 }
 
 .single-solution {
@@ -1925,13 +1943,15 @@ Get In Touch Area Style
   .get-in-touch-form
   .form-group
   .form-control {
-  border: 1px solid #ebebeb !important;
+  border: 1px solid gray !important;
+  border-radius: 30px;
 }
 .get-in-touch-area.get-in-touch-area-two
   .get-in-touch-form
   .form-group
   .form-control:focus {
   border-color: #e21f36 !important;
+  border-radius: 50px;
 }
 
 .get-in-touch-form {
@@ -1966,7 +1986,7 @@ Protect Area Style
   overflow: hidden;
 }
 .protect-area .single-challenges {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 20px;
 }
 .protect-area .col-lg-6 .row .col-lg-6:nth-child(2) .single-challenges {
@@ -2000,17 +2020,17 @@ Protect Area Style
   z-index: 1;
 }
 .protect-area.protect-area-three .single-challenges {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
 }
 .protect-area.protect-area-three .single-challenges i {
   color: #e21f36;
 }
 .protect-area.protect-area-three .single-challenges h3 {
-  color: #000219;
+  /* color: #000219; */
 }
 .protect-area.protect-area-three .single-challenges p {
-  color: #4b5280;
+  /* color: #4b5280; */
 }
 .protect-area.protect-area-three .protect-left-shape {
   z-index: -1;
@@ -2675,10 +2695,10 @@ Counter Area Style
   border-color: #edeaea;
 }
 .counter-area.counter-area-three .single-counter h2 {
-  color: #000219;
+  /* color: #000219; */
 }
 .counter-area.counter-area-three .single-counter h3 {
-  color: #000000;
+  /* color: #000000; */
   margin: 0;
 }
 
@@ -2700,7 +2720,7 @@ Counter Area Style
   padding-right: 30px;
 }
 .single-counter h2 {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 40px;
   margin-bottom: 5px;
   line-height: 1;
@@ -2710,7 +2730,7 @@ Counter Area Style
   top: 2px;
 }
 .single-counter h3 {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: normal;
   font-size: 15px;
   font-weight: 600;
@@ -5591,7 +5611,7 @@ Blog Column One Area Style
 }
 .single-blog-posts .single-blog-content {
   padding: 30px;
-  background-color: #f9fafb;
+  /* background-color: #f9fafb; */
 }
 .single-blog-posts .single-blog-content span {
   text-transform: uppercase;

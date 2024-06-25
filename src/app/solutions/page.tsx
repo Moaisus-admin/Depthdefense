@@ -1,19 +1,19 @@
 import React from "react";
-import NavbarFive from "../../components/Layouts/NavbarFive";
 import PageBanner from "../../components/Common/PageBanner";
-import ServicesCard from "../../components/Services/ServicesCard";
+import ServicesCard from "../../components/Solutions/Solutions";
 import Footer from "../../components/Layouts/Footer";
+import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
   return (
     <>
-      <NavbarFive />
+      <NavbarThree />
 
       <PageBanner
-        pageTitle="Services"
+        pageTitle="Solutions"
         homePageUrl="/"
         homePageText="Home"
-        activePageText="Services"
+        activePageText="Solutions"
       />
 
       <ServicesCard />

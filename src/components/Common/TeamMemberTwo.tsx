@@ -1,16 +1,16 @@
 "use client";
-  
+
 import React from "react";
 import Image from "next/image";
 
 const TeamMemberTwo: React.FC = () => {
   return (
     <>
-      <div className="team-area team-area-three white-bg pt-100 pb-70">
+      <div className="team-area team-area-three white-bg pt-100 pb-70 dark:bg-zinc-600">
         <div className="container">
           <div className="section-title">
-            <span>Professionals</span>
-            <h2>Meet Our Skilled Team</h2>
+            <span className="text-3xl dark:text-white">Professionals</span>
+            <h2 className="dark:text-white">Meet Our Skilled Team</h2>
           </div>
 
           <div className="row justify-content-center">

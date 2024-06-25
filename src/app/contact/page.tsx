@@ -4,11 +4,12 @@ import PageBanner from "../../components/Common/PageBanner";
 import Footer from "../../components/Layouts/Footer";
 import ContactForm from "../../components/Contact/ContactForm";
 import GoogleMap from "../../components/Contact/GoogleMap";
+import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
   return (
     <>
-      <NavbarFive />
+      <NavbarThree />
 
       <PageBanner
         pageTitle="Contact Us"

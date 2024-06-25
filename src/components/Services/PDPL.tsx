@@ -34,7 +34,7 @@ const PDPL: React.FC = () => {
 
   return (
     <>
-      <div className="blog-column-two-area  dark:bg-zinc-800 text-black">
+      <div className="blog-column-two-area  dark:bg-zinc-700 text-black">
         <div className="container">
           <div className="row w-full">
             <div className="col-lg-12 flex justify-center mt-[50px] mb-6">
@@ -48,10 +48,10 @@ const PDPL: React.FC = () => {
             <div className="col-lg-9 col-md-12 m-auto">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content rounded-xl dark:bg-zinc-800 "
                   ref={ref1}
                 >
-                  <p className="dark:text-white">
+                  <p className="dark:text-white ">
                     The Personal Data Protection Law (PDPL) is the first of its
                     kind to be passed in the Kingdom of Saudi Arabia (KSA). The
                     data protection rules were published in the government’s
@@ -66,7 +66,7 @@ const PDPL: React.FC = () => {
             <div className="col-lg-11 col-md-12 mt-6 m-auto">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref2}
                 >
                   <h2 className="text-2xl mb-2 dark:text-white">
@@ -100,7 +100,7 @@ const PDPL: React.FC = () => {
             <div className="col-lg-12 col-md-12 mt-6">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref3}
                 >
                   <h2 className="text-2xl mb-2 dark:text-white">

@@ -7,9 +7,9 @@ import { Typewriter } from "react-simple-typewriter";
 const TeamMember: React.FC = () => {
   return (
     <>
-      <div className="challenges-area pt-100 pb-70 jarallax dark:bg-slate-900 text-black">
+      <div className="challenges-area pt-[50px] jarallax dark:bg-slate-900 text-black">
         <div className="container">
-          <div className="section-title white-title m-auto ">
+          <div className="section-title white-title m-auto">
             <span className="text-2xl text-red-500">About Company</span>
             <h2 className="dark:text-white">
               <Typewriter
@@ -26,8 +26,8 @@ const TeamMember: React.FC = () => {
 
           <div className="row w-full cardd">
             <div className="col-lg-12 col-sm-6 dark:bg-slate-900">
-              <div className="single-challenges overly-one dark:bg-slate-900 dark:text-white flex flex-wrap">
-                <div className="col-lg-3 col-sm-6">
+              <div className="single-challenges overly-one dark:bg-slate-900 dark:text-white flex flex-wrap rounded-full">
+                {/* <div className="col-lg-3 col-sm-6">
                   <div className="single-team m-auto">
                     <Image
                       src="/images/About-1.jpg"
@@ -36,12 +36,12 @@ const TeamMember: React.FC = () => {
                       height={600}
                     />
                   </div>
-                </div>
-                <div className="overly-two water-effect ml-auto">
+                </div> */}
+                <div className="overly-two water-effect m-auto">
                   <i className="flaticon-threat pb-4"></i>
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.1s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.1s" }}
                   >
                     <p>
                       Depth defense is Saudi based company with panache to
@@ -51,8 +51,8 @@ const TeamMember: React.FC = () => {
                   </div>
 
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.2s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.2s" }}
                   >
                     <p>
                       Modern cyber threats can originate from virtually (pun
@@ -61,8 +61,8 @@ const TeamMember: React.FC = () => {
                   </div>
 
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.3s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.3s" }}
                   >
                     <p>
                       Hackers use all kinds of tricks to bypass your company’s
@@ -72,8 +72,8 @@ const TeamMember: React.FC = () => {
                   </div>
 
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.4s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.4s" }}
                   >
                     <p>
                       insiders can create or exacerbate cybersecurity issues.
@@ -82,8 +82,8 @@ const TeamMember: React.FC = () => {
                   </div>
 
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.5s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.5s" }}
                   >
                     <p>
                       countering insider threats- those threats which originate
@@ -93,8 +93,8 @@ const TeamMember: React.FC = () => {
                   </div>
 
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.6s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.6s" }}
                   >
                     <p>
                       network segmentation to prevent attacks on the inside from
@@ -104,8 +104,8 @@ const TeamMember: React.FC = () => {
                   </div>
 
                   <div
-                    className="floating-line"
-                    style={{ animationDelay: "0.7s" }}
+                  // className="floating-line"
+                  // style={{ animationDelay: "0.7s" }}
                   >
                     <p>be able to easily compromise the entire network.</p>
                   </div>

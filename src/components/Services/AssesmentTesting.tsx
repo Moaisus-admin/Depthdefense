@@ -47,7 +47,7 @@ const AssesmentTesting: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-800">
+      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <Image
@@ -60,7 +60,7 @@ const AssesmentTesting: React.FC = () => {
             <div className="col-lg-12 col-md-12 mt-[90px]">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={cardRef1}
                 >
                   <p className="dark:text-white">
@@ -85,7 +85,7 @@ const AssesmentTesting: React.FC = () => {
             <div className="col-lg-12 col-md-12">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={cardRef2}
                 >
                   <p className="dark:text-white">
@@ -109,7 +109,7 @@ const AssesmentTesting: React.FC = () => {
             <div className="col-lg-12 col-md-12">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={cardRef3}
                 >
                   <p className="dark:text-white">

@@ -1,0 +1,98 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
+.sliderContainer {
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align the slider */
+  padding: 15px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.slider {
+  height: 250px;
+  width: 100%; /* Adjust width as needed */
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slideTrack {
+  display: flex;
+  width: calc(250px * 18); /* Keep the original width calculation */
+  animation: scroll 40s linear infinite;
+}
+
+.slideTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 250px; /* Maintain image width */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.img {
+  width: 100%; /* Ensure images are 100% of the slide width */
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.slider.dark::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.slider.dark::after {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}

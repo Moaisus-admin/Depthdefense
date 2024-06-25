@@ -56,7 +56,7 @@ const SolutionNextgenFirewall: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area ptb-100 dark:bg-zinc-800">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <div ref={imgRef}>
@@ -72,7 +72,7 @@ const SolutionNextgenFirewall: React.FC = () => {
               <div className="single-blog-posts">
                 <div
                   ref={ref}
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                 >
                   <p className="dark:text-white">
                     Next Generation Firewalls (NGFW) refers to advanced network

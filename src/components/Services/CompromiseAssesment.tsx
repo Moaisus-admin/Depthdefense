@@ -60,7 +60,7 @@ const CompromiseAssesment: React.FC = () => {
 
   return (
     <>
-      <div className="blog-column-two-area dark:bg-zinc-800">
+      <div className="blog-column-two-area dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <div className="col-lg-6" ref={imageRef}>
@@ -74,7 +74,7 @@ const CompromiseAssesment: React.FC = () => {
             <div className="col-lg-6 col-md-12 mt-[90px]">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={p1Ref}
                 >
                   <p className="dark:text-white">
@@ -99,7 +99,7 @@ const CompromiseAssesment: React.FC = () => {
 
             <div className="col-md-12">
               <div
-                className="single-solution  dark:bg-zinc-900 dark:text-white main-point"
+                className="single-solution  dark:bg-zinc-800 dark:text-white main-point"
                 ref={cardRef1}
               >
                 <div className="overly-two">
@@ -123,7 +123,7 @@ const CompromiseAssesment: React.FC = () => {
             </div>
             <div className="col-md-12">
               <div
-                className="single-solution dark:bg-zinc-900 dark:text-white main-point"
+                className="single-solution dark:bg-zinc-800 dark:text-white main-point"
                 ref={cardRef2}
               >
                 <div className="overly-two">
@@ -143,7 +143,7 @@ const CompromiseAssesment: React.FC = () => {
 
             <div className="col-md-12 ">
               <div
-                className="single-solution dark:bg-zinc-900 dark:text-white main-point"
+                className="single-solution dark:bg-zinc-800 dark:text-white main-point"
                 ref={cardRef3}
               >
                 <div className="overly-two">

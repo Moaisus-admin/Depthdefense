@@ -102,7 +102,7 @@ const Governance: React.FC = () => {
   });
   return (
     <>
-      <div className="our-approach-area pb-70 pt-[60px] text-black dark:bg-zinc-800">
+      <div className="our-approach-area pb-70 pt-[60px] text-black dark:bg-zinc-700">
         <div className="container">
           <div className="section-title">
             <h2 className="dark:text-white">GRC</h2>
@@ -171,7 +171,7 @@ const Governance: React.FC = () => {
                     <div className="row mt-4">
                       <div className="col-lg-6 col-sm-6">
                         <div
-                          className=" dark:bg-zinc-700 shadow-2xl rounded-full px-3"
+                          className=" dark:bg-zinc-600 shadow-2xl rounded-full px-3"
                           ref={ref1}
                         >
                           <h3 className="dark:text-white text-center">
@@ -182,7 +182,7 @@ const Governance: React.FC = () => {
 
                       <div className="col-lg-6 col-sm-6">
                         <div
-                          className=" dark:bg-zinc-700 shadow-xl rounded-full px-3"
+                          className=" dark:bg-zinc-600 shadow-xl rounded-full px-3"
                           ref={ref2}
                         >
                           <h3 className="dark:text-white text-center">
@@ -193,7 +193,7 @@ const Governance: React.FC = () => {
 
                       <div className="col-lg-6 col-sm-6">
                         <div
-                          className=" dark:bg-zinc-700 shadow-xl rounded-full px-3"
+                          className=" dark:bg-zinc-600 shadow-xl rounded-full px-3"
                           ref={ref3}
                         >
                           <h3 className="dark:text-white text-center">
@@ -204,7 +204,7 @@ const Governance: React.FC = () => {
 
                       <div className="col-lg-6 col-sm-6">
                         <div
-                          className=" dark:bg-zinc-700 shadow-xl rounded-full px-3"
+                          className=" dark:bg-zinc-600 shadow-xl rounded-full px-3"
                           ref={ref4}
                         >
                           <h3 className="dark:text-white text-center">
@@ -219,12 +219,12 @@ const Governance: React.FC = () => {
             </div>
           </div>
 
-          <div className="blog-column-two-area dark:bg-zinc-800">
+          <div className="blog-column-two-area dark:bg-zinc-700">
             <div className="container">
               <div className="row">
                 <div className="col-lg-12 col-md-6">
                   <div
-                    className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4"
+                    className="single-blog-content dark:bg-zinc-600 dark:text-white rounded-xl p-4"
                     ref={p1Ref1}
                   >
                     <span className="text-2xl text-red-600">
@@ -245,7 +245,7 @@ const Governance: React.FC = () => {
                 </div>
                 <div className="col-lg-12 col-md-6 mt-5">
                   <div
-                    className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4"
+                    className="single-blog-content dark:bg-zinc-600 dark:text-white rounded-xl p-4"
                     ref={p1Ref2}
                   >
                     <span className="text-2xl text-red-600">Compliance:</span>
@@ -264,7 +264,7 @@ const Governance: React.FC = () => {
                 </div>
                 <div className="col-lg-12 col-md-6 mt-5">
                   <div
-                    className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl p-4"
+                    className="single-blog-content dark:bg-zinc-600 dark:text-white rounded-xl p-4"
                     ref={p1Ref3}
                   >
                     <span className="text-2xl text-red-600">
@@ -320,7 +320,7 @@ const Governance: React.FC = () => {
             </div>
           </div>
 
-          <div className="blog-column-two-area ptb-100 dark:bg-zinc-800">
+          <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
             <div className="container">
               <div className="row col-lg-10 m-auto" ref={imageRef}>
                 <Image
@@ -333,7 +333,7 @@ const Governance: React.FC = () => {
               </div>
               <div className="col-lg-12 col-md-12 mt-9">
                 <div className="single-blog-posts">
-                  <div className="single-blog-content dark:bg-zinc-900 rounded-3xl">
+                  <div className="single-blog-content dark:bg-zinc-800 rounded-3xl">
                     <p className="dark:text-white">
                       Next Generation Firewalls (NGFW) refers to advanced
                       network security devices that integrate traditional
@@ -436,12 +436,12 @@ const Governance: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="blog-column-two-area  dark:bg-zinc-800 mt-[90px]">
+          <div className="blog-column-two-area  dark:bg-zinc-700 mt-[90px]">
             <div className="container">
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="single-blog-posts">
-                    <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
+                    <div className="single-blog-content dark:bg-zinc-700 rounded-xl">
                       <div className="about-title">
                         <h3 className="text-red-600 text-2xl">
                           NCA ECC Compliance:
@@ -477,7 +477,7 @@ const Governance: React.FC = () => {
                 </div>
                 <div className="col-lg-4 col-md-4 mt-6">
                   <div className="single-blog-posts">
-                    <div className="single-blog-content dark:bg-zinc-900 rounded-xl">
+                    <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <h2 className="text-xl mb-2 dark:text-white">
                         5 Cyber Security Main Domains.
                       </h2>
@@ -486,7 +486,7 @@ const Governance: React.FC = () => {
                 </div>
                 <div className="col-lg-4 col-md-4 mt-6">
                   <div className="single-blog-posts">
-                    <div className="single-blog-content dark:bg-zinc-900 rounded-xl">
+                    <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <h2 className="text-xl mb-2 dark:text-white">
                         29 Cyber Security Sub-Domains.
                       </h2>
@@ -495,7 +495,7 @@ const Governance: React.FC = () => {
                 </div>
                 <div className="col-lg-4 col-md-4 mt-6">
                   <div className="single-blog-posts">
-                    <div className="single-blog-content dark:bg-zinc-900 rounded-xl">
+                    <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <h2 className="text-xl mb-2 dark:text-white">
                         114 Cyber Security Controls.
                       </h2>
@@ -504,7 +504,7 @@ const Governance: React.FC = () => {
                 </div>
                 <div className="col-lg-12 col-md-12 mt-6">
                   <div className="single-blog-posts">
-                    <div className="single-blog-content dark:bg-zinc-900 rounded-xl">
+                    <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <p className="dark:text-white">
                         The controls outlined were developed after a
                         comprehensive review of all the legal, regulatory

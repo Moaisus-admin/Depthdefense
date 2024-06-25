@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +9,7 @@ const DarkModeToggle: React.FC = () => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
 
+    // Update dark mode class on the document root element
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -22,6 +22,7 @@ const DarkModeToggle: React.FC = () => {
     localStorage.setItem("darkMode", newMode.toString());
     setDarkMode(newMode);
 
+    // Toggle dark mode class on the document root element
     if (newMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -30,30 +31,17 @@ const DarkModeToggle: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <button
+      className="flex items-center justify-center w-10 h-6 sm:w-12 sm:h-8 bg-gray-400 rounded-md shadow-md focus:outline-none"
+      onClick={toggleDarkMode}
+    >
       <FontAwesomeIcon
-        icon={faSun}
+        icon={darkMode ? faMoon : faSun}
         className={`text-yellow-400 w-6 ${
-          darkMode ? "opacity-0" : "opacity-100"
+          darkMode ? "opacity-100" : "opacity-100"
         }`}
       />
-      <div
-        className="relative w-12 h-6 bg-gray-400 rounded-full shadow-inner"
-        onClick={toggleDarkMode}
-      >
-        <div
-          className={`absolute left-0 w-6 h-6 bg-white rounded-full shadow-md transform ${
-            darkMode ? "translate-x-full" : ""
-          }`}
-        ></div>
-      </div>
-      <FontAwesomeIcon
-        icon={faMoon}
-        className={`text-yellow-200  w-6 ${
-          !darkMode ? "opacity-0" : "opacity-100"
-        }`}
-      />
-    </div>
+    </button>
   );
 };
 

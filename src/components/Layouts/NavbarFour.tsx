@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MenuItem from "./MenuItem";
 import { menus } from "../../../libs/menus";
-import { menus2 } from "../../../libs/menus2";
+
 import TopHeaderTwo from "./TopHeaderTwo";
 import { useTranslation } from "react-i18next";
 
@@ -68,49 +68,8 @@ const NavbarFour: React.FC = () => {
                 </button>
 
                 <div className={classOne} id="navbarSupportedContent">
-                  <ul className="navbar-nav m-auto text-white dark:text-white">
+                  <ul className="navbar-nav m-auto text-black dark:text-white">
                     {menus.map((menuItem) => (
-                      <MenuItem key={menuItem.label} {...menuItem} />
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="others-option">
-                  <div className="get-quote">
-                    <Link href="/contact" className="default-btn">
-                      <span>{t("Get a Quote")}</span>
-                    </Link>
-                  </div>
-                </div>
-              </nav>
-              <nav className="navbar navbar-expand-md">
-                <Link href="/" className="navbar-brand">
-                  <Image
-                    src="/images/Depth-logo-1.jpg"
-                    alt="logo"
-                    width={150}
-                    height={42}
-                  />
-                </Link>
-
-                <button
-                  onClick={toggleNavbar}
-                  className={classTwo}
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="icon-bar top-bar"></span>
-                  <span className="icon-bar middle-bar"></span>
-                  <span className="icon-bar bottom-bar"></span>
-                </button>
-
-                <div className={classOne} id="navbarSupportedContent">
-                  <ul className="navbar-nav m-auto text-white dark:text-white">
-                    {menus2.map((menuItem) => (
                       <MenuItem key={menuItem.label} {...menuItem} />
                     ))}
                   </ul>

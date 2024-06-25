@@ -11,7 +11,7 @@ const VCISO: React.FC = () => {
   });
 
   return (
-    <div className="about-us-area pb-70  text-black  dark:bg-zinc-900">
+    <div className="about-us-area pb-70  text-black  dark:bg-zinc-800">
       <div className="container mx-auto px-4 overflow-hidden">
         <div className="dark:text-white mt-11">
           <Typewriter

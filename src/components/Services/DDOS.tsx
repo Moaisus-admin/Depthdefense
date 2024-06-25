@@ -17,7 +17,7 @@ const DDOS: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="our-approach-area pb-70 pt-[50px] dark:bg-zinc-800">
+      <div className="our-approach-area pb-70 pt-[50px] dark:bg-zinc-700">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -37,7 +37,7 @@ const DDOS: React.FC = () => {
 
                 <div className="row">
                   <div className="col-lg-12 col-sm-6">
-                    <div className="single-approach-2 dark:bg-zinc-700">
+                    <div className="single-approach-2 dark:bg-zinc-800">
                       <p className="dark:text-white">
                         A DDoS Simulation is an effort to make a system or
                         network device unavailable to its users by attempting to
@@ -52,7 +52,7 @@ const DDOS: React.FC = () => {
                   </div>
 
                   <div className="col-lg-12 col-sm-6">
-                    <div className="single-approach-2 dark:bg-zinc-700">
+                    <div className="single-approach-2 dark:bg-zinc-800">
                       <p className="dark:text-white">
                         The attack involves populating the target machine with a
                         massive number of requests, so that it does not respond
@@ -66,7 +66,7 @@ const DDOS: React.FC = () => {
                   </div>
 
                   <div className="col-lg-12 col-sm-6">
-                    <div className="single-approach-2 dark:bg-zinc-700">
+                    <div className="single-approach-2 dark:bg-zinc-800">
                       <p className="dark:text-white">
                         There is always a threat of a DDoS attack irrespective
                         of the type of industry. There is a need to be prepared

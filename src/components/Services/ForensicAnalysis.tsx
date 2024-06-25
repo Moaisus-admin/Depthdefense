@@ -37,7 +37,7 @@ const ForensicAnalysis: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="about-us-area ptb-50 dark:bg-zinc-800">
+      <div className="about-us-area ptb-50 dark:bg-zinc-700">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -57,7 +57,7 @@ const ForensicAnalysis: React.FC = () => {
                   <div className="col-lg-12 col-md-12 mt-[100px]">
                     <div className="single-blog-posts">
                       <div
-                        className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                        className="single-blog-content dark:bg-zinc-800 rounded-xl"
                         ref={cardRef}
                       >
                         <p className="dark:text-white">

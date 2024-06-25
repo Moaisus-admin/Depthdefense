@@ -9,7 +9,7 @@ const ServicesDetailsContent: React.FC = () => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <div className="our-approach-area pb-70 pt-[60px] text-black dark:bg-zinc-800">
+      <div className="our-approach-area pb-70 pt-[60px] text-black dark:bg-zinc-700">
         <div className="container">
           <div className="section-title">
             <h2 className="dark:text-white">
@@ -70,7 +70,7 @@ const ServicesDetailsContent: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-sm-6">
-                <div className="single-approach dark:bg-zinc-700">
+                <div className="single-approach dark:bg-zinc-600">
                   <h3 className="dark:text-white">
                     {t(" Vulnerabilities present in the assets.")}
                   </h3>
@@ -78,7 +78,7 @@ const ServicesDetailsContent: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-sm-6">
-                <div className="single-approach dark:bg-zinc-700">
+                <div className="single-approach dark:bg-zinc-600">
                   <h3 className="dark:text-white">
                     {t(" Identify the attack surface.")}
                   </h3>
@@ -86,7 +86,7 @@ const ServicesDetailsContent: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-sm-6">
-                <div className="single-approach dark:bg-zinc-700">
+                <div className="single-approach dark:bg-zinc-600">
                   <h3 className="dark:text-white">
                     {t("Potential threats and risks on assets.")}
                   </h3>
@@ -94,7 +94,7 @@ const ServicesDetailsContent: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-sm-6">
-                <div className="single-approach dark:bg-zinc-700">
+                <div className="single-approach dark:bg-zinc-600">
                   <h3 className="dark:text-white">
                     {t("Assets’ cyber resiliency.")}
                   </h3>
@@ -102,7 +102,7 @@ const ServicesDetailsContent: React.FC = () => {
               </div>
 
               <div className="col-lg-6 col-sm-6">
-                <div className="single-approach dark:bg-zinc-700">
+                <div className="single-approach dark:bg-zinc-600">
                   <h3 className="dark:text-white">
                     {t(
                       " Assets prevention cost with proportion to assets cost."
@@ -126,53 +126,53 @@ const ServicesDetailsContent: React.FC = () => {
               </div>
               <div className="row mt-4">
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Vulnerability")}</h3>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Penetration")}</h3>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Compromise")}</h3>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Social")}</h3>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Red")}</h3>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Third-party")}</h3>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Cloud")}</h3>
                   </div>
                 </div>
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Risk")}</h3>
                   </div>
                 </div>
                 <div className="col-lg-6 col-sm-6">
-                  <div className="single-approach dark:bg-zinc-700">
+                  <div className="single-approach dark:bg-zinc-600">
                     <h3 className="dark:text-white">{t("Security")}</h3>
                   </div>
                 </div>

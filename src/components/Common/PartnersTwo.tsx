@@ -1,161 +1,88 @@
 "use client";
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTheme } from "next-themes";
+import { useEffect, useMemo, useState } from "react";
+import {
+  Cloud,
+  fetchSimpleIcons,
+  ICloud,
+  renderSimpleIcon,
+  SimpleIcon,
+} from "react-icon-cloud";
 
-const PartnersTwo: React.FC = () => {
-  const { t } = useTranslation();
-  const swiperOptions = {
-    loop: true,
-    freeMode: false,
-    freeModeMomentum: false,
-    speed: 3000, // Set the slide transition speed (adjust as needed)
-    autoplay: {
-      delay: 1, // Set a very short delay (e.g., 1 millisecond)
-      disableOnInteraction: false,
-      pauseOnMouseEnter: false, // Add this to prevent pausing on mouse hover
+export const cloudProps: Omit<ICloud, "children"> = {
+  containerProps: {
+    style: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      paddingTop: 40,
     },
-  };
-
-  return (
-    <>
-      <div className="partner-area bg-color pt-[60px] pb-5 dark:bg-zinc-800 text-black relative">
-        <h1 className="text-4xl dark:text-white">{t("Our Valued Vendors")}</h1>
-        <div className="container mt-8">
-          <Swiper
-            spaceBetween={20}
-            breakpoints={{
-              0: { slidesPerView: 2 },
-              375: { slidesPerView: 1 },
-              576: { slidesPerView: 3 },
-              768: { slidesPerView: 4 },
-              1260: { slidesPerView: 4 },
-            }}
-            modules={[Autoplay]}
-            className="partner-slide"
-            navigation={{}}
-            {...swiperOptions} // Apply the swiperOptions
-          >
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/F5.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/Sentinel.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/Fortinet.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/IBM.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/Mcafee.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/Sophos.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/symantec.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/tenable.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="partner-item">
-                <a href="#" target="_blank">
-                  <Image
-                    src="/images/vendors/trend.jpg"
-                    alt="Image"
-                    width={230}
-                    height={60}
-                  />
-                </a>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </div>
-    </>
-  );
+  },
+  options: {
+    reverse: true,
+    depth: 1,
+    wheelZoom: false,
+    imageScale: 2,
+    activeCursor: "default",
+    tooltip: "native",
+    initial: [0.1, -0.1],
+    clickToFront: 500,
+    tooltipDelay: 0,
+    outlineColour: "#0000",
+    maxSpeed: 0.04,
+    minSpeed: 0.02,
+    // dragControl: false,
+  },
 };
 
-export default PartnersTwo;
+export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
+  const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
+  const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
+  const minContrastRatio = theme === "dark" ? 2 : 1.2;
+
+  return renderSimpleIcon({
+    icon,
+    bgHex,
+    fallbackHex,
+    minContrastRatio,
+    size: 42,
+    aProps: {
+      href: undefined,
+      target: undefined,
+      rel: undefined,
+      onClick: (e: any) => e.preventDefault(),
+    },
+  });
+};
+
+export type DynamicCloudProps = {
+  iconSlugs: string[];
+};
+
+type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
+
+export default function PartnersTwo({ iconSlugs }: DynamicCloudProps) {
+  const [data, setData] = useState<IconData | null>(null);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+  }, [iconSlugs]);
+
+  const renderedIcons = useMemo(() => {
+    if (!data) return null;
+
+    return Object.values(data.simpleIcons).map((icon) =>
+      renderCustomIcon(icon, theme || "light")
+    );
+  }, [data, theme]);
+
+  return (
+    // @ts-ignore
+    <Cloud {...cloudProps}>
+      <>{renderedIcons}</>
+    </Cloud>
+  );
+}

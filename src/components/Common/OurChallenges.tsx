@@ -9,7 +9,7 @@ const OurChallenges: React.FC = () => {
         <div className="container">
           <div className="section-title white-title ">
             <div className="text-red-600 text-2xl">Our Challenges</div>
-            <h2 className="dark:text-white">
+            <h2 className="text-white">
               You Can Protect Your Organization’s Cybersecurity By Us
             </h2>
           </div>

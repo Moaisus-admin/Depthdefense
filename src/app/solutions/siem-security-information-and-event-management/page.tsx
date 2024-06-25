@@ -1,15 +1,15 @@
 import React from "react";
-import NavbarFive from "../../../components/Layouts/NavbarFive";
 import PageBanner from "../../../components/Common/PageBanner";
 import Footer from "../../../components/Layouts/Footer";
-import PartnersTwo from "../../../components/Common/PartnersTwo";
 import GetInTouchFormTwo from "../../../components/Common/GetInTouchFormTwo";
 import SolutionsCard from "../../../components/Solutions/SolutionsCard";
+import Slider from "@/components/HomeDemoThree/Slider/Slider";
+import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
   return (
     <>
-      <NavbarFive />
+      <NavbarThree />
 
       <PageBanner
         pageTitle="SIEM (Security Information and Event Management)"
@@ -20,7 +20,7 @@ export default function Page() {
 
       <SolutionsCard />
 
-      <PartnersTwo />
+      <Slider />
 
       <GetInTouchFormTwo />
 

@@ -1,14 +1,16 @@
 import React from "react";
-import NavbarFive from "../../../components/Layouts/NavbarFive";
+
 import PageBanner from "../../../components/Common/PageBanner";
 import Footer from "../../../components/Layouts/Footer";
-import PartnersTwo from "../../../components/Common/PartnersTwo";
+
 import PDPL from "../../../components/Services/PDPL";
+import Slider from "@/components/HomeDemoThree/Slider/Slider";
+import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
   return (
     <>
-      <NavbarFive />
+      <NavbarThree />
 
       <PageBanner
         pageTitle="PDPL"
@@ -19,7 +21,7 @@ export default function Page() {
 
       <PDPL />
 
-      <PartnersTwo />
+      <Slider />
 
       <Footer />
     </>

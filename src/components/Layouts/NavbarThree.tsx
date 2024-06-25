@@ -3,90 +3,97 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import MenuItem from "./MenuItem";
-import { menus } from "../../../libs/menus";
-import TopHeader from "./TopHeader";
 import { useTranslation } from "react-i18next";
+import MenuG from "../HomeDemoThree/MenuGsap/MenuG";
+import DarkModeToggle from "@/app/DarkModeToggle";
+import LanguageToggle from "@/app/RtlToggle";
 
 const NavbarThree: React.FC = () => {
   const { t } = useTranslation();
-  const [menu, setMenu] = useState(true);
-  const toggleNavbar = () => {
-    setMenu(!menu);
-  };
+  const [logoSize, setLogoSize] = useState<{ width: number; height: number }>({
+    width: 150,
+    height: 42,
+  });
+  const [isSmallWindow, setIsSmallWindow] = useState<boolean>(false);
 
   useEffect(() => {
-    let elementId = document.getElementById("navbar");
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
-        elementId?.classList.add("is-sticky");
-      } else {
-        elementId?.classList.remove("is-sticky");
-      }
-    });
-  });
+    const handleResize = () => {
+      setIsSmallWindow(window.innerWidth < 640); // Adjust threshold as needed
 
-  const classOne = menu
-    ? "hcollapse navbar-collapse"
-    : "hcollapse navbar-collapse show";
-  const classTwo = menu
-    ? "navbar-toggler navbar-toggler-right collapsed"
-    : "navbar-toggler navbar-toggler-right";
+      // Resize logo based on window width
+      const newSize =
+        window.innerWidth < 640
+          ? { width: 80, height: 34 } // Small screen logo size
+          : { width: 150, height: 42 }; // Default logo size
+
+      setLogoSize(newSize);
+    };
+
+    handleResize(); // Call initially to set state based on current window size
+    window.addEventListener("resize", handleResize); // Listen for window resize
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Cleanup on component unmount
+    };
+  }, []);
+
+  const menuGMargin = isSmallWindow ? "ml-4" : "ml-[60px]";
 
   return (
-    <>
-      <header className="header-area p-relative">
-        <TopHeader />
+    <header className="header-area p-relative">
+      {/* Ensure the navbar area remains LTR even if the rest of the website changes to RTL */}
+      <div
+        className="navbar-area navbar-area-two fixed top-0 w-full z-50 shadow-lg "
+        style={{ direction: "ltr" }}
+      >
+        <div className="main-na">
+          <div className="container mx-auto">
+            <nav className="navbar navbar-expand-md">
+              <Link href="/" className="navbar-brand">
+                <Image
+                  src="/images/Depth-logo-1.jpg"
+                  alt="logo"
+                  width={logoSize.width}
+                  height={logoSize.height}
+                />
+              </Link>
 
-        <div id="navbar" className="navbar-area navbar-area-two">
-          <div className="main-nav">
-            <div className="container">
-              <nav className="navbar navbar-expand-md">
-                <Link href="/" className="navbar-brand">
-                  <Image
-                    src="/images/Depth-logo-1.jpg"
-                    alt="logo"
-                    width={150}
-                    height={42}
-                  />
-                </Link>
-
-                <button
-                  onClick={toggleNavbar}
-                  className={classTwo}
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="icon-bar top-bar"></span>
-                  <span className="icon-bar middle-bar"></span>
-                  <span className="icon-bar bottom-bar"></span>
-                </button>
-
-                <div className={classOne} id="navbarSupportedContent">
-                  <ul className="navbar-nav m-auto">
-                    {menus.map((menuItem) => (
-                      <MenuItem key={menuItem.label} {...menuItem} />
-                    ))}
-                  </ul>
+              <div className="others-option flex items-center ml-auto">
+                <span>
+                  <DarkModeToggle />{" "}
+                </span>
+                <span className="ml-2 mr-2">
+                  <LanguageToggle />
+                </span>
+                <div className="get-quote">
+                  {/* <Link href="/contact" className="default-btn"> */}
+                  {/* <span>{t("Get a Quote")}</span>{" "} */}
+                  {/* </Link> */}
+                  <span className={menuGMargin}>
+                    <MenuG />
+                  </span>
                 </div>
 
-                <div className="others-option">
-                  <div className="get-quote">
-                    <Link href="/contact" className="default-btn">
-                      <span>{t("Get a Quote")}</span>
-                    </Link>
-                  </div>
+                <div className="whatsapp-icon absolute right-[-82px] top-[690px]">
+                  <a
+                    href="https://wa.me/966539006060"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/images/whatsapp.png"
+                      alt="WhatsApp"
+                      width={40}
+                      height={40}
+                    />
+                  </a>
                 </div>
-              </nav>
-            </div>
+              </div>
+            </nav>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

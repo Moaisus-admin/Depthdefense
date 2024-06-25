@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 const OurSolution: React.FC = () => {
   return (
     <>
-      <div className="solution-area pb-70 dark:bg-zinc-800">
+      <div className="solution-area pb-70 dark:bg-zinc-700">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-6">
@@ -30,7 +30,7 @@ const OurSolution: React.FC = () => {
 
                 <div className="row justify-content-center">
                   <div className="col-lg-12 col-md-6">
-                    <div className="single-solution overly-one dark:bg-zinc-900">
+                    <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two">
                         <h3 className="dark:text-white">Vision</h3>
                         <p className="dark:text-white">
@@ -43,7 +43,7 @@ const OurSolution: React.FC = () => {
                   </div>
 
                   <div className="col-lg-12 col-md-6">
-                    <div className="single-solution overly-one dark:bg-zinc-900">
+                    <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two">
                         <h3 className="dark:text-white">Mission</h3>
                         <p className="dark:text-white">
@@ -56,7 +56,7 @@ const OurSolution: React.FC = () => {
                   </div>
 
                   <div className="col-lg-12 col-md-6">
-                    <div className="single-solution overly-one dark:bg-zinc-900">
+                    <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two">
                         <h3 className="dark:text-white">What we do</h3>
                         <p className="dark:text-white">

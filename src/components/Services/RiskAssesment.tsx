@@ -58,7 +58,7 @@ const RiskAssesment: React.FC = () => {
 
   return (
     <>
-      <div className="blog-column-two-area  dark:bg-zinc-800">
+      <div className="blog-column-two-area  dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <div className="col-lg-6" ref={imageRef}>
@@ -72,7 +72,7 @@ const RiskAssesment: React.FC = () => {
             <div className="col-lg-6 col-md-12 mt-[100px]">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={p1Ref}
                 >
                   <p className="dark:text-white">
@@ -89,7 +89,7 @@ const RiskAssesment: React.FC = () => {
             <div className="col-lg-12 col-md-12 mt-6">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={cardRef}
                 >
                   <h2 className="text-2xl mb-2 dark:text-white">Red Teaming</h2>

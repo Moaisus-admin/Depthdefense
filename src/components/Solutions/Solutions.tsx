@@ -8,16 +8,16 @@ import { Typewriter } from "react-simple-typewriter";
 const ServicesCard: React.FC = () => {
   return (
     <>
-      <div className="services-area pb-70 pt-100 dark:bg-zinc-800">
+      <div className="services-area pb-70 pt-100 dark:bg-zinc-700">
         <div className="container">
           <div className="section-title">
             <span className="text-3xl text-red-600">
-              Cybersecurity Services
+              Cybersecurity Solutions
             </span>
             <h2 className="dark:text-white">
               <Typewriter
                 words={[
-                  "You Can Protect Your Organization’s Cybersecurity by Services Us",
+                  "Discover our range of innovative solutions designed to meet your needs and enhance your experience.",
                 ]}
                 loop={1}
                 cursor
@@ -33,7 +33,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/cybersecurity-assessment">
+                  <Link href="/solutions/siem-security-information-and-event-management">
                     <Image
                       src="/images/services/services-A.jpg"
                       alt="Image"
@@ -45,14 +45,14 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/cybersecurity-assessment">
-                      Cybersecurity Assessment
+                    <Link href="/solutions/siem-security-information-and-event-management">
+                      SIEM (Security Information and Event Management)
                     </Link>
                   </h3>
-                  <p>A cybersecurity assessment is a process of. . .</p>
+                  <p>SIEM stands for Security Information and Event . . . .</p>
 
                   <Link
-                    href="/services/cybersecurity-assessment"
+                    href="/solutions/siem-security-information-and-event-management"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -64,7 +64,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/malware-analysis">
+                  <Link href="/solutions/endpoint-protection-edr-xdr-ndr/">
                     <Image
                       src="/images/services/services-B.jpg"
                       alt="Image"
@@ -76,13 +76,18 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/malware-analysis">
-                      Malware Analysis
+                    <Link href="/solutions/endpoint-protection-edr-xdr-ndr/">
+                      End Point Protection EDR,XDR,NDR
                     </Link>
                   </h3>
-                  <p>Malware analysis is the use of tools and. . .</p>
+                  <p>
+                    Endpoint Detection and Response (EDR) is a security . . .
+                  </p>
 
-                  <Link href="/services/malware-analysis" className="read-more">
+                  <Link
+                    href="/solutions/endpoint-protection-edr-xdr-ndr/"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -92,7 +97,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/vulnerability-assessment-penetration-testing">
+                  <Link href="/solutions/nextgen-firewalls-waf-web-application-firewall/">
                     <Image
                       src="/images/services/services-C.jpg"
                       alt="Image"
@@ -104,17 +109,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/vulnerability-assessment-penetration-testing">
-                      Vulnerability Assessment and Penetration Testing
+                    <Link href="/solutions/nextgen-firewalls-waf-web-application-firewall/">
+                      Next Gen Firewall & WAF
                     </Link>
                   </h3>
                   <p>
-                    In the age of “Internet of Things”, we see a proliferation
-                    of . . .
+                    Next Generation Firewalls (NGFW) refers to advanced . . .
                   </p>
 
                   <Link
-                    href="/services/vulnerability-assessment-penetration-testing"
+                    href="/solutions/nextgen-firewalls-waf-web-application-firewall/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -126,7 +130,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/application-security-assessment">
+                  <Link href="/solutions/iam-identity-and-access-management/">
                     <Image
                       src="/images/services/services-D.jpg"
                       alt="Image"
@@ -138,17 +142,14 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/application-security-assessment">
-                      Application Security Assessment
+                    <Link href="/solutions/iam-identity-and-access-management/">
+                      Identity and Access Management
                     </Link>
                   </h3>
-                  <p>
-                    Application security assessment is the process of testing .
-                    . .
-                  </p>
+                  <p>Identity and Access Management (IAM) is a . . .</p>
 
                   <Link
-                    href="/services/application-security-assessment"
+                    href="/solutions/iam-identity-and-access-management/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -160,7 +161,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/ransomware-assessment">
+                  <Link href="/solutions/pam-privileged-access-management/">
                     <Image
                       src="/images/services/services-E.jpg"
                       alt="Image"
@@ -172,16 +173,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/ransomware-assessment">
-                      Ransomware Assessment
+                    <Link href="/solutions/pam-privileged-access-management/">
+                      Privilege Access Management
                     </Link>
                   </h3>
                   <p>
-                    Ransomware preparedness assessment aims to identify. . .
+                    Privilege Access Management (PAM) refers to the set of . . .
                   </p>
 
                   <Link
-                    href="/services/ransomware-assessment"
+                    href="/solutions/pam-privileged-access-management/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -193,7 +194,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/ddos-simulation">
+                  <Link href="/solutions/nac-network-access-control/">
                     <Image
                       src="/images/services/services-F.jpg"
                       alt="Image"
@@ -205,16 +206,18 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/ddos-simulation">
-                      DDoS Simulation
+                    <Link href="/solutions/nac-network-access-control/">
+                      Network Access Control
                     </Link>
                   </h3>
                   <p>
-                    A DDoS Simulation is an effort to make a system or network.
-                    . .
+                    Network Access Control (NAC) is a security solution that . .
                   </p>
 
-                  <Link href="/services/ddos-simulation" className="read-more">
+                  <Link
+                    href="/solutions/nac-network-access-control/"
+                    className="read-more"
+                  >
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>
@@ -224,7 +227,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/compromised-assessment">
+                  <Link href="/solutions/security-intelligence-threat-intelligence/">
                     <Image
                       src="/images/services/services-G.jpg"
                       alt="Image"
@@ -236,17 +239,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/compromised-assessment">
-                      Compromise Assessment
+                    <Link href="/solutions/security-intelligence-threat-intelligence/">
+                      Security Intelligence / Threat Intelligence
                     </Link>
                   </h3>
                   <p>
-                    Compromise assessments are high-level investigations where.
-                    . .
+                    Threat Intelligence is the collection, analysis, and . . .
                   </p>
 
                   <Link
-                    href="/services/compromised-assessment"
+                    href="/solutions/security-intelligence-threat-intelligence/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -258,7 +260,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/risk-assessment">
+                  <Link href="/solutions/advanced-persistent-threat-apt/">
                     <Image
                       src="/images/services/services-H.jpg"
                       alt="Image"
@@ -270,42 +272,17 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/risk-assessment">
-                      Risk Assessment
+                    <Link href="/solutions/advanced-persistent-threat-apt/">
+                      Advanced Persistent Threat
                     </Link>
                   </h3>
-                  <p>IT security risk assessments focus on identifying. . .</p>
-
-                  <Link href="/services/risk-assessment" className="read-more">
-                    Read more <i className="flaticon-right-arrow"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div className="single-services">
-                <div className="services-img">
-                  <Link href="/services/governance-risk-management-and-compliance-sama-citc-nca">
-                    <Image
-                      src="/images/services/services-I.jpg"
-                      alt="Image"
-                      width={550}
-                      height={650}
-                    />
-                  </Link>
-                </div>
-
-                <div className="services-content">
-                  <h3>
-                    <Link href="/services/governance-risk-management-and-compliance-sama-citc-nca">
-                      Governance, Risk Management, and Compliance SAMA/CITC/NCA
-                    </Link>
-                  </h3>
-                  <p>Governance, Risk Management, and Compliance. . .</p>
+                  <p>
+                    An Advanced Persistent Threat (APT) is a targeted cyber . .
+                    .
+                  </p>
 
                   <Link
-                    href="/services/governance-risk-management-and-compliance-sama-citc-nca"
+                    href="/solutions/advanced-persistent-threat-apt/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -317,7 +294,41 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/forensic-analysis">
+                  <Link href="/solutions/breach-attack-simulation-solution/">
+                    <Image
+                      src="/images/services/services-I.jpg"
+                      alt="Image"
+                      width={550}
+                      height={650}
+                    />
+                  </Link>
+                </div>
+
+                <div className="services-content">
+                  <h3>
+                    <Link href="/solutions/breach-attack-simulation-solution/">
+                      Breach & Attack Simulation Solution
+                    </Link>
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Purus facilisis . .
+                    .
+                  </p>
+
+                  <Link
+                    href="/solutions/breach-attack-simulation-solution/"
+                    className="read-more"
+                  >
+                    Read more <i className="flaticon-right-arrow"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-sm-6">
+              <div className="single-services">
+                <div className="services-img">
+                  <Link href="/solutions/network-monitoring-protection/">
                     <Image
                       src="/images/services/services-J.jpg"
                       alt="Image"
@@ -329,17 +340,17 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/forensic-analysis">
-                      Forensic Analysis
+                    <Link href="/solutions/network-monitoring-protection/">
+                      Network Monitoring & Protection
                     </Link>
                   </h3>
                   <p>
-                    Forensic analysis definition can be described as a detailed.
-                    . .
+                    Network and security operations refer to the processes and
+                    practices used . .
                   </p>
 
                   <Link
-                    href="/services/forensic-analysis"
+                    href="/solutions/network-monitoring-protection/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -351,7 +362,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/network-security-operations-noc-soc">
+                  <Link href="/solutions/patch-management-vulnerability-management-tools/">
                     <Image
                       src="/images/services/services-K.jpg"
                       alt="Image"
@@ -363,17 +374,14 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/network-security-operations-noc-soc">
-                      Network & Security Operations
+                    <Link href="/solutions/patch-management-vulnerability-management-tools/">
+                      Patch Management & Vulnerability Management
                     </Link>
                   </h3>
-                  <p>
-                    Network and security operations refer to the processes and.
-                    . .
-                  </p>
+                  <p>Patch management is the process of identifying . . .</p>
 
                   <Link
-                    href="/services/network-security-operations-noc-soc"
+                    href="/solutions/patch-management-vulnerability-management-tools/"
                     className="read-more"
                   >
                     Read more <i className="flaticon-right-arrow"></i>
@@ -385,7 +393,7 @@ const ServicesCard: React.FC = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="single-services">
                 <div className="services-img">
-                  <Link href="/services/vciso">
+                  <Link href="/solutions/digital-rights-management/">
                     <Image
                       src="/images/services/services-L.jpg"
                       alt="Image"
@@ -397,100 +405,16 @@ const ServicesCard: React.FC = () => {
 
                 <div className="services-content">
                   <h3>
-                    <Link href="/services/vciso">vCISO</Link>
-                  </h3>
-                  <p>
-                    A vCISO (Virtual Chief Information Security Officer) is. . .
-                  </p>
-
-                  <Link href="/services/vciso" className="read-more">
-                    Read more <i className="flaticon-right-arrow"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div className="single-services">
-                <div className="services-img">
-                  <Link href="/services/managed-security-services">
-                    <Image
-                      src="/images/services/services-M.jpg"
-                      alt="Image"
-                      width={550}
-                      height={650}
-                    />
-                  </Link>
-                </div>
-
-                <div className="services-content">
-                  <h3>
-                    <Link href="/services/managed-security-services">
-                      Managed Security Services
+                    <Link href="/solutions/digital-rights-management/">
+                      Digital Rights Management
                     </Link>
                   </h3>
-                  <p>Managed Security Services (MSS) refer to. . .</p>
+                  <p>Digital Rights Management (DRM) refers to the . . .</p>
 
                   <Link
-                    href="/services/managed-security-services"
+                    href="/solutions/digital-rights-management/"
                     className="read-more"
                   >
-                    Read more <i className="flaticon-right-arrow"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div className="single-services">
-                <div className="services-img">
-                  <Link href="/services/iso-27001">
-                    <Image
-                      src="/images/services/services-N.jpg"
-                      alt="Image"
-                      width={550}
-                      height={650}
-                    />
-                  </Link>
-                </div>
-
-                <div className="services-content">
-                  <h3>
-                    <Link href="/services/iso-27001">ISO 27001</Link>
-                  </h3>
-                  <p>
-                    ISO27001 is an international standard that is used to. . .
-                  </p>
-
-                  <Link href="/services/iso-27001" className="read-more">
-                    Read more <i className="flaticon-right-arrow"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-sm-6">
-              <div className="single-services">
-                <div className="services-img">
-                  <Link href="/services/pdpl">
-                    <Image
-                      src="/images/services/services-I.jpg"
-                      alt="Image"
-                      width={550}
-                      height={650}
-                    />
-                  </Link>
-                </div>
-
-                <div className="services-content">
-                  <h3>
-                    <Link href="/services/pdpl">PDPL</Link>
-                  </h3>
-                  <p>
-                    The Personal Data Protection Law (PDPL) is the first. . .
-                  </p>
-
-                  <Link href="/services/pdpl" className="read-more">
                     Read more <i className="flaticon-right-arrow"></i>
                   </Link>
                 </div>

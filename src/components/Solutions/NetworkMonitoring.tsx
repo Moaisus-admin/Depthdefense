@@ -37,7 +37,7 @@ const SolutionsNetWorkM: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-800">
+      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <div
@@ -54,7 +54,7 @@ const SolutionsNetWorkM: React.FC = () => {
             <div className="col-lg-12 col-md-12 mt-11">
               <div className="single-blog-posts">
                 <div
-                  className="single-blog-content dark:bg-zinc-900 rounded-xl"
+                  className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref}
                 >
                   <p className="dark:text-white">

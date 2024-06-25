@@ -62,7 +62,7 @@ const SIEMCard: React.FC = () => {
       <div className="solution-area pt-[50px] pb-70 w-full dark:bg-zinc-700  dark:text-white text-black">
         <div className="container-fluid ">
           <div className="row ">
-            <div className="col-lg-6 w-full  ">
+            <div className=" w-full  ">
               <div className="solution-content">
                 <div className="solution-title col-lg-12 flex justify-center">
                   <div className=" ml-auto col-lg-6 text-xl">

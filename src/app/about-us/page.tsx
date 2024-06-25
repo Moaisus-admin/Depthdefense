@@ -5,11 +5,12 @@ import Footer from "../../components/Layouts/Footer";
 import OurSolution from "../../components/HomeDemoFive/OurSolution";
 import StructureCybersecurity from "../../components/AboutUs/StructureOfCybersecurity";
 import DepthCybersecurity from "../../components/AboutUs/DepthCybersecurity";
+import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
   return (
     <>
-      <NavbarFive />
+      <NavbarThree />
 
       <PageBanner
         pageTitle="About Us"

@@ -45,7 +45,7 @@ const Ransomware: React.FC = () => {
 
   return (
     <>
-      <div className="blog-column-two-area ptb-100 dark:bg-zinc-800">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-6">
@@ -61,7 +61,7 @@ const Ransomware: React.FC = () => {
 
                 <div
                   ref={cardRef}
-                  className="single-blog-content dark:bg-zinc-700 dark:text-white rounded-xl"
+                  className="single-blog-content dark:bg-zinc-600 dark:text-white rounded-xl"
                 >
                   <span className="text-2xl">Ransomware:</span>
 

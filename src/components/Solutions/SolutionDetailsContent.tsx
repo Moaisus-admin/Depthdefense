@@ -35,7 +35,7 @@ const EndPointProtection: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area ptb-100 dark:bg-zinc-800">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-6" ref={ref1}>

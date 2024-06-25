@@ -52,7 +52,7 @@ const Features: React.FC = () => {
   return (
     <>
       <div
-        className="feature-area feature-area-two feature-area-five pt-100 pb-[100px] bg-slate-50 dark:bg-zinc-800"
+        className="feature-area feature-area-two feature-area-five pt-100 pb-[100px] dark:bg-zinc-800 w-full"
         ref={sectionRef}
       >
         <div className="container">
@@ -67,7 +67,7 @@ const Features: React.FC = () => {
                   loop={1}
                   cursor
                   cursorStyle=""
-                  typeSpeed={70}
+                  typeSpeed={30}
                   deleteSpeed={50}
                   delaySpeed={1000}
                 />
@@ -76,64 +76,61 @@ const Features: React.FC = () => {
           </div>
           <div className="row">
             <div className="col-lg-4 col-sm-6" ref={addToRefs}>
-              <div
-                className="single-feature overly-one rounded-3xl feature-card"
-                id="feature-container"
-              >
-                <div className="overly-two round">
-                  <div className="title justify-center flex">
+              <div className="single-feature overly-one">
+                <div className="overly-two">
+                  <div className="title">
+                    <i className="flaticon-testing"></i>
+                    <h3>SOC/IR Service</h3>
+                  </div>
+
+                  <div className="feature-shape">
                     <Image
-                      src="/images/Service-3.jpg"
+                      src="/images/feature-shape.png"
                       alt="Image"
-                      width={119}
-                      height={119}
-                      className="items-center"
+                      width={230}
+                      height={202}
                     />
                   </div>
-                  <p className="text-center">SOC/IR Service</p>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-4 col-sm-6 " ref={addToRefs}>
-              <div
-                className="single-feature overly-one rounded-3xl feature-card"
-                id="feature-container"
-              >
+            <div className="col-lg-4 col-sm-6" ref={addToRefs}>
+              <div className="single-feature overly-one">
                 <div className="overly-two">
-                  <div className="title justify-center flex">
+                  <div className="title">
+                    <i className="flaticon-cybercrime"></i>
+                    <h3>VAPT</h3>
+                  </div>
+
+                  <div className="feature-shape">
                     <Image
-                      src="/images/Service-2.jpg"
+                      src="/images/feature-shape.png"
                       alt="Image"
-                      width={119}
-                      height={119}
-                      className="items-center"
+                      width={230}
+                      height={202}
                     />
                   </div>
-                  <p className="text-center">VAPT</p>
                 </div>
               </div>
             </div>
 
-            <div
-              className="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0"
-              ref={addToRefs}
-            >
-              <div
-                className="single-feature overly-one rounded-3xl feature-card"
-                id="feature-container"
-              >
+            <div className="col-lg-4 col-sm-6" ref={addToRefs}>
+              <div className="single-feature overly-one">
                 <div className="overly-two">
-                  <div className="title justify-center flex">
+                  <div className="title">
+                    <i className="flaticon-cyber-security"></i>
+                    <h3>Risk Management</h3>
+                  </div>
+
+                  <div className="feature-shape">
                     <Image
-                      src="/images/Service-1.jpg"
+                      src="/images/feature-shape.png"
                       alt="Image"
-                      width={119}
-                      height={119}
-                      className="items-center"
+                      width={230}
+                      height={202}
                     />
                   </div>
-                  <p className="text-center">Risk Management</p>
                 </div>
               </div>
             </div>
