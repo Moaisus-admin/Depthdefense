@@ -68,7 +68,7 @@ const Protects: React.FC = () => {
                   <h3 className="dark:text-white">Server Security</h3>
                   <p className="dark:text-white">
                     Strengthen server defenses with firewalls, regular patches,
-                    and intrusion detection systems."
+                    and intrusion detection systems.
                   </p>
                   <span className="flaticon-security-1"></span>
                 </div>

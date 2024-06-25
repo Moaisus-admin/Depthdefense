@@ -10,7 +10,7 @@ const Features: React.FC = () => {
         <div className="container">
           <div className="row">
             <h2 className="text-center dark:text-white">
-              Strengthen Your Organization's Cybersecurity with Our Professional
+              Strengthen Your Organizations Cybersecurity with Our Professional
               Services
             </h2>
             <div className="col-lg-4 col-sm-6">

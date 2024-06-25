@@ -19,7 +19,7 @@ const Features: React.FC = () => {
                     </h3>
                   </div>
                   <p>
-                    Achieve full compliance with Saudi Arabia's PDPL using our
+                    Achieve full compliance with Saudi Arabias PDPL using our
                     advanced solutions, designed to protect personal data and
                     ensure privacy across your organization.
                   </p>
@@ -47,7 +47,7 @@ const Features: React.FC = () => {
                   <p>
                     Optimize your data governance and security with our
                     NDMO-compliant solutions, ensuring seamless alignment with
-                    Saudi Arabia's National Data Management Office standards.
+                    Saudi Arabias National Data Management Office standards.
                   </p>
                   <div className="feature-shape">
                     <Image

@@ -125,7 +125,7 @@ const CyberSafety: React.FC = () => {
                   <h3 className="dark:text-white">Update Your Antivirus</h3>
                   <p className="dark:text-white">
                     Keep your antivirus up to date for protection against cyber
-                    threats. Enhance device's security by regularly updating
+                    threats. Enhance devices security by regularly updating
                     antivirus and security.
                   </p>
                 </div>

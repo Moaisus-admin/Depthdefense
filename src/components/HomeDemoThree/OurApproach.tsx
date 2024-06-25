@@ -95,7 +95,7 @@ const OurApproach: React.FC = () => {
                   <h3 className="dark:text-white">Use Antivirus Software</h3>
                   <p className="dark:text-white">
                     Deploy robust antivirus software to detect and eliminate
-                    malicious threats, ensuring your website's security.
+                    malicious threats, ensuring your websites security.
                   </p>
                   <div className="approach-shape">
                     <Image
