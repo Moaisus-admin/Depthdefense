@@ -2,13 +2,21 @@ import withBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // For Static Export
-  // output: 'export',
+  distDir: "out",
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
   optimizeFonts: false,
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        chunks: "all",
+        maxSize: 250000,
+      };
+    }
+    return config;
+  },
 };
 
 export default withBundleAnalyzer({
