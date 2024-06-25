@@ -1157,8 +1157,8 @@ Banner Area Style
   margin-bottom: 35px;
   font-weight: 600;
 }
-.banner-content h1 {
-  font-size: 60px;
+.banner-content h2 {
+  font-size: 50px;
   font-weight: 900;
   margin-bottom: 45px;
 }

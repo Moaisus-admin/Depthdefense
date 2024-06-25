@@ -11,7 +11,7 @@ const CyberSafety: React.FC = () => {
           <div className="section-title">
             <span className="text-3xl dark:text-white">Cyber Safety</span>
             <h2 className="dark:text-white">
-              How Can We Keep Uur Website Safe FRom Cyber Crimes
+              How Can We Keep your Website Safe From Cyber Crimes
             </h2>
           </div>
 

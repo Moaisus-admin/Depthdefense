@@ -9,7 +9,7 @@ const OurApproach: React.FC = () => {
       <div className="our-approach-area-three pb-70 dark:bg-zinc-600">
         <div className="container">
           <div className="section-title">
-            <span className="text-3xl dark:text-white">Our Approach</span>
+            <span className="text-3xl dark:text-white">Our Core Services</span>
             <h2 className="dark:text-white">
               How Can I Protect My Website From Cyber Attacks
             </h2>

@@ -92,12 +92,12 @@ const menugLinks = [
         path: "/services/ransomware-assessment/",
         label: "Ransomware Assessment",
       },
-      { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
+      // { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
       {
         path: "/services/compromised-assessment/",
         label: "Compromise Assessment",
       },
-      { path: "/services/risk-assessment/", label: "Risk Assessment" },
+      // { path: "/services/risk-assessment/", label: "Risk Assessment" },
 
       { path: "/services/forensic-analysis/", label: "Forensic Analysis" },
       {

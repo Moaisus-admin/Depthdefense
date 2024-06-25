@@ -8,17 +8,17 @@ const MainBanner: React.FC = () => {
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
   const bannerRef = useRef(null);
   const headings = [
-    "Personal Data Protection Law Compliance",
-    "Risk Assessment",
+    "PDPL Compliance",
     "SAMA Compliance",
     "NCA Compliance",
     "CMA Compliance",
     "CCC Compliance",
     "CITC Compliance",
+    "SOC As A Service",
     "Vulnerability Assessment",
     "Penetration Testing",
-    "Secure Code Review",
-    "Red Teaming",
+    "Red Teaming / Blue Teaming",
+    
   ];
 
   useEffect(() => {

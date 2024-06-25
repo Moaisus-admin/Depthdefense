@@ -9,17 +9,16 @@ const MainBanner: React.FC = () => {
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
   const bannerRef = useRef(null);
   const headings = [
-    "Personal Data Protection Law Compliance",
-    "Risk Assessment",
+    "PDPL Compliance",
     "SAMA Compliance",
     "NCA Compliance",
     "CMA Compliance",
     "CCC Compliance",
     "CITC Compliance",
+    "SOC As A Service",
     "Vulnerability Assessment",
     "Penetration Testing",
-    "Secure Code Review",
-    "Red Teaming",
+    "Red Teaming / Blue Teaming",
   ];
 
   useEffect(() => {
@@ -55,12 +54,12 @@ const MainBanner: React.FC = () => {
           <div className="d-table-cell">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-lg-6 text-center">
+                <div className="col-lg-8 text-center">
                   <div className="banner-content">
                     <span className="top-title text-xl">
                       World Class Cyber Security
                     </span>
-                    <h1 className="transition-opacity duration-1000 opacity-100 w-full text-white">
+                    <h2 className="transition-opacity duration-1000 opacity-100 w-full text-white">
                       {headings.map((heading, index) => (
                         <span
                           key={index}
@@ -73,7 +72,7 @@ const MainBanner: React.FC = () => {
                           {heading}
                         </span>
                       ))}
-                    </h1>
+                    </h2>
                     <p className="text-white">
                       Cyber security is the protection from the theft to protect
                       of our computer systems and networks or being damaged of

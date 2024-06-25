@@ -34,7 +34,7 @@ const Solution: React.FC = () => {
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
                         <h3 className="dark:text-white">
-                          SNDMO - National Data Management
+                          NDMO - National Data Management Office
                         </h3>
                         <span className="NumberLogo">02</span>
                       </div>
@@ -45,18 +45,28 @@ const Solution: React.FC = () => {
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
                         <h3 className="dark:text-white">
-                          NCA ECC- National Cyber Security Authority{" "}
+                          NCA- National Cybersecurity Authority{" "}
                         </h3>
                         <span className="NumberLogo">03</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="col-lg-12 col-md-6">
+                  {/* <div className="col-lg-12 col-md-6">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
                         <h3 className="dark:text-white">
                           Essential Cybersecurity Control
+                        </h3>
+                        <span className="NumberLogo">04</span>
+                      </div>
+                    </div>
+                  </div> */}
+                  <div className="col-lg-12 col-md-6">
+                    <div className="single-solution-new overly-one">
+                      <div className="overly-two">
+                        <h3 className="dark:text-white">
+                          OTCC-Operational Technology Cybersecurity Control
                         </h3>
                         <span className="NumberLogo">04</span>
                       </div>
@@ -66,19 +76,9 @@ const Solution: React.FC = () => {
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
                         <h3 className="dark:text-white">
-                          OTCC-Operational Technology Cybersecurity Control
-                        </h3>
-                        <span className="NumberLogo">05</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-12 col-md-6">
-                    <div className="single-solution-new overly-one">
-                      <div className="overly-two">
-                        <h3 className="dark:text-white">
                           Aramco Cybersecurity Compliance Certification
                         </h3>
-                        <span className="NumberLogo dark:text-white">06</span>
+                        <span className="NumberLogo dark:text-white">05</span>
                       </div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ const Solution: React.FC = () => {
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
                         <h3 className="dark:text-white">ISO 27001</h3>
-                        <span className="NumberLogo dark:text-white">07</span>
+                        <span className="NumberLogo dark:text-white">06</span>
                       </div>
                     </div>
                   </div>

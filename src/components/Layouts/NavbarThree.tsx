@@ -74,7 +74,7 @@ const NavbarThree: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="whatsapp-icon absolute right-[-82px] top-[690px]">
+                <div className="whatsapp-icon absolute right-[-82px] top-[470px]">
                   <a
                     href="https://wa.me/966539006060"
                     target="_blank"
@@ -83,8 +83,8 @@ const NavbarThree: React.FC = () => {
                     <Image
                       src="/images/whatsapp.png"
                       alt="WhatsApp"
-                      width={40}
-                      height={40}
+                      width={50}
+                      height={50}
                     />
                   </a>
                 </div>
