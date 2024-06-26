@@ -26,8 +26,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Depthdefense - Cyber Security Company",
-  description: "Cyber Security Company",
+  title: "Depthdefense - Cybersecurity Company",
+  description: "Cybersecurity Company",
 };
 
 export default function RootLayout({

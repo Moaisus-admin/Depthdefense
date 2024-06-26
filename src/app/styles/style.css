@@ -179,6 +179,13 @@ Default Style
   transition: transform 0.3s ease-in-out;
 }
 
+.whatsapp-icon{
+  position:fixed;
+	bottom:80px;
+	right:30px;
+  z-index:100;
+}
+
 .feature-card:hover {
   transform: scale(1.05);
 }

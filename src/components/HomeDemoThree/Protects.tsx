@@ -10,7 +10,7 @@ const Protects: React.FC = () => {
         <div className="container">
           <div className="section-title">
             <span className="text-2xl dark:text-white">
-              Cyber Security Protect
+              Cybersecurity Protect
             </span>
             <h2 className="dark:text-white">
               Protect Your Website, Web Server And Web Application From Hacker

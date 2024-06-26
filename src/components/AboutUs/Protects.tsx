@@ -23,7 +23,7 @@ const Protects: React.FC = () => {
             <div className="col-lg-6">
               <div className="protect-content">
                 <div className="protect-title">
-                  <span>Cyber Security Protect</span>
+                  <span>Cybersecurity Protect</span>
                   <h2 className="dark:text-white">
                     Protect your website, web server, and web application for
                     helping you being threats from the hacker

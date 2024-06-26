@@ -13,7 +13,7 @@ const TeamMember: React.FC = () => {
             <span className="text-2xl text-red-500">About Company</span>
             <h2 className="dark:text-white">
               <Typewriter
-                words={["Cyber Security Solutions Built On Customer Trust"]}
+                words={["Cybersecurity Solutions Built On Customer Trust"]}
                 loop={1}
                 cursor
                 cursorStyle=""

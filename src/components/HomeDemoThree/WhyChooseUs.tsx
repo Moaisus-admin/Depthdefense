@@ -25,7 +25,7 @@ const WhyChooseUs: React.FC = () => {
                 <div className="section-title">
                   <span className="dark:text-white text-2xl">Why Choose Us</span>
                   <h2 className="dark:text-white">
-                    We Have a Lot of Skills in Cyber Security
+                    We Have a Lot of Skills in Cybersecurity
                   </h2>
                 </div>
 

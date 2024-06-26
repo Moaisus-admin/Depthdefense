@@ -7,9 +7,9 @@ i18n.use(initReactI18next).init({
       translation: {
         english: "English",
         arabic: "Arabic",
-        worldClassCyberSecurity: "World Class Cyber Security",
+        worldClassCyberSecurity: "World Class Cybersecurity",
         cyberSecurityDescription:
-          "Cyber security is the protection from the theft to protect of our computer systems and networks or being damaged of our hardware and software.",
+          "Cybersecurity is the protection from the theft to protect of our computer systems and networks or being damaged of our hardware and software.",
         powerfulProtectionEasyRecovery: "Powerful Protection Easy Recovery",
 
         ///////////// CyberSecurity Assesment Page/////

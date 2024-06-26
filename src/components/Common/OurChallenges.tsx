@@ -41,7 +41,7 @@ const OurChallenges: React.FC = () => {
               <div className="single-challenges overly-one  dark:bg-slate-900 dark:text-white">
                 <div className="overly-two">
                   <i className="flaticon-cyber-security-1"></i>
-                  <h3 className="dark:text-white">Testing Cyber Security</h3>
+                  <h3 className="dark:text-white">Testing Cybersecurity</h3>
 
                   <span className="flaticon-cyber-security-1"></span>
                 </div>

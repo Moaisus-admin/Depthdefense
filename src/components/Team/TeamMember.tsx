@@ -142,7 +142,7 @@ const TeamMember: React.FC = () => {
 
                 <div className="team-content">
                   <h3>Michael Jettkant</h3>
-                  <span>Cyber Security Technician</span>
+                  <span>Cybersecurity Technician</span>
 
                   <ul>
                     <li>

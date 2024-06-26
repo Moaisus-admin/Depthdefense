@@ -56,7 +56,7 @@ const FaqSection: React.FC = () => {
                   <AccordionItem uuid="b">
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        Why Do We Need Cyber Security?
+                        Why Do We Need Cybersecurity?
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
@@ -74,7 +74,7 @@ const FaqSection: React.FC = () => {
                   <AccordionItem uuid="c">
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        What is Theaa Best Way to Learn Cyber security?
+                        What is Theaa Best Way to Learn Cybersecurity?
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>

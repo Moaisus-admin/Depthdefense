@@ -57,7 +57,7 @@ const MainBanner: React.FC = () => {
                 <div className="col-lg-12 text-center">
                   <div className="banner-content">
                     <span className="top-title text-2xl">
-                      World Class Cyber Security
+                      World Class Cybersecurity
                     </span>
                     <h2 className="transition-opacity duration-1000 opacity-100 w-full text-white">
                       {headings.map((heading, index) => (
@@ -73,10 +73,9 @@ const MainBanner: React.FC = () => {
                         </span>
                       ))}
                     </h2>
-                    <p className="text-white">
-                      Cyber security is the protection from the theft to protect
-                      of our computer systems and networks or being damaged of
-                      our hardware and software.
+                    <p className="text-white text-xl">
+                    Securing your future in the digital world
+
                     </p>
 
                     <div className="banner-btn">

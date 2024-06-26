@@ -74,7 +74,7 @@ const NavbarThree: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="whatsapp-icon absolute right-[-82px] top-[450px]">
+                <div className="whatsapp-icon">
                   <a
                     href="https://wa.me/966539006060"
                     target="_blank"

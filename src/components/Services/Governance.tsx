@@ -448,21 +448,21 @@ const Governance: React.FC = () => {
                         </h3>
                       </div>
                       <p className="dark:text-white">
-                        The National Cyber Security Authority (NCA) of Saudi
-                        Arabia developed the Essential Cyber Security Controls
+                        The National Cybersecurity Authority (NCA) of Saudi
+                        Arabia developed the Essential Cybersecurity Controls
                         in the year 2018. It was developed after a comprehensive
                         study of various national and international Cyber
                         Security Frameworks and Standards. The NCA ECC was
                         developed to ensure organizations maintain and support
-                        the Cyber Security initiative to protect the interests,
+                        the Cybersecurity initiative to protect the interests,
                         national security, critical infrastructure, and
                         government services. It was developed with an aim to set
-                        minimum Cyber Security requirements for information and
+                        minimum Cybersecurity requirements for information and
                         technology assets in organizations of Saudi Arabia. The
                         controls requirements developed are based on
                         industry-leading practices which intend to help
-                        organizations minimize Cyber Security Risks. The
-                        Essential Cyber Security Controls (ECC) comprises-
+                        organizations minimize Cybersecurity Risks. The
+                        Essential Cybersecurity Controls (ECC) comprises-
                       </p>
                     </div>
                   </div>
@@ -479,7 +479,7 @@ const Governance: React.FC = () => {
                   <div className="single-blog-posts">
                     <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <h2 className="text-xl mb-2 dark:text-white">
-                        5 Cyber Security Main Domains.
+                        5 Cybersecurity Main Domains.
                       </h2>
                     </div>
                   </div>
@@ -488,7 +488,7 @@ const Governance: React.FC = () => {
                   <div className="single-blog-posts">
                     <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <h2 className="text-xl mb-2 dark:text-white">
-                        29 Cyber Security Sub-Domains.
+                        29 Cybersecurity Sub-Domains.
                       </h2>
                     </div>
                   </div>
@@ -497,7 +497,7 @@ const Governance: React.FC = () => {
                   <div className="single-blog-posts">
                     <div className="single-blog-content dark:bg-zinc-800 rounded-xl">
                       <h2 className="text-xl mb-2 dark:text-white">
-                        114 Cyber Security Controls.
+                        114 Cybersecurity Controls.
                       </h2>
                     </div>
                   </div>
@@ -508,14 +508,14 @@ const Governance: React.FC = () => {
                       <p className="dark:text-white">
                         The controls outlined were developed after a
                         comprehensive review of all the legal, regulatory
-                        requirements, global Cyber Security best practices
-                        analysis of Cyber Security incidents, and attacks on
+                        requirements, global Cybersecurity best practices
+                        analysis of Cybersecurity incidents, and attacks on
                         government establishments, and considering opinions of
                         various prominent business firms of the country. In
                         addition to the ECC Standard, the National Cyber
                         Security Authority of Saudi Arabia introduced Critical
-                        Systems Cyber Security Controls (CSCC) in the year 2019.
-                        The NCA CSCC mandates the minimum Cyber Security
+                        Systems Cybersecurity Controls (CSCC) in the year 2019.
+                        The NCA CSCC mandates the minimum Cybersecurity
                         requirements for critical systems within national
                         organizations.
                       </p>

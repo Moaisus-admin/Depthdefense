@@ -11,7 +11,7 @@ const ServiceSidebar: React.FC = () => {
           <ul>
             <li>
               <Link href="/services/details">
-                Cyber Security <i className="bx bx-chevron-right"></i>
+                Cybersecurity <i className="bx bx-chevron-right"></i>
               </Link>
             </li>
             <li>
