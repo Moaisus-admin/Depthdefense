@@ -27,7 +27,7 @@ const GoTop = () => {
   return (
     <>
       {showButton && (
-        <div onClick={scrollToTop} className="go-top">
+        <div onClick={scrollToTop} className="go-top fixed">
           <i className="bx bx-chevrons-up"></i>
           <i className="bx bx-chevrons-up"></i>
         </div>
