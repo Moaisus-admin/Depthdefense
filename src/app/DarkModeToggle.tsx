@@ -7,27 +7,29 @@ const DarkModeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(isDarkMode);
+    if (typeof window !== "undefined") {
+      const isDarkMode = localStorage.getItem("darkMode") === "true";
+      setDarkMode(isDarkMode);
 
-    // Update dark mode class on the document root element
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     }
   }, []);
 
   const toggleDarkMode = () => {
     const newMode = !darkMode;
-    localStorage.setItem("darkMode", newMode.toString());
     setDarkMode(newMode);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("darkMode", newMode.toString());
 
-    // Toggle dark mode class on the document root element
-    if (newMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+      if (newMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     }
   };
 
