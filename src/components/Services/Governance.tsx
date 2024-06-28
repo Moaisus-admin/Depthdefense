@@ -29,7 +29,7 @@ const Governance: React.FC = () => {
     const elements = [ref1, ref2, ref3, ref4];
     elements.forEach((ref, index) => {
       gsap.set(ref.current, {
-        x: index % 2 === 0 ? "-100vw" : "100vw",
+        x: "-100vw",
         autoAlpha: 0,
       });
 
@@ -449,8 +449,8 @@ const Governance: React.FC = () => {
                       </div>
                       <p className="dark:text-white">
                         The National Cybersecurity Authority (NCA) of Saudi
-                        Arabia developed the Essential Cybersecurity Controls
-                        in the year 2018. It was developed after a comprehensive
+                        Arabia developed the Essential Cybersecurity Controls in
+                        the year 2018. It was developed after a comprehensive
                         study of various national and international Cyber
                         Security Frameworks and Standards. The NCA ECC was
                         developed to ensure organizations maintain and support
