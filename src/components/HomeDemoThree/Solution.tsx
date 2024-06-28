@@ -2,8 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Solution: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="solution-area solution-area-three white-bg pt-100 pb-70 dark:bg-zinc-500 dark:text-white">
@@ -12,19 +14,15 @@ const Solution: React.FC = () => {
             <div className="col-lg-6">
               <div className="solution-content">
                 <div className="solution-title">
-                  <span className="text-2xl ">What We Do</span>
-                  <h2 className="dark:text-white">
-                    The Perfect Solution For all Protection
-                  </h2>
+                  <span className="text-2xl ">{t("whatWeDo")}</span>
+                  <h2 className="dark:text-white">{t("perfectSolution")}</h2>
                 </div>
 
                 <div className="row">
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">
-                          PDPL -Privacy Data Protection Law{" "}
-                        </h3>
+                        <h3 className="dark:text-white">{t("PDPL2")}</h3>
                         <span className="NumberLogo">01</span>
                       </div>
                     </div>
@@ -33,9 +31,7 @@ const Solution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">
-                          NDMO -National Data Management Office
-                        </h3>
+                        <h3 className="dark:text-white">{t("NDMO")}</h3>
                         <span className="NumberLogo">02</span>
                       </div>
                     </div>
@@ -44,9 +40,7 @@ const Solution: React.FC = () => {
                   <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">
-                          NCA -National Cybersecurity Authority{" "}
-                        </h3>
+                        <h3 className="dark:text-white">{t("NCA2")}</h3>
                         <span className="NumberLogo">03</span>
                       </div>
                     </div>
@@ -65,9 +59,7 @@ const Solution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">
-                          OTCC -Operational Technology Cybersecurity Control
-                        </h3>
+                        <h3 className="dark:text-white">{t("OTCC")}</h3>
                         <span className="NumberLogo">04</span>
                       </div>
                     </div>
@@ -75,9 +67,7 @@ const Solution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">
-                          DCC - Data Cybersecurity Controls
-                        </h3>
+                        <h3 className="dark:text-white">{t("DCC")}</h3>
                         <span className="NumberLogo dark:text-white">05</span>
                       </div>
                     </div>
@@ -85,9 +75,7 @@ const Solution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution-new overly-one">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">
-                        Aramco Cybersecurity Compliance Certification
-                        </h3>
+                        <h3 className="dark:text-white">{t("Aramco")}</h3>
                         <span className="NumberLogo dark:text-white">06</span>
                       </div>
                     </div>

@@ -2,8 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Features: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="feature-area feature-area-three pb-70 dark:bg-zinc-600">
@@ -15,14 +17,10 @@ const Features: React.FC = () => {
                   <div className="title">
                     <i className="flaticon-testing"></i>
                     <h3 className="dark:text-white">
-                      Privacy Data Protection Law
+                      {t("privacyDataProtectionLaw")}
                     </h3>
                   </div>
-                  <p>
-                    Achieve full compliance with Saudi Arabias PDPL using our
-                    advanced solutions, designed to protect personal data and
-                    ensure privacy across your organization.
-                  </p>
+                  <p>{t("privacyDataProtectionLawDesc")}</p>
                   <div className="feature-shape">
                     <Image
                       src="/images/feature-shape-2.png"
@@ -41,14 +39,10 @@ const Features: React.FC = () => {
                   <div className="title">
                     <i className="flaticon-cybercrime"></i>
                     <h3 className="dark:text-white">
-                      National Data Management
+                      {t("nationalDataManagement")}
                     </h3>
                   </div>
-                  <p>
-                    Optimize your data governance and security with our
-                    NDMO-compliant solutions, ensuring seamless alignment with
-                    Saudi Arabias National Data Management Office standards.
-                  </p>
+                  <p>{t("nationalDataManagementDesc")}</p>
                   <div className="feature-shape">
                     <Image
                       src="/images/feature-shape-2.png"
@@ -66,13 +60,9 @@ const Features: React.FC = () => {
                 <div className="overly-two">
                   <div className="title">
                     <i className="flaticon-cyber-security"></i>
-                    <h3 className="dark:text-white">SAMA Compliance</h3>
+                    <h3 className="dark:text-white"> {t("SAMACompliance")}</h3>
                   </div>
-                  <p>
-                    Ensure your financial institution meets regulatory standards
-                    effortlessly with our comprehensive SAMA Compliance
-                    solution, designed to safeguard your operations.
-                  </p>
+                  <p>{t("SAMAComplianceDesc")}</p>
                   <div className="feature-shape">
                     <Image
                       src="/images/feature-shape-2.png"

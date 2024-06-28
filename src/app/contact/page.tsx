@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import NavbarFive from "../../components/Layouts/NavbarFive";
+import { useTranslation } from "react-i18next";
 import PageBanner from "../../components/Common/PageBanner";
 import Footer from "../../components/Layouts/Footer";
 import ContactForm from "../../components/Contact/ContactForm";
@@ -7,15 +8,16 @@ import GoogleMap from "../../components/Contact/GoogleMap";
 import NavbarThree from "@/components/Layouts/NavbarThree";
 
 export default function Page() {
+  const { t } = useTranslation();
   return (
     <>
       <NavbarThree />
 
       <PageBanner
-        pageTitle="Contact Us"
+        pageTitle={t("contactUsTitle")}
         homePageUrl="/"
         homePageText="Home"
-        activePageText="Contact Us"
+        activePageText={t("contactUsTitle")}
       />
 
       <ContactForm />

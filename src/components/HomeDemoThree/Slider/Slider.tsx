@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import "./sliderstyle.css"; // Correct import for the CSS file
 
 const imageNames = [
@@ -29,17 +31,14 @@ const imageNames = [
 ];
 
 const Slider = () => {
+  const { t } = useTranslation();
   return (
-    <>
-    
-     <div className="section-title">
-                  {/* <span className="dark:text-white text-2xl">Why Choose Us</span> */}
-                  <h2 className="dark:text-white">
-Our Esteemed Clients                  </h2>
-                </div>
-      <div className="sliderContainer dark:bg-zinc-500 pt-[20px] relative">
-     
-
+    <div className="dark:bg-zinc-600">
+      <div className="section-title">
+        {/* <span className="dark:text-white text-2xl">Why Choose Us</span> */}
+        <h2 className="dark:text-white">{t("ourEsteemedClients")}</h2>
+      </div>
+      <div className="sliderContainer dark:bg-zinc-500 pt-[5px] relative">
         <div className="slider dark:text-white relative">
           <div className="slideTrack dark:text-white">
             {imageNames.map((imageName, index) => (
@@ -56,7 +55,7 @@ Our Esteemed Clients                  </h2>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

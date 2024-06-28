@@ -179,11 +179,11 @@ Default Style
   transition: transform 0.3s ease-in-out;
 }
 
-.whatsapp-icon{
-  position:fixed;
-	bottom:80px;
-	right:30px;
-  z-index:100;
+.whatsapp-icon {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 100;
 }
 
 .feature-card:hover {
@@ -197,6 +197,24 @@ Default Style
 
 .partner-slide {
   direction: ltr !important;
+}
+
+/* Add this CSS for mobile view styling */
+@media (max-width: 640px) {
+  .fixed-position {
+    position: fixed;
+    direction: ltr;
+  }
+
+  .darkmode-toggle {
+    right: 140px;
+    top: 18px;
+  }
+
+  .language-toggle {
+    right: 70px;
+    top: 4px;
+  }
 }
 
 body {
@@ -586,7 +604,7 @@ Header Area Style
 Navbar Area Style
 ======================================================*/
 .navbar-area {
-  background-color: #171616d9
+  background-color: #171616d9;
 }
 .navbar-area .main-nav {
   padding-top: 0;

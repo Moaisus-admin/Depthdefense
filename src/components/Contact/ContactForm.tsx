@@ -3,8 +3,10 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 
 const ContactForm: React.FC = () => {
+  const { t } = useTranslation();
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const nameInputRef = useRef<HTMLInputElement | null>(null);
   const emailInputRef = useRef<HTMLInputElement | null>(null);
@@ -86,7 +88,8 @@ const ContactForm: React.FC = () => {
                   <div className="contact-title">
                     <h2 className="dark:text-white">
                       <Typewriter
-                        words={["Send us a message"]}
+                        key={t("sendMessage")}
+                        words={[t("sendMessage")]}
                         loop={1}
                         cursor
                         cursorStyle="_"
@@ -101,12 +104,15 @@ const ContactForm: React.FC = () => {
                     <div className="row">
                       <div className="col-lg-6 col-md-6">
                         <div className="form-group">
-                          <label className="dark:text-white">Name</label>
+                          <label className="dark:text-white">
+                            {" "}
+                            {t("nameLabel")}
+                          </label>
                           <input
                             type="text"
                             name="name"
                             className="form-control dark:text-white rounded-3xl"
-                            placeholder="Enter Name"
+                            placeholder={t("namePlaceholder")}
                             ref={nameInputRef}
                             required
                           />
@@ -116,13 +122,13 @@ const ContactForm: React.FC = () => {
                       <div className="col-lg-6 col-md-6">
                         <div className="form-group">
                           <label className="dark:text-white">
-                            Email Address
+                            {t("emailLabel")}
                           </label>
                           <input
                             type="text"
                             name="email"
                             className="form-control dark:text-white rounded-3xl"
-                            placeholder="Enter Email"
+                            placeholder={t("emailPlaceholder")}
                             ref={emailInputRef}
                             required
                           />
@@ -132,13 +138,13 @@ const ContactForm: React.FC = () => {
                       <div className="col-lg-6 col-md-6">
                         <div className="form-group">
                           <label className="dark:text-white">
-                            Phone Number
+                            {t("phoneLabel")}
                           </label>
                           <input
                             type="text"
                             name="number"
                             className="form-control dark:text-white rounded-3xl"
-                            placeholder="Enter Number"
+                            placeholder={t("phonePlaceholder")}
                             required
                           />
                         </div>
@@ -146,12 +152,15 @@ const ContactForm: React.FC = () => {
 
                       <div className="col-lg-6 col-md-6">
                         <div className="form-group">
-                          <label className="dark:text-white">Subject</label>
+                          <label className="dark:text-white">
+                            {" "}
+                            {t("subjectLabel")}
+                          </label>
                           <input
                             type="text"
                             name="subject"
                             className="form-control dark:text-white rounded-3xl"
-                            placeholder="Enter Subject"
+                            placeholder={t("subjectPlaceholder")}
                             required
                           />
                         </div>
@@ -159,13 +168,16 @@ const ContactForm: React.FC = () => {
 
                       <div className="col-lg-12 col-md-12">
                         <div className="form-group">
-                          <label className="dark:text-white">Message</label>
+                          <label className="dark:text-white">
+                            {" "}
+                            {t("messageLabel")}
+                          </label>
                           <textarea
                             name="text"
                             className="form-control dark:text-white rounded-2xl"
                             cols={30}
                             rows={5}
-                            placeholder="Enter Your Message..."
+                            placeholder={t("messagePlaceholder")}
                             required
                           />
                         </div>
@@ -177,7 +189,7 @@ const ContactForm: React.FC = () => {
                           className="default-btn btn-two rounded-full"
                           ref={buttonRef}
                         >
-                          Submit
+                          {t("submitButton")}
                         </button>
                       </div>
                     </div>
@@ -188,27 +200,24 @@ const ContactForm: React.FC = () => {
 
             <div className="col-lg-4 dark:bg-zinc-700 rounded-xl" ref={cardRef}>
               <div className="contact-info">
-                <h3 className="dark:text-white">Our contact details</h3>
+                <h3 className="dark:text-white">{t("contactDetailsTitle")}</h3>
 
                 <ul className="address">
                   <li className="location">
                     <i className="bx bxs-location-plus"></i>
-                    <span className="dark:text-white">Address</span>
-                    <div className="dark:text-white">
-                      Khalid Al Hakim Road, Ar Rabwah Dist, Riyadh, Kingdom of
-                      Saudi Arabia.
-                    </div>
+                    <span className="dark:text-white">{t("addressLabel")}</span>
+                    <div className="dark:text-white">{t("addressText")}</div>
                   </li>
                   <li>
                     <i className="bx bxs-phone-call"></i>
-                    <span className="dark:text-white">Phone</span>
+                    <span className="dark:text-white">{t("phoneLabel")}</span>
                     <a className="dark:text-white" href="tel:966-539006060">
                       966-539006060
                     </a>
                   </li>
                   <li>
                     <i className="bx bxs-envelope"></i>
-                    <span className="dark:text-white">Email</span>
+                    <span className="dark:text-white">{t("emailLabel")}</span>
                     <a
                       className="dark:text-white"
                       href="mailto:info@depthdefense.com"
@@ -220,7 +229,7 @@ const ContactForm: React.FC = () => {
                 </ul>
 
                 <div className="sidebar-follow-us">
-                  <h3 className="dark:text-white">Follow us:</h3>
+                  <h3 className="dark:text-white">{t("followUsTitle")}</h3>
 
                   <ul className="social-wrap">
                     <li>

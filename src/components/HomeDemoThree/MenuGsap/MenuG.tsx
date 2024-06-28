@@ -28,7 +28,6 @@ const additionalSolutions = [
         label: "Next Gen Firewall & WAF",
         path: "/solutions/nextgen-firewalls-waf-web-application-firewall/",
       },
-
       {
         label: "Network Access Control",
         path: "/solutions/nac-network-access-control/",
@@ -61,10 +60,7 @@ const additionalSolutions = [
   },
 ];
 
-const menugLinks = [
-  { path: "/", label: "Home" },
-  { path: "/about-us/", label: "About" },
-  { path: "/contact/", label: "Contact" },
+const additionalServices = [
   {
     path: "#",
     label: "Services",
@@ -92,13 +88,10 @@ const menugLinks = [
         path: "/services/ransomware-assessment/",
         label: "Ransomware Assessment",
       },
-      // { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
       {
-        path: "/services/compromised-assessment/",
+        path: "/services/compromise-assessment/",
         label: "Compromise Assessment",
       },
-      // { path: "/services/risk-assessment/", label: "Risk Assessment" },
-
       { path: "/services/forensic-analysis/", label: "Forensic Analysis" },
       {
         path: "/services/network-security-operations-noc-soc/",
@@ -111,6 +104,12 @@ const menugLinks = [
       },
     ],
   },
+];
+
+const menugLinks = [
+  { path: "/", label: "Home" },
+  { path: "/about-us/", label: "About" },
+  { path: "/contact/", label: "Contact" },
 ];
 
 const MenuG = () => {
@@ -183,7 +182,7 @@ const MenuG = () => {
 
   return (
     <div
-      className={`menug-container ${isMenuGOpen ? "menug-open" : ""}`}
+      className={`menug-container w-fit ${isMenuGOpen ? "menug-open" : ""}`}
       ref={container}
     >
       <div className="menug-bar w-fit">
@@ -195,49 +194,57 @@ const MenuG = () => {
           </div>
         </div>
       </div>
-      <div className="menug-overlay col-lg-12">
-        <div className="menug-overlay-bar">
-          <div className="menug-logo">
-            <Link href="/"></Link>
-          </div>
-        </div>
-        <div className="menug-content col-lg-12 flex">
-          <div className="menug-links col-lg-6">
+
+      <div className="menug-overlay-bar"></div>
+      <div className="menug-overlay">
+        <div className="menug-content col-lg-12 flex gap-4">
+          <div className="menug-links col-lg-2">
             {menugLinks.map((link, index) => (
               <div className="menug-link-item" key={index}>
                 <div
                   className={`menug-link-item-holder ${
                     index < 5 ? "first-link services-link" : ""
-                  }`}
-                  onClick={link.children ? undefined : toggleMenuG}
+                  } ${link.label.toLowerCase()}-link`} /* Unique class for each link */
                 >
                   <Link href={link.path} className="menug-link">
                     {link.label}
                   </Link>
-                  {link.children && (
-                    <div className="submenu">
-                      {link.children.map((childLink, childIndex) => (
-                        <div className="menug-link-item" key={childIndex}>
-                          <div
-                            className="menug-link-item-holder"
-                            onClick={toggleMenuG}
-                          >
-                            <Link
-                              href={childLink.path}
-                              className="menug-link submenu-link"
-                            >
-                              {childLink.label}
-                            </Link>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
           </div>
-          <div className="menug-additional-content col-lg-6">
+
+          <div className="menug-additional-content col-lg-5">
+            <div className="menug-links">
+              <div className="menug-link-item">
+                <div className="menug-link-item-holder first-link services-link">
+                  <span className="menug-link additional-services-heading">
+                    {additionalServices[0].label}
+                  </span>
+                  {additionalServices[0].children && (
+                    <div className="submenu">
+                      {additionalServices[0].children.map(
+                        (childLink, childIndex) => (
+                          <div className="menug-link-item" key={childIndex}>
+                            <div className="menug-link-item-holder">
+                              <Link
+                                href={childLink.path}
+                                className="menug-link submenu-link"
+                              >
+                                {childLink.label}
+                              </Link>
+                            </div>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="menug-additional-content col-lg-5">
             <div className="menug-links">
               <div className="menug-link-item">
                 <div className="menug-link-item-holder first-link services-link">

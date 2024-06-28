@@ -10,7 +10,6 @@ body.no-scroll {
   padding: 15px;
   overflow: hidden; /* Prevent overflow */
 }
-
 .slider {
   height: 250px;
   width: 100%; /* Adjust width as needed */
@@ -18,6 +17,7 @@ body.no-scroll {
   display: grid;
   place-items: center;
   overflow: hidden;
+  direction: ltr; /* Ensure LTR direction */
 }
 
 .slideTrack {

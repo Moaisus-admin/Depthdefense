@@ -2,8 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 
 const OurSolution: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="solution-area pb-70 dark:bg-zinc-700">
@@ -12,12 +14,13 @@ const OurSolution: React.FC = () => {
             <div className="col-lg-6">
               <div className="solution-content">
                 <div className="solution-title">
-                  <span className="text-2xl text-red-600">Who we Are</span>
+                  <span className="text-2xl text-red-600">
+                    {t("whoWeAreTitle")}
+                  </span>
                   <h2 className="dark:text-white">
                     <Typewriter
-                      words={[
-                        " We are team of young, dynamic & passionate experienced team, always ready to take up challenges & deliver them responsibility ensuring extreme customer satisfaction & high quality of standards.",
-                      ]}
+                      key={t("whoWeAreDescription")} // Add this line
+                      words={[t("whoWeAreDescription")]}
                       loop={1}
                       cursor
                       cursorStyle=""
@@ -32,10 +35,9 @@ const OurSolution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">Vision</h3>
+                        <h3 className="dark:text-white">{t("visionTitle")}</h3>
                         <p className="dark:text-white">
-                          To become a highly revered Saudi Organization,
-                          recognized for deep domain knowledge & applied wisdom.
+                          {t("visionDescription")}
                         </p>
                         <span className="NumberLogo">01</span>
                       </div>
@@ -45,10 +47,9 @@ const OurSolution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">Mission</h3>
+                        <h3 className="dark:text-white">{t("missionTitle")}</h3>
                         <p className="dark:text-white">
-                          Empower clients to fortify their Infrastructure by
-                          delivering value to build secure.
+                          {t("missionDescription")}
                         </p>
                         <span className="NumberLogo">02</span>
                       </div>
@@ -58,14 +59,11 @@ const OurSolution: React.FC = () => {
                   <div className="col-lg-12 col-md-6">
                     <div className="single-solution overly-one dark:bg-zinc-800">
                       <div className="overly-two">
-                        <h3 className="dark:text-white">What we do</h3>
+                        <h3 className="dark:text-white">
+                          {t("whatWeDoTitle")}
+                        </h3>
                         <p className="dark:text-white">
-                          Advisory consulting is our forte. We understand that
-                          business have more questions than answers to the
-                          evolving cyber threats. We assist in identifying gaps
-                          suggest solutions to mitigate risks & reduce exposure
-                          to cyber-attacks. This helps in meeting your business
-                          demands & conducting business with aplomb.
+                          {t("whatWeDoDescription")}
                         </p>
                         <span className="NumberLogo">03</span>
                       </div>

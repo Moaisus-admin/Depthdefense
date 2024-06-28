@@ -33,7 +33,7 @@ body.no-scroll {
 .menug-overlay {
   position: fixed;
   top: 0;
-  right: 0; /* Change this from 'left' to 'right' */
+  left: 0; /* Change this from 'left' to 'right' */
   width: 100vw;
   height: 100vh;
   padding: 1em; /* Adjust padding as needed */
@@ -60,13 +60,24 @@ body.no-scroll {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20px; /* Default margin-top for big screens */
+  margin-right: 20px;
 }
 
 @media (max-width: 768px) {
   .hamburger-menu {
     width: 20px; /* Adjust width of hamburger button for smaller screens */
     height: 15px; /* Adjust height of hamburger button for smaller screens */
-    margin-top: 6px; /* Adjust margin-top for smaller screens */
+    margin-top: 20px; /* Adjust margin-top for smaller screens */
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hamburger-menu {
+    width: 20px; /* Adjust width of hamburger button for smaller screens */
+    height: 15px; /* Adjust height of hamburger button for smaller screens */
+    margin-top: 10px; /* Adjust margin-top for smaller screens */
+    margin-left: 20px;
   }
 }
 
@@ -139,7 +150,6 @@ body.no-scroll {
 }
 
 .menug-link-item-holder.services-link a {
-  font-size: 2.5em; /* Font size for "Home", "About us", "Solutions", "Services", and "Contact" */
   margin-bottom: 15px;
   margin-top: 0; /* Reset margin top */
   color: #a1a7b4;
@@ -147,15 +157,17 @@ body.no-scroll {
 
 .submenu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
   max-width: calc(100vw - 4em);
-  overflow-y: auto; /* Enable vertical scrolling */
+
   padding-top: 20px;
 }
 
 .submenu .menug-link-item-holder {
+  display: flex;
+  align-items: center; /* Vertically center items */
   position: relative;
   overflow: visible;
   width: 100%;
@@ -164,25 +176,35 @@ body.no-scroll {
 
 .submenu .menug-link-item-holder::before {
   content: "";
-  display: inline-block;
+  display: block;
   width: 8px; /* Adjust size of the dot */
   height: 8px; /* Adjust size of the dot */
   background-color: white; /* Color of the dot */
   border-radius: 50%; /* Ensures the dot is circular */
-
-  margin-left: 30px;
+  margin-right: 8px; /* Space between dot and text */
+  margin-bottom: 12px;
 }
 
 .submenu .menug-link-item-holder a {
   color: white;
-  font-size: 1.5em !important; /* Adjust as needed */
+  font-size: 1.2em; /* Adjust as needed */
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 85%;
   display: inline-block;
   text-decoration: none; /* Ensure no underline */
-  vertical-align: middle; /* Align text vertically with dot */
-  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .submenu .menug-link-item-holder a {
+    font-size: 0.6em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .submenu .menug-link-item-holder a {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
 }
 
 .additional-solutions-heading {
@@ -190,4 +212,57 @@ body.no-scroll {
   /* font-weight: bold; */
   margin-bottom: 15px;
   color: #a1a7b4;
+}
+
+.additional-services-heading {
+  font-size: 2.5em;
+  /* font-weight: bold; */
+  margin-bottom: 15px;
+  color: #a1a7b4;
+}
+
+@media (max-width: 768px) {
+  .additional-solutions-heading {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .additional-solutions-heading {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .additional-services-heading {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .additional-services-heading {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+}
+
+.home-link,
+.about-link,
+.contact-link {
+  font-size: 2.5em;
+}
+
+@media (max-width: 768px) {
+  .home-link,
+  .about-link,
+  .contact-link {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-link,
+  .about-link,
+  .contact-link {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
 }

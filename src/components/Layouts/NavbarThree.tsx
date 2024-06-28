@@ -59,10 +59,20 @@ const NavbarThree: React.FC = () => {
               </Link>
 
               <div className="others-option flex items-center ml-auto">
-                <span>
+                <span
+                  className={
+                    isSmallWindow ? "fixed-position darkmode-toggle" : ""
+                  }
+                >
                   <DarkModeToggle />{" "}
                 </span>
-                <span className="ml-2 mr-2">
+                <span
+                  className={
+                    isSmallWindow
+                      ? "fixed-position language-toggle ml-2 mr-2"
+                      : "ml-2 mr-2"
+                  }
+                >
                   <LanguageToggle />
                 </span>
                 <div className="get-quote">
@@ -74,7 +84,7 @@ const NavbarThree: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="whatsapp-icon">
+                <div className="whatsapp-icon absolute right-[-82px] top-[450px]">
                   <a
                     href="https://wa.me/966539006060"
                     target="_blank"

@@ -2,20 +2,18 @@
 
 import React from "react";
 import Image from "next/image";
-
+import { useTranslation } from "next-i18next";
 const Protects: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="protect-area protect-area-three pt-100 pb-70 dark:bg-zinc-500">
         <div className="container">
           <div className="section-title">
             <span className="text-2xl dark:text-white">
-              Cybersecurity Protect
+              {t("cybersecurityProtect")}
             </span>
-            <h2 className="dark:text-white">
-              Protect Your Website, Web Server And Web Application From Hacker
-              Threats
-            </h2>
+            <h2 className="dark:text-white">{t("protectYourWebsite")}</h2>
           </div>
 
           <div className="row">
@@ -23,11 +21,8 @@ const Protects: React.FC = () => {
               <div className="single-challenges overly-one dark:bg-zinc-600">
                 <div className="overly-two">
                   <i className="flaticon-database"></i>
-                  <h3 className="dark:text-white">Database Security</h3>
-                  <p className="dark:text-white">
-                    Implement robust encryption and access controls to safeguard
-                    sensitive data.
-                  </p>
+                  <h3 className="dark:text-white">{t("databaseSecurity")}</h3>
+                  <p className="dark:text-white">{t("databaseSecurityDesc")}</p>
                   <span className="flaticon-database"></span>
                 </div>
               </div>
@@ -37,10 +32,11 @@ const Protects: React.FC = () => {
               <div className="single-challenges overly-one dark:bg-zinc-600">
                 <div className="overly-two">
                   <i className="flaticon-application"></i>
-                  <h3 className="dark:text-white">Application Security</h3>
+                  <h3 className="dark:text-white">
+                    {t("applicationSecurity")}
+                  </h3>
                   <p className="dark:text-white">
-                    Secure your applications with comprehensive code reviews and
-                    regular security testing.
+                    {t("applicationSecurityDesc")}
                   </p>
                   <span className="flaticon-application"></span>
                 </div>
@@ -51,11 +47,8 @@ const Protects: React.FC = () => {
               <div className="single-challenges overly-one dark:bg-zinc-600">
                 <div className="overly-two">
                   <i className="flaticon-security"></i>
-                  <h3 className="dark:text-white">Web Security</h3>
-                  <p className="dark:text-white">
-                    Secure your website with HTTPS, strong authentication, and
-                    regular vulnerability assessments.
-                  </p>
+                  <h3 className="dark:text-white">{t("webSecurity")}</h3>
+                  <p className="dark:text-white">{t("webSecurityDesc")}</p>
                   <span className="flaticon-security"></span>
                 </div>
               </div>
@@ -65,11 +58,8 @@ const Protects: React.FC = () => {
               <div className="single-challenges overly-one dark:bg-zinc-600">
                 <div className="overly-two">
                   <i className="flaticon-security-1"></i>
-                  <h3 className="dark:text-white">Server Security</h3>
-                  <p className="dark:text-white">
-                    Strengthen server defenses with firewalls, regular patches,
-                    and intrusion detection systems.
-                  </p>
+                  <h3 className="dark:text-white">{t("serverSecurity")}</h3>
+                  <p className="dark:text-white">{t("serverSecurityDesc")}</p>
                   <span className="flaticon-security-1"></span>
                 </div>
               </div>

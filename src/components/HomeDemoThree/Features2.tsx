@@ -2,29 +2,26 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Features: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="feature-area feature-area-three pb-70 dark:bg-zinc-600">
         <div className="container">
           <div className="row">
             <h2 className="text-center dark:text-white">
-              Strengthen Your Organizations Cybersecurity with Our Professional
-              Services
+              {t("strengthenCybersecurity")}
             </h2>
             <div className="col-lg-4 col-sm-6">
               <div className="single-feature overly-one dark:text-white dark:bg-zinc-700 rounded-2xl">
                 <div className="overly-two">
                   <div className="title">
                     <i className="flaticon-testing"></i>
-                    <h3 className="dark:text-white">SOC/IR Service</h3>
+                    <h3 className="dark:text-white"> {t("SOCIRService")}</h3>
                   </div>
-                  <p>
-                    Benefit from our Security Operations Center (SOC) and
-                    Incident Response (IR) services to monitor, detect, and
-                    respond to cyber threats in real-time.
-                  </p>
+                  <p>{t("SOCIRServiceDesc")}</p>
                   <div className="feature-shape">
                     <Image
                       src="/images/feature-shape-2.png"
@@ -42,13 +39,9 @@ const Features: React.FC = () => {
                 <div className="overly-two">
                   <div className="title">
                     <i className="flaticon-cybercrime"></i>
-                    <h3 className="dark:text-white">VAPT</h3>
+                    <h3 className="dark:text-white"> {t("VAPT")}</h3>
                   </div>
-                  <p>
-                    Strengthen your defenses with our Vulnerability Assessment
-                    and Penetration Testing (VAPT) services, identifying and
-                    mitigating security weaknesses before they can be exploited.
-                  </p>
+                  <p>{t("VAPTDesc")}</p>
                   <div className="feature-shape">
                     <Image
                       src="/images/feature-shape-2.png"
@@ -66,13 +59,9 @@ const Features: React.FC = () => {
                 <div className="overly-two">
                   <div className="title">
                     <i className="flaticon-cyber-security"></i>
-                    <h3 className="dark:text-white">Risk Management</h3>
+                    <h3 className="dark:text-white"> {t("riskManagement")}</h3>
                   </div>
-                  <p>
-                    Implement comprehensive risk management strategies with our
-                    expert guidance, ensuring your organization is prepared to
-                    handle potential cybersecurity threats effectively.
-                  </p>
+                  <p>{t("riskManagementDesc")}</p>
                   <div className="feature-shape">
                     <Image
                       src="/images/feature-shape-2.png"

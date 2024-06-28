@@ -3,8 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -22,10 +24,7 @@ const Footer: React.FC = () => {
                   />
                 </Link>
 
-                <p>
-                  Depth defense is Saudi based company with panache to deliver
-                  competitive & quality cyber consulting services with ease.
-                </p>
+                <p>{t("companyDescription")}</p>
 
                 <ul className="social-icon">
                   <li>
@@ -54,13 +53,12 @@ const Footer: React.FC = () => {
 
             <div className="col-lg-3 col-md-6">
               <div className="single-footer-widget">
-                <h3>Address</h3>
+                <h3>{t("addressTitle")}</h3>
 
                 <ul className="address">
                   <li className="location">
                     <i className="bx bxs-location-plus"></i>
-                    Khalid Al Hakim Road, Ar Rabwah Dist, Riyadh, Kingdom of
-                    Saudi Arabia.
+                    {t("address")}
                   </li>
                   <li>
                     <i className="bx bxs-envelope"></i>
@@ -79,26 +77,26 @@ const Footer: React.FC = () => {
 
             <div className="col-lg-3 col-md-6">
               <div className="single-footer-widget">
-                <h3>Services</h3>
+                <h3>{t("servicesTitle")}</h3>
 
                 <ul className="import-link">
                   <li>
-                    <Link href="#">Risk Management</Link>
+                    <Link href="#">{t("riskManagement1")}</Link>
                   </li>
                   <li>
-                    <Link href="#">VAPT</Link>
+                    <Link href="#">{t("vapt")}</Link>
                   </li>
                   <li>
-                    <Link href="#">SOC/IR Service</Link>
+                    <Link href="#">{t("socIrService")}</Link>
                   </li>
                   <li>
-                    <Link href="#">Offensive Security</Link>
+                    <Link href="#">{t("offensiveSecurity")}</Link>
                   </li>
                   <li>
-                    <Link href="#">NOC Service</Link>
+                    <Link href="#">{t("nocService")}</Link>
                   </li>
                   <li>
-                    <Link href="#">Infrastructure Service</Link>
+                    <Link href="#">{t("infrastructureService")}</Link>
                   </li>
                 </ul>
               </div>
@@ -106,26 +104,26 @@ const Footer: React.FC = () => {
 
             <div className="col-lg-3 col-md-6">
               <div className="single-footer-widget">
-                <h3>Quick Links</h3>
+                <h3>{t("quickLinksTitle")}</h3>
 
                 <ul className="import-link">
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/">{t("home")}</Link>
                   </li>
                   <li>
-                    <Link href="/about-us/">About Us</Link>
+                    <Link href="/about-us/">{t("aboutUs")}</Link>
                   </li>
                   <li>
-                    <Link href="/services/">Services</Link>
+                    <Link href="/services/">{t("services")}</Link>
                   </li>
                   <li>
-                    <Link href="#">Solution</Link>
+                    <Link href="#">{t("solution")}</Link>
                   </li>
                   <li>
-                    <Link href="/solutions">Careers</Link>
+                    <Link href="/solutions">{t("careers")}</Link>
                   </li>
                   <li>
-                    <Link href="/contact/">Contact</Link>
+                    <Link href="/contact/">{t("contact")}</Link>
                   </li>
                 </ul>
               </div>
@@ -139,7 +137,7 @@ const Footer: React.FC = () => {
           <div className="row align-items-center">
             <div className="col-lg-7 col-md-6">
               <p className="flex justify-end gap-1">
-                Copyright &copy; {currentYear}
+                {t("copyright", { year: currentYear })}
                 <span className="text-red-500">Depth Defense</span>
               </p>
             </div>
@@ -147,12 +145,12 @@ const Footer: React.FC = () => {
             <div className="col-lg-5 col-md-6">
               <ul className="footer-menu">
                 <li>
-                  <Link href="/privacy-policy">Privacy Policy</Link>
+                  <Link href="/privacy-policy">{t("privacyPolicy")}</Link>
                 </li>
                 <li>
-                  <Link href="/terms-conditions">Terms & Conditions</Link>
+                  <Link href="/terms-conditions">{t("termsConditions")}</Link>
                 </li>
-                <li className="text-white">Cookie Policy</li>
+                <li className="text-white">{t("cookiePolicy")}</li>
               </ul>
             </div>
           </div>

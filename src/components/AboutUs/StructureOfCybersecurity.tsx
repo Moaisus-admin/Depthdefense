@@ -10,8 +10,10 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const StructureCybersecurity: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="faq-area white-bg ptb-100 dark:bg-zinc-800">
@@ -31,10 +33,7 @@ const StructureCybersecurity: React.FC = () => {
             <div className="col-lg-6">
               <div className="faq-accordion">
                 <div className="faq-title">
-                  <h2 className="dark:text-white">
-                    A birds Eyes view of Defense in Depth structure of
-                    cybersecurity
-                  </h2>
+                  <h2 className="dark:text-white">{t("faqTitle")}</h2>
                 </div>
 
                 <Accordion allowZeroExpanded preExpanded={["a"]}>
@@ -43,7 +42,7 @@ const StructureCybersecurity: React.FC = () => {
                       <AccordionItemButton>
                         <span className="dark:text-white">
                           {" "}
-                          Governance & Risk management
+                          {t("governanceRiskTitle")}
                         </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
@@ -51,18 +50,17 @@ const StructureCybersecurity: React.FC = () => {
                       <div className="dark:text-white">
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          ISO 27002 Compliant
+                          {t("isoCompliant")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" /> Center for Internet
-                          Security (CIS) Controls
+                          <FaStar className="mr-1" /> {t("cisControls")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" /> 3 Annual Pen Tests{" "}
+                          <FaStar className="mr-1" /> {t("annualPenTests")}{" "}
                         </div>
                       </div>
 
@@ -70,55 +68,55 @@ const StructureCybersecurity: React.FC = () => {
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Privacy Shield Certified
+                          {t("privacyShield")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" /> GOPR/CCPA Compliant{" "}
-                        </div>
-                      </div>
-                      <div className="dark:text-white">
-                        {" "}
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" />
-                          Enterprice Risk Register{" "}
+                          <FaStar className="mr-1" /> {t("gdprCcpa")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          NIST SP 800-53 Compliant{" "}
+                          {t("riskRegister")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          SSAE 18 soCI Type 2 Certified{" "}
+                          {t("nistCompliant")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Standard Information Cathering (SIC){" "}
+                          {t("ssaeCertified")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Information Security Audit Reports{" "}
+                          {t("sic")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Enterprice Incident Response{" "}
+                          {t("securityAuditReports")}
+                        </div>
+                      </div>
+                      <div className="dark:text-white">
+                        {" "}
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <FaStar className="mr-1" />
+                          {t("incidentResponse")}
                         </div>
                       </div>
                     </AccordionItemPanel>
@@ -128,7 +126,7 @@ const StructureCybersecurity: React.FC = () => {
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <span className="dark:text-white">
-                          Platform Security
+                          {t("platformSecurityTitle")}
                         </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
@@ -137,55 +135,55 @@ const StructureCybersecurity: React.FC = () => {
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Next Generation Firewalls{" "}
+                          {t("platformSecurityTitle")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" /> Antivirus for Servers{" "}
-                        </div>
-                      </div>
-                      <div className="dark:text-white">
-                        {" "}
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" />
-                          AES 256 Encryption at Rest{" "}
+                          <FaStar className="mr-1" /> {t("antivirusServers")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Segregated Active Directory & VLANS{" "}
+                          {t("aesEncryption")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Privileged Account Vaulting{" "}
+                          {t("segregatedAdVlans")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Continuous Vulnerability Scanning & Patch Management{" "}
+                          {t("privilegedAccountVaulting")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Secure Data Backups and Disaster Recovery{" "}
+                          {t("vulnerabilityScanning")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Operating Systems Hardening{" "}
+                          {t("secureBackups")}
+                        </div>
+                      </div>
+                      <div className="dark:text-white">
+                        {" "}
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <FaStar className="mr-1" />
+                          {t("osHardening")}
                         </div>
                       </div>
                     </AccordionItemPanel>
@@ -195,7 +193,7 @@ const StructureCybersecurity: React.FC = () => {
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <span className="dark:text-white">
-                          End User Protection
+                          {t("endUserProtectionTitle")}
                         </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
@@ -204,28 +202,28 @@ const StructureCybersecurity: React.FC = () => {
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          End User Protection Cybersecurity Awareness Training{" "}
+                          {t("cybersecurityTraining")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Multifactor Authentication{" "}
+                          {t("multifactorAuthentication")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Role-Based Access Constrol{" "}
+                          {t("roleBasedAccessControl")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Simulated Pishing Campaigns{" "}
+                          {t("simulatedPhishing")}
                         </div>
                       </div>
                     </AccordionItemPanel>
@@ -235,7 +233,7 @@ const StructureCybersecurity: React.FC = () => {
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <span className="dark:text-white">
-                          Security Information Event Management
+                          {t("securityInformationEventTitle")}
                         </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
@@ -244,26 +242,26 @@ const StructureCybersecurity: React.FC = () => {
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Raw Logs, Endpoint Data &Network Traffic Analytics{" "}
+                          {t("rawLogs")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
-                          <FaStar className="mr-1" /> Unified Log Data{" "}
+                          <FaStar className="mr-1" /> {t("unifiedLogData")}
                         </div>{" "}
                       </div>
                       <div className="dark:text-white">
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          User Behavior Analytics (UBA){" "}
+                          {t("userBehaviorAnalytics")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Suspicious Activity Detection & Alerts{" "}
+                          {t("anomalyDetection")}
                         </div>
                       </div>
                     </AccordionItemPanel>
@@ -273,7 +271,7 @@ const StructureCybersecurity: React.FC = () => {
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <span className="dark:text-white">
-                          Perimeter security
+                          {t("perimeterSecurityTitle")}
                         </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
@@ -282,49 +280,49 @@ const StructureCybersecurity: React.FC = () => {
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          External Firewalls{" "}
+                          {t("externalFirewalls")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Remote Access{" "}
+                          {t("remoteAccess")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Spam Filtering{" "}
+                          {t("spamFiltering")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Threat Intel Feeds{" "}
+                          {t("threatIntelFeeds")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Remote Authentication Reporting{" "}
+                          {t("remoteAuthReporting")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Brute Force and DoS Detection{" "}
+                          {t("bruteForceDosDetection")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Data Center Physical Security{" "}
+                          {t("dataCenterSecurity")}
                         </div>
                       </div>
                     </AccordionItemPanel>
@@ -334,7 +332,7 @@ const StructureCybersecurity: React.FC = () => {
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <span className="dark:text-white">
-                          Endpoint Security
+                          {t("endpointSecurityTitle")}
                         </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
@@ -343,63 +341,63 @@ const StructureCybersecurity: React.FC = () => {
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Automated Microsoft Windows and 3rd Party application
-                          Patch Management{" "}
+                          {t("patchManagement")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Antivirus and Endpoint Detection &Response (EDR){" "}
+                          {t("antivirusEdR")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Remote Monitoring & Management System{" "}
+                          {t("remoteMonitoringManagement")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Local Admin Password Solution{" "}
+                          {t("localAdminPassword")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Full Disk Encryption{" "}
-                        </div>
-                      </div>
-                      <div className="dark:text-white">
-                        {" "}
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                          Mobile Device Management{" "}
+                          {t("fullDiskEncryption")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Group Policy Enforcement{" "}
+                          {t("mobileDeviceManagement")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Password Complexity{" "}
+                          {t("groupPolicyEnforcement")}
                         </div>
                       </div>
                       <div className="dark:text-white">
                         {" "}
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <FaStar className="mr-1" />
-                          Brute Force Prevention{" "}
+                          {t("passwordComplexity")}
+                        </div>
+                      </div>
+                      <div className="dark:text-white">
+                        {" "}
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <FaStar className="mr-1" />
+                          {t("bruteForcePrevention")}
                         </div>
                       </div>
                     </AccordionItemPanel>

@@ -2,15 +2,19 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const TeamMemberTwo: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="team-area team-area-three white-bg pt-100 pb-70 dark:bg-zinc-600">
         <div className="container">
           <div className="section-title">
-            <span className="text-3xl dark:text-white">Professionals</span>
-            <h2 className="dark:text-white">Meet Our Skilled Team</h2>
+            <span className="text-3xl dark:text-white">
+              {t("professionals")}
+            </span>
+            <h2 className="dark:text-white">{t("meetOurTeam")}</h2>
           </div>
 
           <div className="row justify-content-center">
@@ -25,7 +29,7 @@ const TeamMemberTwo: React.FC = () => {
 
                 <div className="team-content">
                   <h3>Ciaran Sebastian</h3>
-                  <span>Commercial Director</span>
+                  <span>{t("commercialDirector")}</span>
 
                   <ul>
                     <li>
@@ -64,7 +68,7 @@ const TeamMemberTwo: React.FC = () => {
 
                 <div className="team-content">
                   <h3>Jendoubi Bayer</h3>
-                  <span>Financial Officer</span>
+                  <span>{t("financialOfficer")}</span>
 
                   <ul>
                     <li>
@@ -103,7 +107,7 @@ const TeamMemberTwo: React.FC = () => {
 
                 <div className="team-content">
                   <h3>Andrew Gleeson</h3>
-                  <span>Chief Executive Officer</span>
+                  <span>{t("chiefExecutiveOfficer")}</span>
 
                   <ul>
                     <li>
