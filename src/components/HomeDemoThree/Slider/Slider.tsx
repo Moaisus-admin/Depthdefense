@@ -38,11 +38,11 @@ const Slider = () => {
         {/* <span className="dark:text-white text-2xl">Why Choose Us</span> */}
         <h2 className="dark:text-white">{t("ourEsteemedClients")}</h2>
       </div>
-      <div className="sliderContainer dark:bg-zinc-500 pt-[5px] relative">
+      <div className="sliderContainer  pt-[5px] relative">
         <div className="slider dark:text-white relative">
           <div className="slideTrack dark:text-white">
             {imageNames.map((imageName, index) => (
-              <div className="slide dark:bg-zinc-500" key={index}>
+              <div className="slide " key={index}>
                 <Image
                   src={`/images/vendors/${imageName}`}
                   alt={`Slide ${index + 1}`}

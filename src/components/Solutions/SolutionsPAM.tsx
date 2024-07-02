@@ -3,10 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsPAM: React.FC = () => {
+  const { t } = useTranslation("common"); // 'common' is the namespace, replace it with your own if different
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref = useRef(null);
@@ -74,19 +76,7 @@ const SolutionsPAM: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref}
                 >
-                  <p className="dark:text-white">
-                    Privilege Access Management (PAM) refers to the set of
-                    processes, tools, and policies designed to manage and
-                    control privileged user access in an organization. PAM is
-                    aimed at identifying and controlling privileged users, their
-                    access levels, and privileges within a system or network.
-                    This includes activities such as managing passwords,
-                    restricting access to sensitive systems, enforcing user
-                    accountability, and monitoring user activity. The goal of
-                    PAM is to reduce the risk of data breaches and protect
-                    critical assets by limiting access to only authorized users
-                    who require privileged access to perform their duties.
-                  </p>
+                  <p className="dark:text-white">{t("pamDescription")}</p>
                 </div>
               </div>
             </div>

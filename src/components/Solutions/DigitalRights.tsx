@@ -3,10 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsDigitalRights: React.FC = () => {
+  const { t } = useTranslation();
   const imageRef = useRef(null);
   const cardRef = useRef(null);
 
@@ -37,9 +39,9 @@ const SolutionsDigitalRights: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-5">
             <div
               className="col-lg-12 col-md-12 justify-center flex flex-wrap gap-4"
               ref={imageRef}
@@ -58,20 +60,7 @@ const SolutionsDigitalRights: React.FC = () => {
                   ref={cardRef}
                 >
                   <p className="dark:text-white">
-                    Digital Rights Management (DRM) refers to the techniques and
-                    technologies used to control access and usage of digital
-                    content and software. It is a system that is typically
-                    implemented by content creators and publishers to protect
-                    their intellectual property from unauthorized reproduction,
-                    distribution, or copying. DRM may involve encrypting digital
-                    media, controlling access through digital keys, or limiting
-                    the number of devices that can access the content or
-                    software. It enables copyright holders to safeguard their
-                    rights and ensure that they receive payment for their works.
-                    However, DRM has also been criticized for potentially
-                    restricting user rights, making it difficult to use legally
-                    purchased content across different devices, and hindering
-                    innovation.
+                    {t("digital_rights_content")}
                   </p>
                 </div>
               </div>

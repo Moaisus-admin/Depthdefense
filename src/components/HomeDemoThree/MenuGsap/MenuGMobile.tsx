@@ -6,12 +6,25 @@ import React, {
   useEffect,
 } from "react";
 import Link from "next/link";
-import "./Menu.css";
+import "./MenuGMobile.css";
 import { gsap } from "gsap";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { FaPlus } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
 
-const additionalSolutions = [
+// Define types
+type MenuLink = {
+  path: string;
+  label: string;
+  children?: MenuLink[];
+};
+
+const menugmobileLinks: MenuLink[] = [
+  { path: "/", label: "Home" },
+  { path: "/about-us/", label: "About" },
+  { path: "/contact/", label: "Contact" },
   {
-    path: "/solutions/",
+    path: "#",
     label: "Solutions",
     children: [
       {
@@ -64,9 +77,6 @@ const additionalSolutions = [
       },
     ],
   },
-];
-
-const additionalServices = [
   {
     path: "#",
     label: "Services",
@@ -91,17 +101,15 @@ const additionalServices = [
         label: "Application Security Assessment",
       },
       {
-        path: "/services/risk-assessment/",
-        label: "Risk Assessment",
-      },
-      {
         path: "/services/ransomware-assessment/",
         label: "Ransomware Assessment",
       },
+      { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
       {
         path: "/services/compromised-assessment/",
-        label: "Compromised Assessment",
+        label: "Compromise Assessment",
       },
+      { path: "/services/risk-assessment/", label: "Risk Assessment" },
       { path: "/services/forensic-analysis/", label: "Forensic Analysis" },
       {
         path: "/services/network-security-operations-noc-soc/",
@@ -112,15 +120,8 @@ const additionalServices = [
         path: "/services/managed-security-services/",
         label: "Managed Security Services",
       },
-      { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
     ],
   },
-];
-
-const menugLinks = [
-  { path: "/", label: "Home" },
-  { path: "/about-us/", label: "About" },
-  { path: "/contact/", label: "Contact" },
 ];
 
 interface MenuProps {
@@ -128,28 +129,49 @@ interface MenuProps {
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
+const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   const container = useRef<HTMLDivElement>(null);
   const [isMenuGOpen, setIsMenuGOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const [submenuLinks, setSubmenuLinks] = useState<MenuLink[]>([]);
   const tl = useRef(gsap.timeline({ paused: true }));
+  const [buttonStates, setButtonStates] = useState<{ [key: string]: boolean }>(
+    {}
+  );
 
   const toggleMenuG = () => {
     setIsMenuGOpen(!isMenuGOpen);
+    // Reset submenus when closing the main menu
+    if (!isMenuGOpen) {
+      setActiveSubMenu(null);
+      setSubmenuLinks([]);
+      setButtonStates({});
+    }
   };
 
+  const toggleSubMenu = (label: string, children: MenuLink[] | undefined) => {
+    if (activeSubMenu === label) {
+      setActiveSubMenu(null);
+      setSubmenuLinks([]);
+      setButtonStates((prevState) => ({ ...prevState, [label]: false }));
+    } else {
+      setActiveSubMenu(label);
+      setSubmenuLinks(children || []);
+      setButtonStates({ Solutions: false, Services: false, [label]: true });
+    }
+  };
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 600);
-    };
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    if (submenuLinks.length > 0) {
+      // Ensure animation for opening submenu
+      gsap.from(".submenu .menug-link-item-holder", {
+        opacity: 0,
+        y: 50,
+        duration: 0.3,
+        stagger: 0.02,
+        ease: "power4.out",
+      });
+    }
+  }, [submenuLinks]);
 
   useEffect(() => {
     gsap.set(".menug-link-item-holder", { opacity: 0, y: 75 });
@@ -164,8 +186,8 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
       .to(".menug-link-item-holder", {
         opacity: 1,
         y: 0,
-        duration: 0.5,
-        stagger: 0.06,
+        duration: 1,
+        stagger: 0.2,
         ease: "power4.inOut",
         delay: -0.75,
       });
@@ -182,9 +204,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   }, [isMenuGOpen]);
 
   useEffect(() => {
-    const links = document.querySelectorAll(
-      ".menug-link-item-holder:not(.first-link)"
-    );
+    const links = document.querySelectorAll(".submenu .menug-link-item-holder");
 
     links.forEach((link) => {
       link.addEventListener("mouseenter", () => {
@@ -207,11 +227,11 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         });
       });
     };
-  }, [isMenuGOpen]);
+  }, [submenuLinks]);
 
   return (
     <div
-      className={`menug-container w-fit ${isMenuGOpen ? "menug-open" : ""}`}
+      className={`menug-container ${isMenuGOpen ? "menug-open" : ""}`}
       ref={container}
     >
       <div className="menug-bar w-fit">
@@ -226,15 +246,46 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
       <div className="menug-overlay-bar"></div>
       <div className="menug-overlay">
-        <div className="menug-content col-lg-12 flex gap-4">
-          <div className="menug-links col-lg-2">
-            {menugLinks.map((link, index) => (
+        <div className="menug-content col-lg-12 flex gap-2">
+          <div className="menug-links col-lg-3">
+            {menugmobileLinks.map((link, index) => (
               <div className="menug-link-item" key={index}>
                 <div
                   className={`menug-link-item-holder ${
-                    index < 5 ? "first-link services-link" : ""
-                  } ${link.label.toLowerCase()}-link`} /* Unique class for each link */
+                    (link.label === "Solutions" || link.label === "Services") &&
+                    activeSubMenu === link.label
+                      ? "expanded"
+                      : ""
+                  } ${index < 5 ? "first-link services-link" : ""}`}
+                  style={{ display: "flex", alignItems: "center" }} // Add this line
                 >
+                  {link.children && (
+                    <button
+                      className={
+                        buttonStates[link.label]
+                          ? "minus-button"
+                          : "plus-button"
+                      }
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setButtonStates((prevState) => {
+                          const newState = {
+                            ...prevState,
+                            [link.label]: !prevState[link.label],
+                          };
+                          toggleSubMenu(link.label, link.children);
+                          return newState;
+                        });
+                      }}
+                    >
+                      <FaPlus
+                        className={!buttonStates[link.label] ? "" : "hidden"}
+                      />
+                      <FaMinus
+                        className={buttonStates[link.label] ? "" : "hidden"}
+                      />
+                    </button>
+                  )}
                   <Link href={link.path} className="menug-link">
                     {link.label}
                   </Link>
@@ -242,62 +293,22 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               </div>
             ))}
           </div>
-
-          <div className="menug-additional-content col-lg-5">
-            <div className="menug-links">
+          <div className="col-lg-8">
+            <div className={`menug-links ${activeSubMenu ? "active" : ""}`}>
               <div className="menug-link-item">
-                <div className="menug-link-item-holder first-link services-link">
-                  <span className="menug-link additional-services-heading">
-                    {additionalServices[0].label}
-                  </span>
-                  {additionalServices[0].children && (
-                    <div className="submenu">
-                      {additionalServices[0].children.map(
-                        (childLink, childIndex) => (
-                          <div className="menug-link-item" key={childIndex}>
-                            <div className="menug-link-item-holder">
-                              <Link
-                                href={childLink.path}
-                                className="menug-link submenu-link"
-                              >
-                                {childLink.label}
-                              </Link>
-                            </div>
-                          </div>
-                        )
-                      )}
+                <div className="submenu">
+                  {submenuLinks.map((childLink, childIndex) => (
+                    <div className="menug-link-item" key={childIndex}>
+                      <div className="menug-link-item-holder">
+                        <Link
+                          href={childLink.path}
+                          className="menug-link submenu-link"
+                        >
+                          {childLink.label}
+                        </Link>
+                      </div>
                     </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="menug-additional-content col-lg-5">
-            <div className="menug-links">
-              <div className="menug-link-item">
-                <div className="menug-link-item-holder first-link services-link">
-                  <span className="menug-link additional-solutions-heading">
-                    {additionalSolutions[0].label}
-                  </span>
-                  {additionalSolutions[0].children && (
-                    <div className="submenu">
-                      {additionalSolutions[0].children.map(
-                        (childLink, childIndex) => (
-                          <div className="menug-link-item" key={childIndex}>
-                            <div className="menug-link-item-holder">
-                              <Link
-                                href={childLink.path}
-                                className="menug-link submenu-link"
-                              >
-                                {childLink.label}
-                              </Link>
-                            </div>
-                          </div>
-                        )
-                      )}
-                    </div>
-                  )}
+                  ))}
                 </div>
               </div>
             </div>
@@ -308,4 +319,4 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   );
 };
 
-export default MenuG;
+export default MenuGMobile;

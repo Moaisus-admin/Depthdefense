@@ -3,17 +3,20 @@
 import React from "react";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 
 const GetInTouchFormTwo: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="get-in-touch-area get-in-touch-area-two bg-color ptb-100 text-black dark:bg-zinc-900">
         <div className="container">
           <div className="section-title">
-            <span className="text-2xl text-[#e21f36]">Contact Us</span>
+            <span className="text-2xl text-[#e21f36]">{t("contact_us")}</span>
             <h2 className="dark:text-white">
               <Typewriter
-                words={["Speak With An Expert About Your Specific Needs"]}
+                key={t("speak_with_expert")}
+                words={[t("speak_with_expert")]}
                 loop={1}
                 cursor
                 cursorStyle=""
@@ -28,12 +31,12 @@ const GetInTouchFormTwo: React.FC = () => {
             <div className="row">
               <div className="col-lg-6 col-md-6">
                 <div className="form-group dark:text-white">
-                  <label>Name</label>
+                  <label>{t("name")}</label>
                   <input
                     type="text"
                     name="name"
                     className="form-control dark:text-white rounded-3xl"
-                    placeholder="Enter Name"
+                    placeholder={t("enter_name")}
                     required
                   />
                 </div>
@@ -41,12 +44,12 @@ const GetInTouchFormTwo: React.FC = () => {
 
               <div className="col-lg-6 col-md-6">
                 <div className="form-group dark:text-white">
-                  <label>Email</label>
+                  <label>{t("email")}</label>
                   <input
                     type="text"
                     name="email"
                     className="form-control dark:text-white rounded-3xl"
-                    placeholder="Enter Email"
+                    placeholder={t("enter_email")}
                     required
                   />
                 </div>
@@ -54,12 +57,12 @@ const GetInTouchFormTwo: React.FC = () => {
 
               <div className="col-lg-6 col-md-6">
                 <div className="form-group dark:text-white">
-                  <label>Phone</label>
+                  <label>{t("phone")}</label>
                   <input
                     type="text"
                     name="number"
                     className="form-control dark:text-white rounded-3xl"
-                    placeholder="Enter Number"
+                    placeholder={t("enter_number")}
                     required
                   />
                 </div>
@@ -67,12 +70,12 @@ const GetInTouchFormTwo: React.FC = () => {
 
               <div className="col-lg-6 col-md-6">
                 <div className="form-group dark:text-white">
-                  <label>Subject</label>
+                  <label>{t("subject")}</label>
                   <input
                     type="text"
                     name="subject"
                     className="form-control dark:text-white rounded-3xl"
-                    placeholder="Enter Subject"
+                    placeholder={t("enter_subject")}
                     required
                   />
                 </div>
@@ -80,13 +83,13 @@ const GetInTouchFormTwo: React.FC = () => {
 
               <div className="col-lg-12 col-md-12">
                 <div className="form-group dark:text-white rounded-3xl">
-                  <label>Message</label>
+                  <label>{t("message")}</label>
                   <textarea
                     name="text"
                     cols={30}
                     rows={5}
                     className="form-control dark:text-white rounded-2xl"
-                    placeholder="Enter Message"
+                    placeholder={t("enter_message")}
                     required
                   />
                 </div>
@@ -94,7 +97,7 @@ const GetInTouchFormTwo: React.FC = () => {
 
               <div className="col-lg-12 col-sm-12">
                 <button type="submit" className="default-btn rounded-full">
-                  Submit
+                  {t("submit")}
                 </button>
               </div>
             </div>

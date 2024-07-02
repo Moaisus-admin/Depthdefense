@@ -3,9 +3,11 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const Ransomware: React.FC = () => {
+  const { t } = useTranslation();
   const imageRef = useRef(null);
   const cardRef = useRef(null);
   useEffect(() => {
@@ -19,7 +21,7 @@ const Ransomware: React.FC = () => {
         ease: "power1.out",
         scrollTrigger: {
           trigger: imageRef.current,
-          start: "top center", // when the top of the trigger hits the center of the viewport
+          start: "top bottom", // when the top of the trigger hits the center of the viewport
           end: "bottom center", // end after scrolling 500px beyond the start
           toggleActions: "play none none none", // don't reverse the animation
         },
@@ -63,20 +65,9 @@ const Ransomware: React.FC = () => {
                   ref={cardRef}
                   className="single-blog-content dark:bg-zinc-600 dark:text-white rounded-xl"
                 >
-                  <span className="text-2xl">Ransomware:</span>
+                  <span className="text-2xl">{t("ransomwareTitle")}</span>
 
-                  <p>
-                    Ransomware preparedness assessment aims to identify where
-                    your defenses are strong and where vulnerabilities exist
-                    that ransomware actors can exploit. Our methodology focuses
-                    on the cyber kill chain, a comprehensive examination that
-                    includes remote access configuration, phishing prevention,
-                    email and web protections, access controls and endpoint
-                    monitoring and end user awareness. At the end of our
-                    assessment, we will provide you with a prioritized,
-                    customized set of recommendations to help your organization
-                    deflect, detect or respond to a ransomware attack.
-                  </p>
+                  <p>{t("ransomwareDescription")}</p>
                 </div>
               </div>
             </div>

@@ -1,0 +1,216 @@
+@media (max-width: 600px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .menug-bar,
+  .menug-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10000; /* Ensure the menu bar and overlay are on top */
+  }
+
+  .menug-logo {
+    /* Add styles as needed */
+  }
+
+  .menug-bar a,
+  .menug-toggle .hamburger-menu span {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .menug-overlay-bar .menug-logo a,
+  .menug-close-icon p {
+    color: #000;
+    cursor: pointer;
+  }
+
+  .menug-overlay {
+    position: fixed;
+
+    top: 0;
+    right: 0; /* Change this from 'left' to 'right' */
+    width: 100vw;
+    height: 100vh;
+
+    background: #0c375bef;
+    z-index: 9998;
+    display: flex;
+
+    justify-content: space-between;
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  .menug-content {
+    margin-top: 2em;
+  }
+
+  .menug-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .hamburger-menu {
+    width: 30px; /* Default width for big screens */
+    height: 17px; /* Default height for big screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px; /* Default margin-top for big screens */
+  }
+
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      width: 20px; /* Adjust width of hamburger button for smaller screens */
+      height: 15px; /* Adjust height of hamburger button for smaller screens */
+      margin-top: 6px; /* Adjust margin-top for smaller screens */
+    }
+  }
+
+  .hamburger-menu span {
+    width: 100%;
+    height: 2px; /* Adjust height of hamburger lines */
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger-menu span:nth-child(1) {
+    transform: translateY(0);
+  }
+
+  .hamburger-menu span:nth-child(2) {
+    transform-origin: center;
+  }
+
+  .hamburger-menu span:nth-child(3) {
+    transform: translateY(0);
+  }
+
+  .menug-open .hamburger-menu span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menug-open .hamburger-menu span:nth-child(2) {
+    transform: scaleX(0);
+  }
+
+  .menug-open .hamburger-menu span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .menug-links {
+    flex: 1; /* Take available space */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+
+  .menug-close-icon {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+  }
+
+  .menug-link-item {
+    width: max-content;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    overflow: visible; /* Ensure overflow is visible */
+  }
+
+  .menug-link-item-holder {
+    position: relative;
+    overflow: visible; /* Ensure overflow is visible */
+    width: 50%; /* Adjust as needed */
+  }
+
+  .menug-link-item-holder a {
+    color: #000;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 85%;
+    display: inline-block; /* Ensure the anchor tag scales properly */
+  }
+
+  .menug-link-item-holder.services-link a {
+    font-size: 0.8em; /* Font size for "Home", "About us", "Solutions", "Services", and "Contact" */
+    margin-bottom: 0.5em;
+    margin-top: 0; /* Reset margin top */
+    color: #a1a7b4;
+  }
+
+  .submenu .menug-link-item-holder {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    padding-bottom: 10px; /* Padding between items */
+  }
+
+  .submenu .menug-link-item-holder::before {
+    content: "";
+    display: inline-block;
+    width: 0px !important; /* Adjust size of the dot */
+    height: 0px !important; /* Adjust size of the dot */
+    background-color: white; /* Color of the dot */
+    border-radius: 50%; /* Ensures the dot is circular */
+  }
+
+  .submenu .menug-link-item-holder a {
+    color: white;
+    font-size: 0.6em !important; /* Adjust as needed */
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 85%;
+    display: inline-block;
+    text-decoration: none; /* Ensure no underline */
+    vertical-align: middle; /* Align text vertically with dot */
+    padding-left: 20px;
+  }
+
+  .menug-links,
+  .submenu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 0px !important;
+
+    max-width: 80vw; /* Adjust max-width as per your design */
+  }
+
+  .plus-button {
+    font-size: 0.7em; /* Adjust as needed */
+
+    float: right;
+    margin-right: 3px;
+    cursor: pointer;
+    margin-top: -8px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  .plus-button:hover {
+    transform: rotate(90deg);
+  }
+
+  .minus-button {
+    font-size: 0.7em; /* Adjust as needed */
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: -15px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+}

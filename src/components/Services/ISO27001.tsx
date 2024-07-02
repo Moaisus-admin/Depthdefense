@@ -3,8 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 
 const ISO: React.FC = () => {
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -15,9 +17,8 @@ const ISO: React.FC = () => {
       <div className="container mx-auto px-4 overflow-hidden">
         <div className="dark:text-white mt-11">
           <Typewriter
-            words={[
-              "ISO27001 is an international standard that is used to manage and ensure the security of information assets in an organization. The standard provides a framework for implementing a robust information security management system (ISMS) that includes policies, procedures, and controls designed to protect the confidentiality, integrity, and availability of information.",
-            ]}
+            key={t("iso_description")}
+            words={[t("iso_description")]}
             loop={1}
             cursor
             cursorStyle=""
@@ -26,8 +27,8 @@ const ISO: React.FC = () => {
             delaySpeed={1000}
           />
         </div>
-        <div className="flex flex-wrap items-center">
-          <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
+        <div className="row items-center">
+          <div className="w-full col-lg-6">
             <div className="about-img mr-auto w-fit">
               <Image
                 src="/images/services/services-An.jpg"
@@ -40,11 +41,11 @@ const ISO: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 text-black">
+          <div className="w-full col-lg-6 text-black">
             <div className="about-content">
               <div className="about-title">
                 <h2 className="dark:text-white mt-[50px]">
-                  Benefits of ISO27001 include:
+                  {t("benefits_title1")}
                 </h2>
               </div>
 
@@ -57,46 +58,35 @@ const ISO: React.FC = () => {
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Enhanced information security: The standard provides a
-                  comprehensive framework to manage information security and
-                  protect information assets against a range of threats.
+                  {t("benefit_1a")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Regulatory compliance: Implementation of ISO 27001 helps
-                  organizations comply with various regulatory requirements
-                  related to information security such as NCA, CITC,CCC,SAMA
+                  {t("benefit_2a")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white  ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Improved business reputation: Demonstration of adherence to
-                  the standard helps organizations gain the trust of customers,
-                  stakeholders, and partners.
+                  {t("benefit_3a")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Risk management: Implementation of risk management processes
-                  in line with ISO27001 helps organizations identify and
-                  mitigate potential security risks proactively
+                  {t("benefit_4a")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Competitive advantage: Achieving certification to the standard
-                  can provide a competitive edge in the market, demonstrating a
-                  commitment to information security to clients, partners, and
-                  other stakeholders.
+                  {t("benefit_5a")}
                 </li>
               </ul>
             </div>

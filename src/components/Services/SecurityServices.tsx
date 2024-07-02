@@ -3,8 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "react-i18next";
 
 const SecurityServices: React.FC = () => {
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -15,9 +17,8 @@ const SecurityServices: React.FC = () => {
       <div className="container mx-auto px-4 overflow-hidden">
         <div className="dark:text-white mt-11">
           <Typewriter
-            words={[
-              "Managed Security Services (MSS) refer to outsourcing security tasks and duties to third-party service providers. These services aim to enhance an organization’s security posture by providing advanced security measures, threat detection, and response capabilities.",
-            ]}
+            key={t("managed_security_services")}
+            words={[t("managed_security_services")]}
             loop={1}
             cursor
             cursorStyle=""
@@ -44,8 +45,7 @@ const SecurityServices: React.FC = () => {
             <div className="about-content">
               <div className="about-title">
                 <h2 className="dark:text-white mt-[50px]">
-                  The benefits of Managed Security Services for organizations
-                  include:
+                  {t("benefits_of_mss")}
                 </h2>
               </div>
 
@@ -58,63 +58,49 @@ const SecurityServices: React.FC = () => {
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Proactive Threat Detection: MSS providers use specialized
-                  tools and techniques to continuously monitor an organizations
-                  systems, networks, and applications for potential security
-                  threats.
+                  {t("proactive_threat_detection")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Reduced Security Risk: Managed Security Services provide a
-                  holistic approach to security and help organizations mitigate
-                  risks associated with cybersecurity breaches.
+                  {t("reduced_security_risk")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white  ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Cost-Effective: MSS reduces the need for in-house security
-                  teams and infrastructure, which in turn reduces the overall
-                  cost of maintaining a robust security posture.
+                  {t("cost_effective")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Expertise: Managed Security Services providers have
-                  experienced security personnel who possess extensive knowledge
-                  and skills required to handle complex security issues.
+                  {t("expertise")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Compliance and Regulations: MSS providers ensure that
-                  organizations comply with industry standards and regulations.
+                  {t("compliance_and_regulations")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  24x7x365 Support: MSS providers offer round-the-clock support
-                  to their clients and provide immediate response to prevent or
-                  mitigate security incidents.
+                  {t("24x7x365_support")}
                 </li>
                 <li
                   className={`shine-animation flex items-center mb-4 dark:text-white ${
                     inView ? "slide-in" : "opacity-0"
                   }`}
                 >
-                  Business Continuity: MSS providers offer business continuity
-                  services that enable organizations to resume their operations
-                  in the event of security incidents or disasters.
+                  {t("business_continuity")}
                 </li>
               </ul>
             </div>

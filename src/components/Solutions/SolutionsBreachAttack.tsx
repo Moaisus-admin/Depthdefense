@@ -4,10 +4,13 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsBreachAttack: React.FC = () => {
+  const { t } = useTranslation();
+
   const imageRef = useRef(null);
   const cardRef = useRef(null);
 
@@ -40,9 +43,9 @@ const SolutionsBreachAttack: React.FC = () => {
 
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-4">
             <div
               className="col-lg-12 col-md-12 justify-center flex flex-wrap gap-4"
               ref={imageRef}
@@ -61,23 +64,7 @@ const SolutionsBreachAttack: React.FC = () => {
                   ref={cardRef}
                 >
                   <p className="dark:text-white">
-                    Lorem ipsum dolor sit amet consectetur. Purus facilisis
-                    ultrices viverra malesuada tellus bibendum tortor felis.
-                    Pellentesque mattis massa faucibus in arcu in eget et.
-                    Turpis vel nunc venenatis dui. Risus enim fermentum ornare
-                    nec in volutpat vestibulum neque nunc. In quis pharetra ac
-                    phasellus commodo viverra tincidunt aenean. Vehicula
-                    pulvinar quam magna in egestas amet purus pretium ipsum. Est
-                    curabitur integer non nibh ante neque euismod. Purus mi Odio
-                    enim termentum sollicitudin. Lorem ipsum dolor sit amet
-                    consectetur. Purus facilisis ultrices viverra malesuada
-                    tellus bibendum tortor felis.lorem ipsum dolor sit amet
-                    consectetur. Purus facilisis ultrices viverra malesuada
-                    tellus bibendum tortor felis. Pellentesque mattis massa
-                    faucibus in arcu in eget et. Turpis vel nunc venenatis dui.
-                    Risus enim fermentum ornare nec in volutpat vestibulum neque
-                    nunc. In quis pharetra ac phasellus commodo viverra
-                    tincidunt aenean.
+                    {t("breach_attack_content")}
                   </p>
                 </div>
               </div>

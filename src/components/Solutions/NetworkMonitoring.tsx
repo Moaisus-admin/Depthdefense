@@ -3,11 +3,14 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
+
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsNetWorkM: React.FC = () => {
+  const { t } = useTranslation();
   const imageRef = useRef(null);
   const ref = useRef(null);
 
@@ -37,9 +40,9 @@ const SolutionsNetWorkM: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-5">
             <div
               className="col-lg-12 col-md-12 justify-center flex flex-wrap gap-4"
               ref={imageRef}
@@ -57,25 +60,7 @@ const SolutionsNetWorkM: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref}
                 >
-                  <p className="dark:text-white">
-                    Lorem ipsum dolor sit amet consectetur. Purus facilisis
-                    ultrices viverra malesuada tellus bibendum tortor felis.
-                    Pellentesque mattis massa faucibus in arcu in eget et.
-                    Turpis vel nunc venenatis dui. Risus enim fermentum ornare
-                    nec in volutpat vestibulum neque nunc. In quis pharetra ac
-                    phasellus commodo viverra tincidunt aenean. Vehicula
-                    pulvinar quam magna in egestas amet purus pretium ipsum. Est
-                    curabitur integer non nibh ante neque euismod. Purus mi Odio
-                    enim termentum sollicitudin. Lorem ipsum dolor sit amet
-                    consectetur. Purus facilisis ultrices viverra malesuada
-                    tellus bibendum tortor felis.lorem ipsum dolor sit amet
-                    consectetur. Purus facilisis ultrices viverra malesuada
-                    tellus bibendum tortor felis. Pellentesque mattis massa
-                    faucibus in arcu in eget et. Turpis vel nunc venenatis dui.
-                    Risus enim fermentum ornare nec in volutpat vestibulum neque
-                    nunc. In quis pharetra ac phasellus commodo viverra
-                    tincidunt aenean.
-                  </p>
+                  <p className="dark:text-white">{t("network_description")}</p>
                 </div>
               </div>
             </div>

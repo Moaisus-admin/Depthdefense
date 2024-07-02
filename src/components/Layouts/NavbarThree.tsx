@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import MenuG from "../HomeDemoThree/MenuGsap/MenuG";
 import DarkModeToggle from "@/app/DarkModeToggle";
 import LanguageToggle from "@/app/RtlToggle";
+import ParentComponent from "../HomeDemoThree/MenuGsap/MenugParent";
 
 const NavbarThree: React.FC = () => {
   const { t } = useTranslation();
@@ -80,7 +81,7 @@ const NavbarThree: React.FC = () => {
                   {/* <span>{t("Get a Quote")}</span>{" "} */}
                   {/* </Link> */}
                   <span className={menuGMargin}>
-                    <MenuG />
+                    <ParentComponent />
                   </span>
                 </div>
 

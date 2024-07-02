@@ -3,10 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsIdentityManagement: React.FC = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -56,9 +58,9 @@ const SolutionsIdentityManagement: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-5">
             <div className="col-lg-12 col-md-12 justify-center flex">
               <div ref={imgRef}>
                 <Image
@@ -75,27 +77,9 @@ const SolutionsIdentityManagement: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref}
                 >
-                  <p className="dark:text-white">
-                    Identity and Access Management (IAM) is a framework for
-                    managing and controlling access to resources within an
-                    organization. It involves managing the identities of users,
-                    devices, and other entities that interact with an
-                    organization’s systems, applications, and data.
-                  </p>
-                  <p className="dark:text-white">
-                    IAM solutions provide centralized control over user access
-                    to resources, and allow administrators to manage
-                    authentication, authorization, and access control policies.
-                    They enable organizations to enforce security policies,
-                    maintain compliance, and reduce the risk of data breaches or
-                    unauthorized access to sensitive resources.
-                  </p>
-                  <p className="dark:text-white">
-                    IAM solutions typically include features such as user
-                    provisioning, single sign-on (SSO), multi-factor
-                    authentication (MFA), directory services, and identity
-                    governance and administration (IGA), among others.
-                  </p>
+                  <p className="dark:text-white">{t("iam_description_1")}</p>
+                  <p className="dark:text-white">{t("iam_description_2")}</p>
+                  <p className="dark:text-white">{t("iam_description_3")}</p>
                 </div>
               </div>
             </div>

@@ -11,9 +11,6 @@ const LanguageToggle: React.FC = () => {
     if (typeof window !== "undefined") {
       const savedRtl = localStorage.getItem("isRtlEnabled");
       const isRtl = savedRtl ? JSON.parse(savedRtl) : false;
-      const savedLang = localStorage.getItem("lang");
-      const lang = savedLang ? savedLang : "en";
-      i18n.changeLanguage(lang);
       setIsRtlEnabled(isRtl);
 
       const handleResize = () => {
@@ -35,7 +32,6 @@ const LanguageToggle: React.FC = () => {
     if (typeof window !== "undefined") {
       localStorage.setItem("isRtlEnabled", JSON.stringify(newIsRtlEnabled));
       const newLang = newIsRtlEnabled ? "ar" : "en";
-      localStorage.setItem("lang", newLang);
 
       const container = document.getElementById("app-container");
       if (container) {

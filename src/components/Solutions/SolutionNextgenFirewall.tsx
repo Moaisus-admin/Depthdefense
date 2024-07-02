@@ -2,11 +2,12 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionNextgenFirewall: React.FC = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -75,24 +76,8 @@ const SolutionNextgenFirewall: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                 >
                   <p className="dark:text-white">
-                    Next Generation Firewalls (NGFW) refers to advanced network
-                    security devices that integrate traditional firewall
-                    capabilities with advanced security technologies such as
-                    intrusion prevention, application identification and
-                    control, and advanced threat detection. A Web Application
-                    Firewall (WAF) is a security solution that protects web
-                    applications from several forms of cyber attacks. It is
-                    designed to monitor the incoming and outgoing traffic to and
-                    from a web application and identify and block any malicious
-                    requests that could compromise the security of the
-                    application. The firewall filters the requests according to
-                    a set of predefined rules and policies based on the known
-                    vulnerabilities of the application, such as SQL injection,
-                    cross-site scripting, or file inclusion attacks. By
-                    implementing a WAF, organizations can effectively protect
-                    their web applications against common web application
-                    attacks, reduce the risk of data breaches, and ensure
-                    compliance with regulatory requirements.
+                    {t("firewallDescription")}{" "}
+                    {/* Replace 'firewallDescription' with the key of your translated text */}
                   </p>
                 </div>
               </div>

@@ -3,10 +3,13 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsThreat: React.FC = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -56,9 +59,9 @@ const SolutionsThreat: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-5">
             <div className="col-lg-12 col-md-12 justify-center flex flex-wrap gap-4">
               <div ref={imgRef}>
                 <Image
@@ -75,19 +78,7 @@ const SolutionsThreat: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref}
                 >
-                  <p className="dark:text-white">
-                    Threat Intelligence is the collection, analysis, and
-                    dissemination of information related to security threats and
-                    risks to organizational assets or infrastructure. It
-                    involves using various sources of information, such as
-                    internal logs, external feeds, and human intelligence, to
-                    identify and mitigate potential security risks. The goal of
-                    security and threat intelligence is to provide organizations
-                    with the knowledge and tools they need to anticipate,
-                    detect, and respond to cyber threats and attacks. This
-                    information can be used to prevent attacks, minimize damage,
-                    and quickly recover from an incident.
-                  </p>
+                  <p className="dark:text-white">{t("threatIntelligence")}</p>
                 </div>
               </div>
             </div>

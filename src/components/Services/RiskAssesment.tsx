@@ -3,11 +3,13 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const RiskAssesment: React.FC = () => {
+  const { t } = useTranslation();
   const p1Ref = useRef(null);
   const cardRef = useRef(null);
   const imageRef = useRef(null);
@@ -76,12 +78,7 @@ const RiskAssesment: React.FC = () => {
                   ref={p1Ref}
                 >
                   <p className="dark:text-white">
-                    IT security risk assessments focus on identifying the
-                    threats facing your information systems, networks and data,
-                    and assessing the potential consequences you’d face should
-                    these adverse events occur. Risk assessments should be
-                    conducted on a regular basis (e.g. annually) and whenever
-                    major changes occur within your organization.
+                    {t("riskAssessmentDescription")}
                   </p>
                 </div>
               </div>
@@ -92,18 +89,11 @@ const RiskAssesment: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={cardRef}
                 >
-                  <h2 className="text-2xl mb-2 dark:text-white">Red Teaming</h2>
+                  <h2 className="text-2xl mb-2 dark:text-white">
+                    {t("redTeamingTitle")}
+                  </h2>
                   <p className="dark:text-white">
-                    Red Teaming is a security discipline originating in the
-                    military arena that simulates full-spectrum cyber-attacks.
-                    This allows you to measure your cyber defense’s
-                    effectiveness against malicious actors and allows your
-                    defenders to practice their detection and response
-                    capabilities in a controlled environment and validate or
-                    refine them. Lastly, the Red Team can also expose gaps in
-                    your overall security defense capabilities by targeting your
-                    organization and not being confined by the constraints of a
-                    regular penetration test.
+                    {t("redTeamingDescription")}
                   </p>
                 </div>
               </div>

@@ -3,10 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsNAC: React.FC = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const imgRef = useRef(null);
   useEffect(() => {
@@ -56,9 +58,9 @@ const SolutionsNAC: React.FC = () => {
   }, []);
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-5">
             <div className="col-lg-12 col-md-12 justify-center flex flex-wrap gap-4">
               <div ref={imgRef}>
                 <Image
@@ -75,19 +77,7 @@ const SolutionsNAC: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={ref}
                 >
-                  <p className="dark:text-white">
-                    Network Access Control (NAC) is a security solution that
-                    helps organizations control access to their network. NAC
-                    solutions use various techniques to authenticate and
-                    authorize users and devices that connect to a network,
-                    ensuring that only authorized parties are granted access.
-                    This can include methods such as checking the user’s
-                    credentials, assessing the health and compliance of
-                    connected devices, and requiring the installation of
-                    security software before allowing access. NAC solutions can
-                    help prevent unauthorized or malicious access to a network
-                    and reduce the risk of security breaches.
-                  </p>
+                  <p className="dark:text-white">{t("nac_description")}</p>
                 </div>
               </div>
             </div>

@@ -4,10 +4,12 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SolutionsAPT: React.FC = () => {
+  const { t } = useTranslation();
   const cardRef = useRef(null);
   const imageRef = useRef(null);
 
@@ -30,7 +32,7 @@ const SolutionsAPT: React.FC = () => {
         ease: "power1.out",
         scrollTrigger: {
           trigger: cardRef.current,
-          start: "top center", // when the top of the trigger hits the center of the viewport
+          start: "top bottom", // when the top of the trigger hits the center of the viewport
           end: "bottom center", // end after scrolling 500px beyond the start
           toggleActions: "play none none none", // don't reverse the animation
         },
@@ -40,9 +42,9 @@ const SolutionsAPT: React.FC = () => {
 
   return (
     <>
-      <div className="blog-column-two-area pt-100 dark:bg-zinc-700">
+      <div className="blog-column-two-area ptb-100 dark:bg-zinc-700">
         <div className="container">
-          <div className="row">
+          <div className="row gap-4">
             <div
               className="col-lg-12 col-md-12 justify-center flex flex-wrap gap-4"
               ref={imageRef}
@@ -60,22 +62,7 @@ const SolutionsAPT: React.FC = () => {
                   className="single-blog-content dark:bg-zinc-800 rounded-xl"
                   ref={cardRef}
                 >
-                  <p className="dark:text-white">
-                    An Advanced Persistent Threat (APT) is a targeted cyber
-                    attack that is designed to gain unauthorized access to
-                    sensitive information or systems for an extended period of
-                    time. APT attacks are typically carried out by skilled and
-                    well-funded attackers who use multiple attack vectors,
-                    including social engineering, malware, and exploit kits, to
-                    bypass traditional security measures and gain access. Once
-                    inside the system, the attackers use sophisticated
-                    techniques to move laterally across the network, steal data,
-                    and maintain persistence, often remaining undetected for
-                    months or even years. APT attacks are often associated with
-                    state-sponsored groups or organized crime syndicates that
-                    have the resources and motivation to launch targeted attacks
-                    against specific organizations or individuals.
-                  </p>
+                  <p className="dark:text-white">{t("apt_description")}</p>
                 </div>
               </div>
             </div>
