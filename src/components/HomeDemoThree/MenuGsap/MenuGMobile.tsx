@@ -138,9 +138,6 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [submenuLinks, setSubmenuLinks] = useState<MenuLink[]>([]);
   const tl = useRef(gsap.timeline({ paused: true }));
-  const [buttonStates, setButtonStates] = useState<{ [key: string]: boolean }>(
-    {}
-  );
 
   const toggleMenuG = () => {
     setIsMenuGOpen(!isMenuGOpen);
@@ -148,7 +145,6 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
     if (!isMenuGOpen) {
       setActiveSubMenu(null);
       setSubmenuLinks([]);
-      setButtonStates({});
     }
   };
 
@@ -156,7 +152,6 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
     if (activeSubMenu === label) {
       setActiveSubMenu(null);
       setSubmenuLinks([]);
-      setButtonStates((prevState) => ({ ...prevState, [label]: false }));
     } else {
       setActiveSubMenu(label);
       setSubmenuLinks(children || []);
@@ -165,7 +160,6 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
       menugmobileLinks.forEach((link) => {
         newButtonStates[link.label] = link.label === label;
       });
-      setButtonStates(newButtonStates);
     }
   };
 
@@ -271,27 +265,20 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   {link.children && (
                     <button
                       className={
-                        buttonStates[link.label]
+                        activeSubMenu === link.label
                           ? "minus-button"
                           : "plus-button"
                       }
                       onClick={(e) => {
                         e.stopPropagation();
-                        setButtonStates((prevState) => {
-                          const newState = {
-                            ...prevState,
-                            [link.label]: !prevState[link.label],
-                          };
-                          toggleSubMenu(link.label, link.children);
-                          return newState;
-                        });
+                        toggleSubMenu(link.label, link.children);
                       }}
                     >
                       <FaPlus
-                        className={!buttonStates[link.label] ? "" : "hidden"}
+                        className={activeSubMenu !== link.label ? "" : "hidden"}
                       />
                       <FaMinus
-                        className={buttonStates[link.label] ? "" : "hidden"}
+                        className={activeSubMenu === link.label ? "" : "hidden"}
                       />
                     </button>
                   )}
