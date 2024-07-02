@@ -8,7 +8,7 @@ import React, {
 import Link from "next/link";
 import "./MenuGMobile.css";
 import { gsap } from "gsap";
-import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
@@ -157,9 +157,15 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
     } else {
       setActiveSubMenu(label);
       setSubmenuLinks(children || []);
-      setButtonStates({ Solutions: false, Services: false, [label]: true });
+      // Update button states to ensure only one submenu can be expanded at a time
+      const newButtonStates: { [key: string]: boolean } = {};
+      menugmobileLinks.forEach((link) => {
+        newButtonStates[link.label] = link.label === label;
+      });
+      setButtonStates(newButtonStates);
     }
   };
+
   useEffect(() => {
     if (submenuLinks.length > 0) {
       // Ensure animation for opening submenu
