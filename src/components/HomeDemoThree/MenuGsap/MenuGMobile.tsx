@@ -101,15 +101,17 @@ const menugmobileLinks: MenuLink[] = [
         label: "Application Security Assessment",
       },
       {
+        path: "/services/risk-assessment/",
+        label: "Risk Assessment",
+      },
+      {
         path: "/services/ransomware-assessment/",
         label: "Ransomware Assessment",
       },
-      { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
       {
         path: "/services/compromised-assessment/",
-        label: "Compromise Assessment",
+        label: "Compromised Assessment",
       },
-      { path: "/services/risk-assessment/", label: "Risk Assessment" },
       { path: "/services/forensic-analysis/", label: "Forensic Analysis" },
       {
         path: "/services/network-security-operations-noc-soc/",
@@ -120,6 +122,7 @@ const menugmobileLinks: MenuLink[] = [
         path: "/services/managed-security-services/",
         label: "Managed Security Services",
       },
+      { path: "/services/ddos-simulation/", label: "DDoS Simulation" },
     ],
   },
 ];
