@@ -6,7 +6,7 @@ import React, {
   useEffect,
 } from "react";
 import Link from "next/link";
-import "./Menu.css";
+import "./menu.css";
 import { gsap } from "gsap";
 
 const additionalSolutions = [

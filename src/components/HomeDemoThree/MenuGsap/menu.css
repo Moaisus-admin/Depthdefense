@@ -11,7 +11,7 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  z-index: 10000; /* Ensure the menu bar and overlay are on top */
+  z-index: 10000; /* Ensure the menu bar and overlay are on */
 }
 
 .menug-logo {
