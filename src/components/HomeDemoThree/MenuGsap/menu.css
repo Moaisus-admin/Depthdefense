@@ -159,7 +159,7 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 7px;
   max-width: calc(100vw - 4em);
 
   padding-top: 20px;
