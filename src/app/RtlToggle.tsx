@@ -8,42 +8,34 @@ const LanguageToggle: React.FC = () => {
   const [isSmallWindow, setIsSmallWindow] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedRtl = localStorage.getItem("isRtlEnabled");
-      const isRtl = savedRtl ? JSON.parse(savedRtl) : false;
-      setIsRtlEnabled(isRtl);
+    const handleResize = () => {
+      setIsSmallWindow(window.innerWidth < 640);
+    };
 
-      const handleResize = () => {
-        setIsSmallWindow(window.innerWidth < 640);
-      };
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-      handleResize();
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleToggle = () => {
     const newIsRtlEnabled = !isRtlEnabled;
     setIsRtlEnabled(newIsRtlEnabled);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("isRtlEnabled", JSON.stringify(newIsRtlEnabled));
-      const newLang = newIsRtlEnabled ? "ar" : "en";
 
-      const container = document.getElementById("app-container");
-      if (container) {
-        if (newIsRtlEnabled) {
-          container.classList.add("rtl-enabled");
-        } else {
-          container.classList.remove("rtl-enabled");
-        }
+    const newLang = newIsRtlEnabled ? "ar" : "en";
+
+    const container = document.getElementById("app-container");
+    if (container) {
+      if (newIsRtlEnabled) {
+        container.classList.add("rtl-enabled");
+      } else {
+        container.classList.remove("rtl-enabled");
       }
-
-      i18n.changeLanguage(newLang);
     }
+
+    i18n.changeLanguage(newLang);
   };
 
   const marginTopStyle = isSmallWindow
