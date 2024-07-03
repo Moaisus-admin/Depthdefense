@@ -8,6 +8,7 @@ import React, {
 import Link from "next/link";
 import "./menu.css";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 
 const additionalSolutions = [
   {
@@ -132,6 +133,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
   const container = useRef<HTMLDivElement>(null);
   const [isMenuGOpen, setIsMenuGOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation();
 
   const tl = useRef(gsap.timeline({ paused: true }));
 
@@ -226,7 +228,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
       <div className="menug-overlay-bar"></div>
       <div className="menug-overlay">
-        <div className="menug-content col-lg-12 flex gap-4">
+        <div className="menug-content col-lg-12 flex gap-2">
           <div className="menug-links col-lg-2">
             {menugLinks.map((link, index) => (
               <div className="menug-link-item" key={index}>
@@ -236,7 +238,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   } ${link.label.toLowerCase()}-link`} /* Unique class for each link */
                 >
                   <Link href={link.path} className="menug-link">
-                    {link.label}
+                    {t(link.label)}
                   </Link>
                 </div>
               </div>
@@ -248,7 +250,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               <div className="menug-link-item">
                 <div className="menug-link-item-holder first-link services-link">
                   <span className="menug-link additional-services-heading">
-                    {additionalServices[0].label}
+                    {t(additionalServices[0].label)}
                   </span>
                   {additionalServices[0].children && (
                     <div className="submenu">
@@ -260,7 +262,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                                 href={childLink.path}
                                 className="menug-link submenu-link"
                               >
-                                {childLink.label}
+                                {t(childLink.label)}
                               </Link>
                             </div>
                           </div>
@@ -278,7 +280,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               <div className="menug-link-item">
                 <div className="menug-link-item-holder first-link services-link">
                   <span className="menug-link additional-solutions-heading">
-                    {additionalSolutions[0].label}
+                    {t(additionalSolutions[0].label)}
                   </span>
                   {additionalSolutions[0].children && (
                     <div className="submenu">
@@ -290,7 +292,7 @@ const MenuG: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                                 href={childLink.path}
                                 className="menug-link submenu-link"
                               >
-                                {childLink.label}
+                                {t(childLink.label)}
                               </Link>
                             </div>
                           </div>

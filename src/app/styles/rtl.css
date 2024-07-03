@@ -6,6 +6,22 @@
   direction: rtl;
   text-align: right;
 
+  .menug-overlay {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .submenu .menug-link-item-holder::before {
+    content: "";
+    display: block;
+    width: 8px; /* Adjust size of the dot */
+    height: 8px; /* Adjust size of the dot */
+    background-color: white; /* Color of the dot */
+    border-radius: 50%; /* Ensures the dot is circular */
+    margin-left: 8px; /* Space between dot and text */
+    margin-bottom: 12px;
+  }
+
   .navbar-area .others-option .cart-icon {
     margin-right: 0;
     margin-left: 40px;

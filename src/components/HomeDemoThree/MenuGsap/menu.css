@@ -114,6 +114,7 @@ body.no-scroll {
 }
 
 .menug-links {
+  margin-top: 50px;
   flex: 1; /* Take available space */
   display: flex;
   flex-direction: column;
@@ -171,7 +172,7 @@ body.no-scroll {
   position: relative;
   overflow: visible;
   width: 100%;
-  padding-bottom: 10px; /* Padding between items */
+  padding-bottom: 5px; /* Padding between items */
 }
 
 .submenu .menug-link-item-holder::before {

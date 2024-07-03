@@ -8,6 +8,7 @@ import React, {
 import Link from "next/link";
 import "./MenuGMobile.css";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
 
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
@@ -133,6 +134,7 @@ interface MenuProps {
 }
 
 const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
+  const { t } = useTranslation();
   const container = useRef<HTMLDivElement>(null);
   const [isMenuGOpen, setIsMenuGOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
@@ -250,7 +252,7 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
       <div className="menug-overlay-bar"></div>
       <div className="menug-overlay">
         <div className="menug-content col-lg-12 flex gap-2">
-          <div className="menug-links col-lg-3">
+          <div className="menug-links col-lg-2">
             {menugmobileLinks.map((link, index) => (
               <div className="menug-link-item" key={index}>
                 <div
@@ -283,7 +285,7 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                     </button>
                   )}
                   <Link href={link.path} className="menug-link">
-                    {link.label}
+                    {t(link.label)}
                   </Link>
                 </div>
               </div>
@@ -300,7 +302,7 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                           href={childLink.path}
                           className="menug-link submenu-link"
                         >
-                          {childLink.label}
+                          {t(childLink.label)}
                         </Link>
                       </div>
                     </div>

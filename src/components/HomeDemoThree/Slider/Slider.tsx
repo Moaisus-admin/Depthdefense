@@ -33,7 +33,7 @@ const imageNames = [
 const Slider = () => {
   const { t } = useTranslation();
   return (
-    <div className="dark:bg-zinc-600">
+    <div className="dark:bg-zinc-600 main">
       <div className="section-title">
         {/* <span className="dark:text-white text-2xl">Why Choose Us</span> */}
         <h2 className="dark:text-white">{t("ourEsteemedClients")}</h2>

@@ -39,7 +39,7 @@ i18n.use(initReactI18next).init({
         Vulnerability: "Vulnerability Assessment",
         Penetration: "Penetration Testing",
         Social: "Social Engineering Assessment",
-        Compromise: "Compromise Assessment",
+        "Compromised Assessment": "Compromised Assessment",
         Red: "Red Teaming or Red-Team Assessment",
         Cloud: "Cloud Security Assessment",
         "Third-party": "Third-party Risk Assessment",
@@ -48,7 +48,7 @@ i18n.use(initReactI18next).init({
         /////////Navbar//////////
         Home: "Home",
         Pages: "Pages",
-        "About Us": "About Us",
+        About: "About",
         Team: "Team",
         Testimonials: "Testimonials",
         Pricing: "Pricing",
@@ -71,8 +71,8 @@ i18n.use(initReactI18next).init({
         "DDoS Simulation": "DDoS Simulation",
         "Compromise Assessment": "Compromise Assessment",
         "Risk Assessment": "Risk Assessment",
-        "Governance, Risk Management, and Compliance SAMA/CITC/NCA":
-          "Governance, Risk Management, and Compliance SAMA/CITC/NCA",
+        "Governance, Risk Management, and Compliance":
+          "Governance, Risk Management, and Compliance",
         "Forensic Analysis": "Forensic Analysis",
         "Network & Security Operations": "Network & Security Operations",
         vCISO: "vCISO",
@@ -121,10 +121,10 @@ i18n.use(initReactI18next).init({
           "Ensuring compliance with Privacy and Data Protection Laws is essential for businesses operating in Saudi Arabia, given the increasing emphasis on data privacy and security. Our specialized consulting services provide expert guidance to help you navigate the regulatory landscape and protect your organization's data.",
         nationalDataManagement: "National Data Management",
         nationalDataManagementDesc:
-          "Ensuring data quality, security, and compliance across all sectors. Our consulting services are designed to help organizations align with NDMO regulations and best practices, enabling them to manage and utilize data effectively.",
+          "Ensuring data quality, security, and compliance across all sectors. Our consulting services are designed to help organizations align with NDMO regulations and best practices, enabling them to manage and utilize data effectively and utilize their data effectively. Partner with us to secure data and maximize value of information.",
         SAMACompliance: "SAMA Compliance",
         SAMAComplianceDesc:
-          "Our specialized SAMA Consulting Services are designed to help financial institutions, banks, and other organizations navigate and comply with these regulations, ensuring robust governance and operational excellence.",
+          "Our specialized SAMA Consulting Services are designed to help financial institutions, banks, and other organizations navigate and comply with these regulations, ensuring robust governance and excellence. At core of our approach is a deep understanding of regulatory frameworks and industry best practices.",
         ////OUR Approach//////
         ourCoreServices: "Our Core Services",
         protectWebsite: "How Can I Protect My Website From Cyber Attacks",
@@ -621,7 +621,7 @@ i18n.use(initReactI18next).init({
         Vulnerability: "تقييم الضعف",
         Penetration: "اختبار الاختراق",
         Social: "تقييم الهندسة الاجتماعية",
-        Compromise: "تقييم التسوية",
+        "Compromised Assessment": "تقييم منقوص",
         Red: "الفريق الأحمر أو تقييم الفريق الأحمر",
         Cloud: "تقييم الأمان السحابي",
         "Third-party": "تقييم مخاطر الطرف الثالث",
@@ -631,7 +631,7 @@ i18n.use(initReactI18next).init({
         //////Navbar/////
         Home: "بيت",
         Pages: "الصفحات",
-        "About Us": "معلومات عنا",
+        About: "بشأن",
         Team: "فريق",
         Testimonials: "الشهادات",
         Pricing: "التسعير",
@@ -654,8 +654,8 @@ i18n.use(initReactI18next).init({
         "DDoS Simulation": "محاكاة DDoS",
         "Compromise Assessment": "تقييم التسوية",
         "Risk Assessment": "تقييم المخاطر",
-        "Governance, Risk Management, and Compliance SAMA/CITC/NCA":
-          "الحوكمة وإدارة المخاطر والامتثال SAMA/CITC/NCA",
+        "Governance, Risk Management, and Compliance":
+          "الحوكمة وإدارة المخاطر والامتثال",
         "Forensic Analysis": "التحليل الجنائي",
         "Network & Security Operations": "عمليات الشبكة والأمن",
         vCISO: "vCISO الافتراضي",
@@ -678,7 +678,7 @@ i18n.use(initReactI18next).init({
         "Patch Management & Vulnerability Management":
           "إدارة التصحيحات وإدارة الثغرات الأمنية",
         "Digital Rights Management": "إدارة الحقوق الرقمية",
-        Contact: "اتصل بنا",
+        Contact: "تلامس",
         "Get a Quote": "إقتبس",
         /////PartnersTwo/////
         "Our Valued Vendors": "بائعينا الكرام",
@@ -702,10 +702,10 @@ i18n.use(initReactI18next).init({
           "يعد ضمان الامتثال لقوانين الخصوصية وحماية البيانات أمرًا ضروريًا للشركات العاملة في المملكة العربية السعودية، نظرًا للتركيز المتزايد على خصوصية البيانات وأمنها. توفر خدماتنا الاستشارية المتخصصة إرشادات الخبراء لمساعدتك على التنقل في المشهد التنظيمي وحماية بيانات مؤسستك.",
         nationalDataManagement: "إدارة البيانات الوطنية",
         nationalDataManagementDesc:
-          "ضمان جودة البيانات وأمانها والامتثال لها في جميع القطاعات. تم تصميم خدماتنا الاستشارية لمساعدة المؤسسات على التوافق مع لوائح NDMO وأفضل الممارسات، مما يمكنها من إدارة البيانات واستخدامها بشكل فعال.",
+          "ضمان جودة البيانات وأمانها والامتثال لها في جميع القطاعات. تم تصميم خدماتنا الاستشارية لمساعدة المؤسسات على التوافق مع لوائح NDMO وأفضل الممارسات، مما يمكنها من إدارة واستخدام البيانات بشكل فعال والاستفادة من بياناتها بشكل فعال. كن شريكًا معنا لتأمين البيانات وتعظيم قيمة المعلومات.",
         SAMACompliance: "الامتثال SAMA",
         SAMAComplianceDesc:
-          "تم تصميم خدماتنا الاستشارية المتخصصة من مؤسسة النقد العربي السعودي لمساعدة المؤسسات المالية والبنوك والمنظمات الأخرى على التنقل والامتثال لهذه اللوائح، مما يضمن حوكمة قوية وتميزًا تشغيليًا.",
+          "تم تصميم خدماتنا الاستشارية المتخصصة من مؤسسة النقد العربي السعودي لمساعدة المؤسسات المالية والبنوك والمنظمات الأخرى على التنقل والامتثال لهذه اللوائح، مما يضمن الحوكمة القوية والتميز. يكمن جوهر نهجنا في الفهم العميق للأطر التنظيمية وأفضل ممارسات الصناعة.",
         ////////OurApproach///////////
         ourCoreServices: "الخدمات الأساسية لدينا",
         protectWebsite:
