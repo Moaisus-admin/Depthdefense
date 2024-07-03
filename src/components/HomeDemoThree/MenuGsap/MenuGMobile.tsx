@@ -251,7 +251,7 @@ const MenuGMobile: React.FC<MenuProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
       <div className="menug-overlay-bar"></div>
       <div className="menug-overlay">
-        <div className="menug-content col-lg-12 flex gap-2">
+        <div className="menug-content col-lg-12 flex">
           <div className="menug-links col-lg-2">
             {menugmobileLinks.map((link, index) => (
               <div className="menug-link-item" key={index}>
